@@ -1,0 +1,30 @@
+:root {
+    --default-flag-width: 60vw;
+    --default-flag-aspect-ratio: calc(2 / 3);
+}
+
+.flag-area {
+    display: flex;
+    flex-flow: column;
+}
+
+.flag-area .flag-container {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-area .flag-container .flag {
+    --width: var(--default-flag-width);
+    --aspect-ratio: var(--default-flag-aspect-ratio);
+    width: var(--width);
+    height: calc(var(--width) * var(--aspect-ratio));
+
+    --shadow-offset: .25rem;
+    --shadow-blur: calc(2 * var(--shadow-offset));
+    box-shadow:
+        var(--shadow-offset) var(--shadow-offset) var(--shadow-blur) var(--shadow-color),
+        0 0 var(--shadow-blur) var(--shadow-color);
+}

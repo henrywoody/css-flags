@@ -1,0 +1,31 @@
+:root {
+    --text-color: #fff;
+    --background-color: #333;
+    --shadow-color: #222;
+}
+
+* {
+    font-family: "Quicksand", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.viewport {
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem 1.5rem;
+}
