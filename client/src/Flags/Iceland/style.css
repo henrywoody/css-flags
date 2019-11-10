@@ -1,0 +1,39 @@
+.flag-area-iceland {
+    --blue: #02529c;
+    --white: #fff;
+    --red: #dc1e35;
+}
+
+.flag-area-iceland .flag {
+    --aspect-ratio: calc(18 / 25);
+    background-color: var(--blue);
+    background-image:
+        linear-gradient(
+            0deg,
+            transparent calc(8 / 18 * 100%),
+            var(--red) calc(8 / 18 * 100%),
+            var(--red) calc(10 / 18 * 100%),
+            transparent calc(10 / 18 * 100%)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(8 / 25 * 100%),
+            var(--red) calc(8 / 25 * 100%),
+            var(--red) calc(10 / 25 * 100%),
+            transparent calc(10 / 25 * 100%)
+        ),
+        linear-gradient(
+            0deg,
+            transparent calc(7 / 18 * 100%),
+            var(--white) calc(7 / 18 * 100%),
+            var(--white) calc(11 / 18 * 100%),
+            transparent calc(11 / 18 * 100%)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(7 / 25 * 100%),
+            var(--white) calc(7 / 25 * 100%),
+            var(--white) calc(11 / 25 * 100%),
+            transparent calc(11 / 25 * 100%)
+        );
+}

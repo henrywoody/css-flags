@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.flag-area .flag-container .flag {
+.flag-area .flag {
     --width: var(--default-flag-width);
     --aspect-ratio: var(--default-flag-aspect-ratio);
     width: var(--width);
