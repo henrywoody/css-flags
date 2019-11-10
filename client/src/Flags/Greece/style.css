@@ -1,0 +1,42 @@
+.flag-area-greece {
+    --blue: #005bae;
+    --white: #fff;
+}
+
+.flag-area-greece .flag {
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            var(--blue),
+            var(--blue) calc(1 / 9 * 100%),
+            var(--white) calc(1 / 9 * 100%),
+            var(--white) calc(2 / 9 * 100%)
+        );
+    position: relative;
+}
+
+.flag-area-greece .flag::before {
+    content: "";
+    background-color: var(--blue);
+    background-image:
+        linear-gradient(
+            0deg,
+            transparent calc(50% - 0.5 / 9 * var(--height)),
+            var(--white) calc(50% - 0.5 / 9 * var(--height)),
+            var(--white) calc(50% + 0.5 / 9 * var(--height)),
+            transparent calc(50% + 0.5 / 9 * var(--height))
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(50% - 0.5 / 9 * var(--height)),
+            var(--white) calc(50% - 0.5 / 9 * var(--height)),
+            var(--white) calc(50% + 0.5 / 9 * var(--height)),
+            transparent calc(50% + 0.5 / 9 * var(--height))
+        );
+    --size: calc(5 / 9 * var(--height));
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
