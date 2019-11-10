@@ -1,0 +1,117 @@
+.flag-area-united-kingdom {
+    --white: #fff;
+    --blue: #012169;
+    --red: #c8102e;
+}
+
+.flag-area-united-kingdom .flag {
+    --aspect-ratio: calc(1 / 2);
+    --diagonal-angle: 26.5650512deg; /* arctan(--aspect-ratio) */
+    background-image:
+        linear-gradient(
+            0deg,
+            transparent calc(12 / 30 * 100%),
+            var(--red) calc(12 / 30 * 100%),
+            var(--red) calc(18 / 30 * 100%),
+            transparent calc(18 / 30 * 100%)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(27 / 60 * 100%),
+            var(--red) calc(27 / 60 * 100%),
+            var(--red) calc(33 / 60 * 100%),
+            transparent calc(33 / 60 * 100%)
+        ),
+        linear-gradient(
+            0deg,
+            transparent calc(10 / 30 * 100%),
+            var(--white) calc(10 / 30 * 100%),
+            var(--white) calc(20 / 30 * 100%),
+            transparent calc(20 / 30 * 100%)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(25 / 60 * 100%),
+            var(--white) calc(25 / 60 * 100%),
+            var(--white) calc(35 / 60 * 100%),
+            transparent calc(35 / 60 * 100%)
+        );
+    position: relative;
+}
+
+.flag-area-united-kingdom .flag::before,
+.flag-area-united-kingdom .flag::after {
+    content: "";
+    background-color: var(--blue);
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.flag-area-united-kingdom .flag::before {
+    top: 0;
+    background-image:
+        linear-gradient(
+            var(--diagonal-angle),
+            transparent calc((11 + 0.4) / 30 * var(--height)),
+            var(--red) calc((11 + 0.4) / 30 * var(--height)),
+            var(--red) calc((13 + 0.4) / 30 * var(--height)),
+            transparent calc((13 + 0.4) / 30 * var(--height))
+        ),
+        linear-gradient(
+            calc(-1 * var(--diagonal-angle)),
+            transparent calc((13 + 0.4) / 30 * var(--height)),
+            var(--red) calc((13 + 0.4) / 30 * var(--height)),
+            var(--red) calc((15 + 0.4) / 30 * var(--height)),
+            transparent calc((15 + 0.4) / 30 * var(--height))
+        ),
+        linear-gradient(
+            var(--diagonal-angle),
+            transparent calc((10 + 0.4) / 30 * var(--height)),
+            var(--white) calc((10 + 0.4) / 30 * var(--height)),
+            var(--white) calc((16 + 0.4) / 30 * var(--height)),
+            transparent calc((16 + 0.4) / 30 * var(--height))
+        ),
+        linear-gradient(
+            calc(-1 * var(--diagonal-angle)),
+            transparent calc((10 + 0.4) / 30 * var(--height)),
+            var(--white) calc((10 + 0.4) / 30 * var(--height)),
+            var(--white) calc((16 + 0.4) / 30 * var(--height)),
+            transparent calc((16 + 0.4) / 30 * var(--height))
+        );
+}
+
+.flag-area-united-kingdom .flag::after {
+    bottom: 0;
+    background-image:
+        linear-gradient(
+            var(--diagonal-angle),
+            transparent calc((15 + 11.8) / 30 * var(--height)),
+            var(--red) calc((15 + 11.8) / 30 * var(--height)),
+            var(--red) calc((17 + 11.8) / 30 * var(--height)),
+            transparent calc((17 + 11.8) / 30 * var(--height))
+        ),
+        linear-gradient(
+            calc(-1 * var(--diagonal-angle)),
+            transparent calc((15 + 9.8) / 30 * var(--height)),
+            var(--red) calc((15 + 9.8) / 30 * var(--height)),
+            var(--red) calc((17 + 9.8) / 30 * var(--height)),
+            transparent calc((17 + 9.8) / 30 * var(--height))
+        ),
+        linear-gradient(
+            var(--diagonal-angle),
+            transparent calc((12 + 11.8) / 30 * var(--height)),
+            var(--white) calc((12 + 11.8) / 30 * var(--height)),
+            var(--white) calc((18 + 11.8) / 30 * var(--height)),
+            transparent calc((18 + 11.8) / 30 * var(--height))
+        ),
+        linear-gradient(
+            calc(-1 * var(--diagonal-angle)),
+            transparent calc((12 + 11.8) / 30 * var(--height)),
+            var(--white) calc((12 + 11.8) / 30 * var(--height)),
+            var(--white) calc((18 + 11.8) / 30 * var(--height)),
+            transparent calc((18 + 11.8) / 30 * var(--height))
+        );
+}

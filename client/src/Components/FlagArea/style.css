@@ -19,8 +19,9 @@
 .flag-area .flag {
     --width: var(--default-flag-width);
     --aspect-ratio: var(--default-flag-aspect-ratio);
+    --height: calc(var(--width) * var(--aspect-ratio));
     width: var(--width);
-    height: calc(var(--width) * var(--aspect-ratio));
+    height: var(--height);
 
     --shadow-offset: .25rem;
     --shadow-blur: calc(2 * var(--shadow-offset));
