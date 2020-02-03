@@ -1,0 +1,79 @@
+.flag-area-switzerland {
+    --red: #da291c;
+    --white: #fff;
+}
+
+.flag-area-switzerland .flag {
+    --aspect-ratio: 1;
+    --width: 70vmin;
+
+    --outer-red-width: calc(6 / 32 * var(--width));
+    --cross-limb-length: calc(7 / 32 * var(--width));
+    --cross-limb-width: calc(6 / 32 * var(--width));
+
+    background-image:
+        linear-gradient(
+            0deg,
+            var(--red) 0 var(--outer-red-width),
+            transparent 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+                + var(--cross-limb-width)
+                + var(--cross-limb-length)
+            ),
+            var(--red) 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+                + var(--cross-limb-width)
+                + var(--cross-limb-length)
+                + var(--outer-red-width)
+            )
+        ),
+        /* Cross */
+        linear-gradient(
+            90deg,
+            var(--red) 0 var(--outer-red-width),
+            transparent 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+            ),
+            var(--white) 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+                + var(--cross-limb-width)
+            ),
+            transparent 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+                + var(--cross-limb-width)
+                + var(--cross-limb-length)
+            ),
+            var(--red) 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+                + var(--cross-limb-width)
+                + var(--cross-limb-length)
+                + var(--outer-red-width)
+            )
+        ),
+        linear-gradient(
+            0deg,
+            transparent 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+            ),
+            var(--white) 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+                + var(--cross-limb-width)
+            ),
+            transparent 0 calc(
+                var(--outer-red-width)
+                + var(--cross-limb-length)
+                + var(--cross-limb-width)
+                + var(--cross-limb-length)
+            )
+        )
+    ;
+    background-color: var(--red);
+}
