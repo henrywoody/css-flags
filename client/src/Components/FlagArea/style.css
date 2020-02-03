@@ -1,5 +1,4 @@
 :root {
-    --default-flag-width: 60vw;
     --default-flag-aspect-ratio: calc(2 / 3);
 }
 
@@ -17,9 +16,11 @@
 }
 
 .flag-area .flag {
-    --width: var(--default-flag-width);
     --aspect-ratio: var(--default-flag-aspect-ratio);
+
+    --width: 70vw;
     --height: calc(var(--width) * var(--aspect-ratio));
+
     width: var(--width);
     height: var(--height);
 
@@ -28,4 +29,11 @@
     box-shadow:
         var(--shadow-offset) var(--shadow-offset) var(--shadow-blur) var(--shadow-color),
         0 0 var(--shadow-blur) var(--shadow-color);
+}
+
+@media all and (min-aspect-ratio: 2/1) {
+    .flag-area .flag {
+        --height: 70vh;
+        --width: calc(var(--height) / var(--aspect-ratio));
+    }
 }
