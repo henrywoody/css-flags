@@ -1,0 +1,38 @@
+.flag-area-guyana {
+    --red: #ce1126;
+    --black: #000;
+    --yellow: #fcd116;
+    --white: #fff;
+    --green: #009e49;
+}
+
+.flag-area-guyana .flag {
+    --aspect-ratio: calc(3 / 5);
+
+    --inner-triangle-angle: calc(30.96deg * 2);
+    --outer-triangle-angle: calc(16.7deg * 2);
+
+    background-image:
+        conic-gradient(
+            from calc(-90deg - var(--inner-triangle-angle) / 2) at 44% 50%,
+            var(--red) 0 var(--inner-triangle-angle),
+            transparent 0 360deg
+        ),
+        conic-gradient(
+            from calc(-90deg - var(--inner-triangle-angle) / 2) at center,
+            var(--black) 0 var(--inner-triangle-angle),
+            transparent 0 360deg
+        ),
+        conic-gradient(
+            from calc(-90deg - var(--outer-triangle-angle) / 2) at 91% 50%,
+            var(--yellow) 0 var(--outer-triangle-angle),
+            transparent 0 360deg
+        ),
+        conic-gradient(
+            from calc(-90deg - var(--outer-triangle-angle) / 2) at 100% 50%,
+            var(--white) 0 var(--outer-triangle-angle),
+            transparent 0 360deg
+        )
+    ;
+    background-color: var(--green);
+}
