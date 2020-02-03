@@ -1,0 +1,75 @@
+.flag-area-north-macedonia {
+    --red: #ce2028;
+    --yellow: #f9d616;
+}
+
+.flag-area-north-macedonia .flag {
+    --aspect-ratio: calc(1 / 2);
+
+    --circle-radius: calc(var(--height) / 7);
+    --circle-outline-radius: calc(var(--circle-radius) * 9 / 8);
+
+    --vertical-ray-angular-width: 14.28deg;
+    --vertical-ray-offset: calc(6 / 56 * var(--height));
+
+    --horizontal-ray-anglular-width: 5.711deg;
+
+    --diagonal-h-offset: calc(3 / 35 * var(--height));
+    --diagonal-v-offset: calc(9 / 140 * var(--height));
+
+    --diagonal1-angular-offset: 54.31deg;
+    --diagonal2-angular-offset: 27.46deg;
+    --diagonal-angular-width: 8.223deg;
+
+    background-image:
+        radial-gradient(
+            circle at center,
+            var(--yellow) 0 var(--circle-radius),
+            var(--red) 0 var(--circle-outline-radius),
+            transparent 0 100%
+        ),
+        /* Top */
+        conic-gradient(
+            from calc(-1 * var(--vertical-ray-angular-width)) at 50% calc(50% - var(--vertical-ray-offset)),
+            var(--yellow) 0 calc(var(--vertical-ray-angular-width) * 2),
+            transparent 0 360deg
+        ),
+        /* Bottom */
+        conic-gradient(
+            from calc(-1 * var(--vertical-ray-angular-width) + 180deg) at 50% calc(50% + var(--vertical-ray-offset)),
+            var(--yellow) 0 calc(var(--vertical-ray-angular-width) * 2),
+            transparent 0 360deg
+        ),
+        /* Right & Left */
+        repeating-conic-gradient(
+            from calc(90deg - var(--horizontal-ray-anglular-width)) at center,
+            var(--yellow) 0 calc(var(--horizontal-ray-anglular-width) * 2),
+            transparent 0 180deg
+        ),
+        /* Top Right */
+        conic-gradient(
+            from var(--diagonal1-angular-offset) at calc(50% - var(--diagonal-h-offset)) calc(50% + var(--diagonal-v-offset)),
+            var(--yellow) 0 var(--diagonal-angular-width),
+            transparent 0 180deg
+        ),
+        /* Bottom Right */
+        conic-gradient(
+            from calc(90deg + var(--diagonal2-angular-offset)) at calc(50% - var(--diagonal-h-offset)) calc(50% - var(--diagonal-v-offset)),
+            var(--yellow) 0 var(--diagonal-angular-width),
+            transparent 0 360deg
+        ),
+        /* Bottom Left */
+        conic-gradient(
+            from calc(180deg + var(--diagonal1-angular-offset)) at calc(50% + var(--diagonal-h-offset)) calc(50% - var(--diagonal-v-offset)),
+            var(--yellow) 0 var(--diagonal-angular-width),
+            transparent 0 360deg
+        ),
+        /* Top Left */
+        conic-gradient(
+            from calc(270deg + var(--diagonal2-angular-offset)) at calc(50% + var(--diagonal-h-offset)) calc(50% + var(--diagonal-v-offset)),
+            var(--yellow) 0 var(--diagonal-angular-width),
+            transparent 0 360deg
+        )
+    ;
+    background-color: var(--red);
+}

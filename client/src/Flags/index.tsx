@@ -3,6 +3,7 @@ import DemocraticRepublicOfTheCongo from "./DemocraticRepublicOfTheCongo";
 import Greece from "./Greece";
 import Iceland from "./Iceland";
 import Japan from "./Japan";
+import NorthMacedonia from "./NorthMacedonia";
 import UnitedKingdom from "./UnitedKingdom";
 
 
@@ -11,6 +12,7 @@ const flags: React.ReactElement[] = [
     <Greece key="greece"/>,
     <Iceland key="iceland"/>,
     <Japan key="japan"/>,
+    <NorthMacedonia key="north-macedonia"/>,
     <UnitedKingdom key="united-kingdom"/>,
 ]
 
