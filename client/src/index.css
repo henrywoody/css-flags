@@ -1,6 +1,8 @@
 :root {
     --text-color: #fff;
+    --visited-link-color: #bbb;
     --background-color: #333;
+    --accent-background-color: #444;
     --shadow-color: #222;
 }
 
@@ -28,6 +30,19 @@ h2 {
 
 .viewport {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 1rem 1.5rem;
+}
+
+a {
+    color: var(--text-color);
+}
+
+a:visited {
+    color: var(--visited-link-color);
+}
+
+code {
+    font-family: monospace;
+    background-color: var(--accent-background-color);
 }

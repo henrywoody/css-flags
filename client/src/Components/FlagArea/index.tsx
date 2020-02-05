@@ -5,19 +5,31 @@ import "./style.css";
 
 type FlagAreaProps = {
     title: string;
-    flagComponents?: React.ReactElement[],
+    flagName?: string;
 }
 
-const FlagArea: React.FC<FlagAreaProps> = ({ title, flagComponents }) => {
+
+const FlagArea: React.FC<FlagAreaProps> = ({ title, flagName, children }) => {
     return (
         <div className={ `flag-area flag-area-${titleToKebabCase(title)} viewport` }>
-            <h2>{ title }</h2>
+            <div className="heading">
+                <h2 className="title">{ title }</h2>
+
+                { !!flagName && (
+                    <h3 className="flag-name">{ flagName }</h3>
+                )}
+            </div>
 
             <div className="flag-container">
                 <div className="flag">
-                    { flagComponents }
                 </div>
             </div>
+
+            { !!children && (
+                <div className="flag-description">
+                    { children }
+                </div>
+            )}
         </div>
     )
 }

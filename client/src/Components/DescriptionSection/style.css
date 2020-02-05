@@ -1,0 +1,19 @@
+section.description-section:not(:last-of-type) {
+    margin-bottom: 1rem;
+}
+
+section.description-section h3 {
+    margin-bottom: .5rem;
+}
+
+section.description-section .section-content {
+    padding: 0 1rem;
+}
+
+section.description-section p:not(:last-of-type) {
+    margin-bottom: .5rem;
+}
+
+section.description-section .citation-list {
+    padding-left: 1.5rem;
+}

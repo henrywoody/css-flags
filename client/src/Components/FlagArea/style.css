@@ -3,8 +3,18 @@
 }
 
 .flag-area {
+    margin-bottom: 5rem;
     display: flex;
     flex-flow: column;
+}
+
+.flag-area .heading {
+    margin-bottom: 2rem;
+}
+
+.flag-area .flag-name {
+    margin-top: .5rem;
+    margin-left: 1rem;
 }
 
 .flag-area .flag-container {
@@ -13,6 +23,7 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .flag-area .flag {
@@ -36,4 +47,9 @@
         --height: 70vh;
         --width: calc(var(--height) / var(--aspect-ratio));
     }
+}
+
+.flag-area .flag-description {
+    margin-top: 2rem;
+    padding: 0 10%;
 }
