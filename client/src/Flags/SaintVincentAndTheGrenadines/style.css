@@ -1,0 +1,46 @@
+.flag-area-saint-vincent-and-the-grenadines {
+    --blue: #005eb8;
+    --yellow: #ffcd00;
+    --green: #009a44;
+}
+
+.flag-area-saint-vincent-and-the-grenadines .flag {
+    --aspect-ratio: calc(2 / 3);
+
+    --diamond-narrow-angle: 53.14deg;
+    --diamond-wide-angle: calc((360deg - 2 * var(--diamond-narrow-angle)) / 2);
+
+    background-image:
+        linear-gradient(
+            90deg,
+            var(--blue) 0 calc(18 / 72 * var(--width)),
+            transparent 0 calc(54 / 72 * var(--width)),
+            var(--green) 0 calc(72 / 72 * var(--width))
+        ),
+        linear-gradient(
+            calc(var(--diamond-wide-angle) / 2),
+            transparent 0 49%,
+            var(--yellow) 0 calc(49% + 2.236 / 72 * var(--width)),
+            transparent 0 59.5%,
+            var(--yellow) 0 100%
+        ),
+        linear-gradient(
+            calc(-1 * var(--diamond-wide-angle) / 2),
+            transparent 0 49%,
+            var(--yellow) 0 calc(49% + 2.236 / 72 * var(--width)),
+            transparent 0 59.5%,
+            var(--yellow) 0 100%
+        ),
+        conic-gradient(
+            from calc(-1 * var(--diamond-narrow-angle) / 2) at 50% calc(100% - 22 / 48 * var(--height)),
+            var(--yellow) 0 var(--diamond-narrow-angle),
+            transparent 0 360deg
+        ),
+        conic-gradient(
+            from calc(-1 * var(--diamond-narrow-angle) / 2) at 50% calc(100% - 6 / 48 * var(--height)),
+            var(--green) 0 var(--diamond-narrow-angle),
+            transparent 0 360deg
+        )
+    ;
+    background-color: var(--yellow);
+}
