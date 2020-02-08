@@ -1,0 +1,31 @@
+.flag-area-qatar {
+    --white: #fff;
+    --maroon: #8a1538;
+}
+
+.flag-area-qatar .flag {
+    --aspect-ratio: calc(11 / 28);
+
+    --serration-angle: 16.99deg;
+    --serration-h-position: calc(144 / 504 * var(--width));
+    --serration-h-size: calc(36 / 504 * var(--width) + 1px);
+    --seration-v-size: calc(22 / 198 * var(--height));
+
+    background:
+        linear-gradient(
+            var(--serration-angle),
+            transparent 0 calc(2 / 3 * 100%),
+            var(--maroon) 0 100%
+        ) repeat-y var(--serration-h-position) 0 / var(--serration-h-size) var(--seration-v-size),
+        linear-gradient(
+            calc(-1 * var(--serration-angle)),
+            var(--maroon) 0 calc(1 / 3 * 100%),
+            transparent 0 100%
+        ) repeat-y var(--serration-h-position) 1px / var(--serration-h-size) var(--seration-v-size),
+        linear-gradient(
+            90deg,
+            var(--white) 0 calc(180 / 504 * var(--width)),
+            var(--maroon) 0 100%
+        )
+    ;
+}
