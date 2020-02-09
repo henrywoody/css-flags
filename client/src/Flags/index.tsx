@@ -13,6 +13,7 @@ import RepublicOfArtsakh from "./RepublicOfArtsakh";
 import SaintLucia from "./SaintLucia";
 import SaintVincentAndTheGrenadines from "./SaintVincentAndTheGrenadines";
 import Seychelles from "./Seychelles";
+import SouthAfrica from "./SouthAfrica";
 import Switzerland from "./Switzerland";
 import UnitedKingdom from "./UnitedKingdom";
 
@@ -32,6 +33,7 @@ const flags: React.ReactElement[] = [
     <SaintLucia key="saint-lucia"/>,
     <SaintVincentAndTheGrenadines key="saint-vincent-and-the-grenadines"/>,
     <Seychelles key="seychelles"/>,
+    <SouthAfrica key="south-africa"/>,
     <Switzerland key="switzerland"/>,
     <UnitedKingdom key="united-kingdom"/>,
 ]

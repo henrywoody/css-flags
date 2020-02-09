@@ -1,0 +1,53 @@
+.flag-area-south-africa {
+    --red: #E03C31;
+    --blue: #001489;
+    --green: #007749;
+    --white: #fff;
+    --gold: #FFB81C;
+    --black: #000;
+}
+
+.flag-area-south-africa .flag {
+    --aspect-ratio: calc(2 / 3);
+
+    --triangle-angle: 67.38deg;
+    --white-triangle-h-position: calc(50% + 9.01388 / 45 * var(--width));
+    --green-triangle-h-position: calc(50% + 5.40833 / 45 * var(--width));
+    --gold-triangle-h-position: calc(50% - 5.40833 / 45 * var(--width));
+    --black-triangle-h-position: calc(50% - 9.01388 / 45 * var(--width));
+    
+    background-image:
+        conic-gradient(
+            from calc(-90deg - var(--triangle-angle) / 2) at var(--black-triangle-h-position) 50%,
+            var(--black) 0 var(--triangle-angle),
+            transparent 0 360deg
+        ),
+        conic-gradient(
+            from calc(-90deg - var(--triangle-angle) / 2) at var(--gold-triangle-h-position) 50%,
+            var(--gold) 0 var(--triangle-angle),
+            transparent 0 360deg
+        ),
+        linear-gradient(
+            0deg,
+            transparent 0 calc(12 / 30 * var(--height)),
+            var(--green) 0 calc(18 / 30 * var(--height)),
+            transparent 0 calc(30 / 30 * var(--height))
+        ),
+        conic-gradient(
+            from calc(-90deg - var(--triangle-angle) / 2) at var(--green-triangle-h-position) 50%,
+            var(--green) 0 var(--triangle-angle),
+            transparent 0 360deg
+        ),
+        conic-gradient(
+            from calc(-90deg - var(--triangle-angle) / 2) at var(--white-triangle-h-position) 50%,
+            var(--white) 0 var(--triangle-angle),
+            transparent 0 360deg
+        ),
+        linear-gradient(
+            180deg,
+            var(--red) 0 calc(10 / 30 * var(--height)),
+            var(--white) 0 calc(20 / 30 * var(--height)),
+            var(--blue) 0 calc(30 / 30 * var(--height))
+        )
+    ;
+}
