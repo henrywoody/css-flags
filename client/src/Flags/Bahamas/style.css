@@ -1,0 +1,25 @@
+.flag-area-the-bahamas {
+    --black: #000;
+    --aquamarine: #00778b;
+    --gold: #ffc72c;
+}
+
+.flag-area-the-bahamas .flag {
+    --aspect-ratio: calc(1 / 2);
+
+    --root-three: 1.73205;
+
+    background-image:
+        conic-gradient(
+            from 240deg  at calc(3 * var(--root-three) / 12 * var(--width)) 50%,
+            var(--black) 0 60deg,
+            transparent 0 360deg
+        ),
+        linear-gradient(
+            0deg,
+            var(--aquamarine) 0 calc(1 / 3 * var(--height)),
+            var(--gold) 0 calc(2 / 3 * var(--height)),
+            var(--aquamarine) 0 calc(3 / 3 * var(--height))
+        )
+    ;
+}
