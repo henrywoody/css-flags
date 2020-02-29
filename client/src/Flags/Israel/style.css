@@ -1,0 +1,107 @@
+.flag-area-israel {
+    --blue: #00205b;
+    --white: #fff;
+}
+
+.flag-area-israel .flag {
+    --aspect-ratio: calc(8 / 11);
+
+    --circle-radius: calc(69 / 440 * var(--width));
+    --root-three: 1.73205;
+    --root-two: 1.41421;
+
+    --overflow-cover-size: calc(var(--circle-radius) / 2);
+    --overflow-diagonal-offset: calc(var(--circle-radius) / (2 * var(--root-two)));
+
+    background:
+        /* Trim Overflow */
+        conic-gradient( /* top */
+            from 150deg at 50% 1px,
+            transparent 0 60deg,
+            var(--white) 0 360deg
+        ) no-repeat 50% calc(var(--height) / 2 - var(--circle-radius) - 1px) / var(--overflow-cover-size) var(--overflow-cover-size),
+        conic-gradient( /* bottom */
+            from -30deg at 50% calc(100% - 2px),
+            transparent 0 60deg,
+            var(--white) 0 360deg
+        ) no-repeat 50% calc(var(--height) / 2 + var(--circle-radius) + 2px - var(--overflow-cover-size)) / var(--overflow-cover-size) var(--overflow-cover-size),
+        linear-gradient( /* top right */
+            120deg,
+            transparent 0 calc(74% - 1px),
+            var(--white) 0 100%
+        ) no-repeat calc(50% + var(--overflow-diagonal-offset)) calc(50% - var(--overflow-diagonal-offset)) / calc(var(--overflow-cover-size) * 3) var(--overflow-cover-size),
+        linear-gradient( /* bottom right */
+            60deg,
+            transparent 0 calc(74% - 1px),
+            var(--white) 0 100%
+        ) no-repeat calc(50% + var(--overflow-diagonal-offset)) calc(50% + var(--overflow-diagonal-offset)) / calc(var(--overflow-cover-size) * 3) var(--overflow-cover-size),
+        linear-gradient( /* top left */
+            60deg,
+            var(--white) 0 calc(26% + 1px),
+            transparent 0 100%
+        ) no-repeat calc(50% - var(--overflow-diagonal-offset)) calc(50% - var(--overflow-diagonal-offset)) / calc(var(--overflow-cover-size) * 3) var(--overflow-cover-size),
+        linear-gradient( /* bottom left */
+            120deg,
+            var(--white) 0 calc(26% + 1px),
+            transparent 0 100%
+        ) no-repeat calc(50% - var(--overflow-diagonal-offset)) calc(50% + var(--overflow-diagonal-offset)) / calc(var(--overflow-cover-size) * 3) var(--overflow-cover-size),
+
+        /* Upper Triangle */
+        linear-gradient(
+            60deg,
+            transparent 0 calc(63% + 11 / 440 * var(--width) / 2),
+            transparent 0 100% /* white */
+        ) no-repeat 50% calc(50% - var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+        linear-gradient(
+            120deg,
+            transparent 0 calc(37% - 11 / 440 * var(--width) / 2), /* white */
+            var(--blue) 0 calc(37% + 11 / 440 * var(--width) / 2),
+            transparent 0 100%
+        ) no-repeat 50% calc(50% - var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+        linear-gradient(
+            60deg,
+            transparent 0 calc(63% - 11 / 440 * var(--width) / 2),
+            var(--blue) 0 calc(63% + 11 / 440 * var(--width) / 2),
+            transparent 0 100% /* white */
+        ) no-repeat 50% calc(50% - var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+        linear-gradient(
+            0deg,
+            var(--blue) 0 calc(11 / 440 * var(--width)),
+            transparent 0 100%
+        ) no-repeat 50% calc(50% - var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+
+        /* Lower Triangle */
+        linear-gradient(
+            60deg,
+            transparent 0 calc(63% + 11 / 440 * var(--width) / 2),
+            transparent 0 100%
+        ) no-repeat 50% calc(50% + var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+        linear-gradient(
+            60deg,
+            transparent 0 calc(37% - 11 / 440 * var(--width) / 2),
+            var(--blue) 0 calc(37% + 11 / 440 * var(--width) / 2),
+            transparent 0 100%
+        ) no-repeat 50% calc(50% + var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+        linear-gradient(
+            120deg,
+            transparent 0 calc(63% - 11 / 440 * var(--width) / 2),
+            var(--blue) 0 calc(63% + 11 / 440 * var(--width) / 2),
+            transparent 0 100%
+        ) no-repeat 50% calc(50% + var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+        linear-gradient(
+            0deg,
+            transparent 0 calc(100% - 11 / 440 * var(--width)),
+            var(--blue) 0 100%
+        ) no-repeat 50% calc(50% + var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+
+        /* Background */
+        linear-gradient(
+            0deg,
+            var(--white) 0 calc(3 / 32 * var(--height)),
+            var(--blue) 0 calc(8 / 32 * var(--height)),
+            var(--white) 0 calc(24 / 32 * var(--height)),
+            var(--blue) 0 calc(29 / 32 * var(--height)),
+            var(--white) 0 calc(32 / 32 * var(--height))
+        )
+    ;
+}
