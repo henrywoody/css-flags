@@ -1,0 +1,61 @@
+.flag-area-suriname {
+    --green: #007a33;
+    --white: #fff;
+    --red: #c8102e;
+    --yellow: #ffcd00;
+}
+
+.flag-area-suriname .flag {
+    --aspect-ratio: calc(2 / 3);
+
+    --sin-18: 0.30902;
+    --cos-18: 0.95106;
+    --tan-18: 0.32492;
+    --sin-54: 0.80902;
+    --tan-54: 1.37638;
+
+    --star-radius: calc(4 / 30 * var(--width));
+    --star-width: calc(var(--star-radius) * 2);
+    --star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
+    --star-position: no-repeat 50% 50% / var(--star-width) var(--star-height);
+    --star-position-bottom-coverer: no-repeat 50% calc(50% + 1px) / var(--star-width) calc(var(--star-height) + 1px);
+    --star-position-left-half: no-repeat calc(50% - var(--star-radius) / 2) 50% / calc(var(--star-width) / 2) var(--star-height);
+    --star-position-right-half: no-repeat calc(50% + var(--star-radius) / 2) 50% / calc(var(--star-width) / 2) var(--star-height);
+    --star-interior-angle: 36deg;
+    --star-top-side-h-position: calc(0% + var(--star-radius) * (1 - var(--cos-18)));
+    --star-top-side-v-position: calc(0% + var(--star-radius) * (1 - var(--sin-18)));
+
+    background:
+        /* Star */
+        conic-gradient(
+            from 90deg at var(--star-top-side-h-position) var(--star-top-side-v-position),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) var(--star-position-left-half),
+        conic-gradient(
+            from calc(270deg - var(--star-interior-angle)) at calc(100% - var(--star-top-side-h-position)) var(--star-top-side-v-position),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) var(--star-position-right-half),
+        conic-gradient(
+            from calc(180deg - 108deg / 2) at 50% calc(100% - var(--star-height) * var(--tan-18) / var(--tan-54) - 1px),
+            var(--red) 0 108deg,
+            transparent 0 360deg
+        ) var(--star-position-bottom-coverer),
+        conic-gradient(
+            from calc(180deg - var(--star-interior-angle) / 2) at 50% 0%,
+            var(--yellow) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) var(--star-position),
+
+        /* Background */
+        linear-gradient(
+            0deg,
+            var(--green) 0 calc(4 / 20 * var(--height)),
+            var(--white) 0 calc(6 / 20 * var(--height)),
+            var(--red) 0 calc(14 / 20 * var(--height)),
+            var(--white) 0 calc(16 / 20 * var(--height)),
+            var(--green) 0 calc(20 / 20 * var(--height))
+        )
+    ;
+}
