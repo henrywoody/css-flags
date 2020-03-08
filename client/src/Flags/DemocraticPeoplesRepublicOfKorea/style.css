@@ -1,0 +1,67 @@
+.flag-area-democratic-peoples-republic-of-korea {
+	--blue: #024fa2;
+	--red: #ed1c27;
+	--white: #fff;
+}
+
+.flag-area-democratic-peoples-republic-of-korea .flag {
+	--aspect-ratio: calc(1 / 2);
+
+	--star-color: var(--red);
+	--star-background-color: var(--white);
+	--star-radius: calc(15.5 / 144 * var(--width));
+    --star-width: calc(var(--star-radius) * 2);
+	--star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
+	--star-x-position: calc(48 / 144 * var(--width) - var(--star-radius));
+	--star-y-position: calc(36 / 72 * var(--star-height) + var(--star-radius) * 13 / 32);
+    --star-sizing: no-repeat var(--star-x-position) var(--star-y-position) / var(--star-width) var(--star-height);
+    --star-sizing-bottom-coverer: no-repeat var(--star-x-position) calc(var(--star-y-position) + 1px) / var(--star-width) calc(var(--star-height) + 1px);
+    --star-sizing-left-half: no-repeat calc(var(--star-x-position)) var(--star-y-position) / calc(var(--star-width) / 2) var(--star-height);
+    --star-sizing-right-half: no-repeat calc(var(--star-x-position) + var(--star-radius)) var(--star-y-position) / calc(var(--star-width) / 2) var(--star-height);
+    --star-interior-angle: 36deg;
+    --star-top-side-h-position: calc(0% + var(--star-radius) * (1 - var(--cos-18)));
+	--star-top-side-v-position: calc(0% + var(--star-radius) * (1 - var(--sin-18)));
+
+	--star-circle-radius: calc(16 / 144 * var(--width));
+
+	background:
+		/* Star */
+		conic-gradient(
+            from 90deg at var(--star-top-side-h-position) var(--star-top-side-v-position),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) var(--star-sizing-left-half),
+        conic-gradient(
+            from calc(270deg - var(--star-interior-angle)) at calc(100% - var(--star-top-side-h-position)) var(--star-top-side-v-position),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) var(--star-sizing-right-half),
+        conic-gradient(
+            from calc(180deg - 108deg / 2) at 50% calc(100% - var(--star-height) * var(--tan-18) / var(--tan-54) - 1px),
+            var(--star-background-color) 0 108deg,
+            transparent 0 360deg
+        ) var(--star-sizing-bottom-coverer),
+        conic-gradient(
+            from calc(180deg - var(--star-interior-angle) / 2) at 50% 0%,
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) var(--star-sizing),
+
+		/* Star Circle */
+		radial-gradient(
+			circle at calc(48 / 144 * var(--width)) 50%,
+			var(--white) 0 var(--star-circle-radius),
+			transparent 0 100%
+		),
+
+		/* Background */
+		linear-gradient(
+			0deg,
+			var(--blue) 0 calc(12 / 72 * var(--height)),
+			var(--white) 0 calc(14 / 72 * var(--height)),
+			var(--red) 0 calc(58 / 72 * var(--height)),
+			var(--white) 0 calc(60 / 72 * var(--height)),
+			var(--blue) 0 calc(72 / 72 * var(--height))
+		)
+	;
+}
