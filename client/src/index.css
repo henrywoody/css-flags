@@ -4,6 +4,13 @@
     --background-color: #333;
     --accent-background-color: #444;
     --shadow-color: #222;
+
+    /* Star constants */
+    --sin-18: 0.30902;
+    --cos-18: 0.95106;
+    --tan-18: 0.32492;
+    --sin-54: 0.80902;
+    --tan-54: 1.37638;
 }
 
 *,

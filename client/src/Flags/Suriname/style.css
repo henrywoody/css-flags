@@ -8,12 +8,8 @@
 .flag-area-suriname .flag {
     --aspect-ratio: calc(2 / 3);
 
-    --sin-18: 0.30902;
-    --cos-18: 0.95106;
-    --tan-18: 0.32492;
-    --sin-54: 0.80902;
-    --tan-54: 1.37638;
-
+    --star-color: var(--yellow);
+	--star-background-color: var(--red);
     --star-radius: calc(4 / 30 * var(--width));
     --star-width: calc(var(--star-radius) * 2);
     --star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
@@ -39,12 +35,12 @@
         ) var(--star-position-right-half),
         conic-gradient(
             from calc(180deg - 108deg / 2) at 50% calc(100% - var(--star-height) * var(--tan-18) / var(--tan-54) - 1px),
-            var(--red) 0 108deg,
+            var(--star-background-color) 0 108deg,
             transparent 0 360deg
         ) var(--star-position-bottom-coverer),
         conic-gradient(
             from calc(180deg - var(--star-interior-angle) / 2) at 50% 0%,
-            var(--yellow) 0 var(--star-interior-angle),
+            var(--star-color) 0 var(--star-interior-angle),
             transparent 0 360deg
         ) var(--star-position),
 
