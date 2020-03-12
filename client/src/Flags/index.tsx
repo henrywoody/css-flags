@@ -1,6 +1,7 @@
 import React from "react";
 import Bahamas from "./Bahamas";
 import Botswana from "./Botswana";
+import Cuba from "./Cuba";
 import DemocraticPeoplesRepublicOfKorea from "./DemocraticPeoplesRepublicOfKorea";
 import DemocraticRepublicOfTheCongo from "./DemocraticRepublicOfTheCongo";
 import Greece from "./Greece";
@@ -31,6 +32,7 @@ import UnitedStatesOfAmerica from "./UnitedStatesOfAmerica";
 const flags: React.ReactElement[] = [
     <Bahamas key="bahamas"/>,
     <Botswana key="botswana"/>,
+    <Cuba key="cuba"/>,
     <DemocraticPeoplesRepublicOfKorea key="democratic-peoples-republic-of-korea"/>,
     <DemocraticRepublicOfTheCongo key="democratic-republic-of-the-congo"/>,
     <Greece key="greece"/>,
