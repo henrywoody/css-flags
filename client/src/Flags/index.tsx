@@ -24,6 +24,7 @@ import Suriname from "./Suriname";
 import Switzerland from "./Switzerland";
 import Togo from "./Togo";
 import UnitedKingdom from "./UnitedKingdom";
+import UnitedStatesOfAmerica from "./UnitedStatesOfAmerica";
 
 
 const flags: React.ReactElement[] = [
@@ -52,6 +53,7 @@ const flags: React.ReactElement[] = [
     <Switzerland key="switzerland"/>,
     <Togo key="togo"/>,
     <UnitedKingdom key="united-kingdom"/>,
+    <UnitedStatesOfAmerica key="united-states-of-america"/>,
 ]
 
 export default flags;
