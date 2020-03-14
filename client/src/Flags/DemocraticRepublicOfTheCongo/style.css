@@ -6,9 +6,20 @@
 
 .flag-area-democratic-republic-of-the-congo .flag {
     --aspect-ratio: calc(3 / 4);
-    background-color: var(--blue);
+
     --diagonal-angle: -31deg;
-    background-image:
+
+    --star-color: var(--yellow);
+	--star-background-color: var(--blue);
+    --star-radius: calc(0.157 * var(--width));
+	--star-x-position: calc(0.034 * var(--width));
+	--star-y-position: calc(0.051 * var(--height));
+
+    background:
+        /* Star */
+        var(--single-five-pointed-star),
+
+        /* Background/Stripe */
         linear-gradient(
             var(--diagonal-angle),
             transparent 41.3%,
@@ -16,43 +27,7 @@
             var(--red) 0 55.5%,
             var(--yellow) 0 58.7%,
             transparent 58.7%
-        );
-}
-
-.flag-area-democratic-republic-of-the-congo .flag::before {
-    --size: calc(var(--width) / 3);
-    --background-color: var(--blue);
-    --star-color: var(--yellow);
-
-    content: "";
-    width: var(--size);
-    height: var(--size);
-    margin-top: 2.5%;
-    margin-left: 2.5%;
-    display: block;
-
-    --triangle1-gradient-stop: 88.2%;
-    --triangle1-h-offset: calc(-0.5 * var(--size));
-    --triangle1-v-offset: calc(0.896 * var(--size) + 1px);
-
-    --triangle2-gradient-stop: 78.9%;
-    --triangle2-h-offset1: calc(-0.5 * var(--size));
-    --triangle2-h-offset2: calc(-1 * var(--triangle2-h-offset1));
-    --triangle2-v-offset: calc(-0.105 * var(--size));
-
-    --triangle3-gradient-stop: 81%;
-    --triangle3-h-offset: calc(-0.5 * var(--size));
-    --triangle3-v-offset: calc(0.3675 * var(--size));
-
-    background:
-        linear-gradient(216deg, transparent var(--triangle1-gradient-stop), var(--background-color) var(--triangle1-gradient-stop)) calc(var(--triangle1-h-offset) - 1px) var(--triangle1-v-offset),
-        linear-gradient(-216deg, transparent var(--triangle1-gradient-stop), var(--background-color) var(--triangle1-gradient-stop)) calc(var(--triangle1-h-offset) + 1px) var(--triangle1-v-offset),
-
-        linear-gradient(108deg, transparent var(--triangle2-gradient-stop), var(--star-color) var(--triangle2-gradient-stop)) calc(var(--triangle2-h-offset1) + 1px) var(--triangle2-v-offset),
-        linear-gradient(-108deg, transparent var(--triangle2-gradient-stop), var(--star-color) var(--triangle2-gradient-stop)) calc(var(--triangle2-h-offset2) - 1px) var(--triangle2-v-offset),
-
-        linear-gradient(36deg, transparent var(--triangle3-gradient-stop), var(--star-color) var(--triangle3-gradient-stop)) var(--triangle3-h-offset) var(--triangle3-v-offset),
-        linear-gradient(-36deg, transparent var(--triangle3-gradient-stop), var(--star-color) var(--triangle3-gradient-stop)) var(--triangle3-h-offset) var(--triangle3-v-offset)
+        )
     ;
-    background-size: var(--size) var(--size);
+    background-color: var(--blue);
 }

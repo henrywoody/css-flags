@@ -11,41 +11,15 @@
 	--star-color: var(--white);
 	--star-background-color: var(--red);
 	--star-radius: calc(19 / 100 * var(--height));
-    --star-width: calc(var(--star-radius) * 2);
-	--star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
 	--star-position: calc(1.5 / 5 * var(--height) - var(--star-radius));
-    --star-sizing: no-repeat var(--star-position) var(--star-position) / var(--star-width) var(--star-height);
-    --star-sizing-bottom-coverer: no-repeat var(--star-position) calc(var(--star-position) + 1px) / var(--star-width) calc(var(--star-height) + 1px);
-    --star-sizing-left-half: no-repeat calc(var(--star-position)) var(--star-position) / calc(var(--star-width) / 2) var(--star-height);
-    --star-sizing-right-half: no-repeat calc(var(--star-position) + var(--star-radius)) var(--star-position) / calc(var(--star-width) / 2) var(--star-height);
-    --star-interior-angle: 36deg;
-    --star-top-side-h-position: calc(0% + var(--star-radius) * (1 - var(--cos-18)));
-	--star-top-side-v-position: calc(0% + var(--star-radius) * (1 - var(--sin-18)));
+	--star-x-position: var(--star-position);
+	--star-y-position: var(--star-position);
 
 	--canton-size: calc(3 / 5 * var(--height));
 
 	background:
 		/* Star */
-		conic-gradient(
-            from 90deg at var(--star-top-side-h-position) var(--star-top-side-v-position),
-            var(--star-color) 0 var(--star-interior-angle),
-            transparent 0 360deg
-        ) var(--star-sizing-left-half),
-        conic-gradient(
-            from calc(270deg - var(--star-interior-angle)) at calc(100% - var(--star-top-side-h-position)) var(--star-top-side-v-position),
-            var(--star-color) 0 var(--star-interior-angle),
-            transparent 0 360deg
-        ) var(--star-sizing-right-half),
-        conic-gradient(
-            from calc(180deg - 108deg / 2) at 50% calc(100% - var(--star-height) * var(--tan-18) / var(--tan-54) - 1px),
-            var(--star-background-color) 0 108deg,
-            transparent 0 360deg
-        ) var(--star-sizing-bottom-coverer),
-        conic-gradient(
-            from calc(180deg - var(--star-interior-angle) / 2) at 50% 0%,
-            var(--star-color) 0 var(--star-interior-angle),
-            transparent 0 360deg
-        ) var(--star-sizing),
+		var(--single-five-pointed-star),
 
 		/* Canton */
 		linear-gradient(
