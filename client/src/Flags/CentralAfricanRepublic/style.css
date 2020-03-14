@@ -1,0 +1,39 @@
+.flag-area-central-african-republic {
+	--blue: #003082;
+	--white: #fff;
+	--green: #289728;
+	--yellow: #ffce00;
+	--red: #d21034;
+}
+
+.flag-area-central-african-republic .flag {
+	--aspect-ratio: calc(3 / 5);
+
+	--stripe-width: calc(1 / 4 * var(--height));
+
+	--star-color: var(--yellow);
+	--star-background-color: var(--blue);
+	--star-radius: calc(8 / 120 * var(--width));
+	--star-x-position: calc(var(--stripe-width) - var(--star-radius));
+	--star-y-position: calc(9 / 72 * var(--height) - var(--star-radius));
+
+	background:
+		/* Star */
+		var(--single-five-pointed-star),
+
+		/* Stripes */
+		linear-gradient(
+			90deg,
+			transparent 0 calc(var(--width) / 2 - var(--stripe-width) / 2),
+			var(--red) 0 calc(var(--width) / 2 + var(--stripe-width) / 2),
+			transparent 0 100%
+		),
+		linear-gradient(
+			180deg,
+			var(--blue) 0 calc(1 * var(--stripe-width)),
+			var(--white) 0 calc(2 * var(--stripe-width)),
+			var(--green) 0 calc(3 * var(--stripe-width)),
+			var(--yellow) 0 calc(4 * var(--stripe-width))
+		)
+	;
+}
