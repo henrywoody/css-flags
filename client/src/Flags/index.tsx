@@ -31,6 +31,7 @@ import SaintVincentAndTheGrenadines from "./SaintVincentAndTheGrenadines";
 import Seychelles from "./Seychelles";
 import SouthAfrica from "./SouthAfrica";
 import Suriname from "./Suriname";
+import Sweden from "./Sweden";
 import Switzerland from "./Switzerland";
 import Togo from "./Togo";
 import UnitedKingdom from "./UnitedKingdom";
@@ -70,6 +71,7 @@ const flags: React.ReactElement[] = [
     <Seychelles key="seychelles"/>,
     <SouthAfrica key="south-africa"/>,
     <Suriname key="suriname"/>,
+    <Sweden key="sweden"/>,
     <Switzerland key="switzerland"/>,
     <Togo key="togo"/>,
     <UnitedKingdom key="united-kingdom"/>,
