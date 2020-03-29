@@ -1,0 +1,17 @@
+.flag-area-palau {
+	--blue: #418fde;
+	--yellow: #f7ea48;
+}
+
+.flag-area-palau .flag {
+	--aspect-ratio: calc(5 / 8);
+
+	background-image:
+		radial-gradient(
+			circle at calc(7 / 16 * var(--width)) 50%,
+			var(--yellow) 0 calc(3 / 16 * var(--width)),
+			transparent 0 100%
+		)
+	;
+	background-color: var(--blue);
+}
