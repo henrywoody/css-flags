@@ -1,0 +1,112 @@
+.flag-area-republic-of-china {
+	--blue: #000095;
+	--red: #fe0000;
+	--white: #fff;
+}
+
+.flag-area-republic-of-china .flag {
+	--aspect-ratio: calc(2 / 3);
+
+	--canton-width: calc(1 / 2 * var(--width));
+	--canton-height: calc(1 / 2 * var(--height));
+	--circle-radius: calc(15 / 120 * var(--canton-width));
+	--ray-angle: 30deg;
+	--ray-radius: calc(30 / 80 * var(--canton-height));
+	--ray-box-width: calc(30 / 120 * var(--canton-width));
+	--ray-box-height: var(--ray-radius);
+
+	--sin-60: 0.86603;
+	--cos-60: 0.5;
+	--sin-30: 0.5;
+	--cos-30: 0.86603;
+
+	background:
+		/* Sun Circle */
+		radial-gradient(
+			circle at calc(1 / 2 * var(--canton-width)) calc(1 / 2 * var(--canton-height)),
+			var(--white) 0 var(--circle-radius),
+			transparent 0 100%
+		),
+		radial-gradient(
+			circle at calc(1 / 2 * var(--canton-width)) calc(1 / 2 * var(--canton-height)),
+			var(--blue) 0 calc(17 / 120 * var(--canton-width)),
+			transparent 0 100%
+		),
+
+		/* Sun Rays (going clockwise starting from the top) */
+		/* top */
+		conic-gradient(
+			from calc(180deg - var(--ray-angle) / 2) at 50% 0%,
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2 - var(--ray-box-width) / 2) calc(10 / 80 * var(--canton-height)) / var(--ray-box-width) var(--ray-box-height),
+		conic-gradient(
+			from calc(180deg + 30deg - var(--ray-angle) / 2) at calc(var(--ray-radius) * var(--cos-60)) calc(100% - var(--ray-radius) * var(--sin-60)),
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2) calc(10 / 80 * var(--canton-height)) / var(--ray-box-width) var(--ray-box-height),
+		conic-gradient(
+			from calc(180deg + 60deg - var(--ray-angle) / 2) at calc(var(--ray-radius) * var(--cos-30)) calc(100% - var(--ray-radius) * var(--sin-30)),
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2) calc(10 / 80 * var(--canton-height)) / var(--ray-box-width) var(--ray-box-height),
+
+		/* right */
+		conic-gradient(
+			from calc(180deg + 90deg - var(--ray-angle) / 2) at 100% 50%,
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2) calc(var(--canton-height) / 2 - var(--ray-box-height) / 2) / var(--ray-box-width) var(--ray-box-height),
+		conic-gradient(
+			from calc(180deg + 120deg - var(--ray-angle) / 2) at calc(var(--ray-radius) * var(--cos-30)) calc(var(--ray-radius) * var(--sin-30)),
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2) calc(var(--canton-height) / 2) / var(--ray-box-width) var(--ray-box-height),
+		conic-gradient(
+			from calc(180deg + 150deg - var(--ray-angle) / 2) at calc(var(--ray-radius) * var(--cos-60)) calc(var(--ray-radius) * var(--sin-60)),
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2) calc(var(--canton-height) / 2) / var(--ray-box-width) var(--ray-box-height),
+
+		/* bottom */
+		conic-gradient(
+			from calc(180deg + 180deg - var(--ray-angle) / 2) at 50% 100%,
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2 - var(--ray-box-width) / 2) calc(var(--canton-height) / 2) / var(--ray-box-width) var(--ray-box-height),
+		conic-gradient(
+			from calc(180deg + 210deg - var(--ray-angle) / 2) at calc(100% - var(--ray-radius) * var(--cos-60)) calc(var(--ray-radius) * var(--sin-60)),
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2 - var(--ray-box-width)) calc(var(--canton-height) / 2) / var(--ray-box-width) var(--ray-box-height),
+		conic-gradient(
+			from calc(180deg + 240deg - var(--ray-angle) / 2) at calc(100% - var(--ray-radius) * var(--cos-30)) calc(var(--ray-radius) * var(--sin-30)),
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2 - var(--ray-box-width)) calc(var(--canton-height) / 2) / var(--ray-box-width) var(--ray-box-height),
+
+		/* left */
+		conic-gradient(
+			from calc(180deg + 270deg - var(--ray-angle) / 2) at 0% 50%,
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2 - var(--ray-box-width)) calc(var(--canton-height) / 2 - var(--ray-box-height) / 2) / var(--ray-box-width) var(--ray-box-height),
+		conic-gradient(
+			from calc(180deg + 300deg - var(--ray-angle) / 2) at calc(100% - var(--ray-radius) * var(--cos-30)) calc(100% - var(--ray-radius) * var(--sin-30)),
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2 - var(--ray-box-width)) calc(var(--canton-height) / 2 - var(--ray-box-height)) / var(--ray-box-width) var(--ray-box-height),
+		conic-gradient(
+			from calc(180deg + 330deg - var(--ray-angle) / 2) at calc(100% - var(--ray-radius) * var(--cos-60)) calc(100% - var(--ray-radius) * var(--sin-60)),
+			var(--white) 0 var(--ray-angle),
+			transparent 0 360deg
+		) no-repeat calc(var(--canton-width) / 2 - var(--ray-box-width)) calc(var(--canton-height) / 2 - var(--ray-box-height)) / var(--ray-box-width) var(--ray-box-height),
+
+		/* Canton background */
+		linear-gradient(
+			0deg,
+			var(--blue) 0 100%
+		) no-repeat 0rem 0rem / var(--canton-width) var(--canton-height)
+	;
+	background-color: var(--red);
+}
