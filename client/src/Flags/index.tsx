@@ -10,6 +10,7 @@ import DemocraticRepublicOfTheCongo from "./DemocraticRepublicOfTheCongo";
 import Denmark from "./Denmark";
 import Estonia from "./Estonia";
 import Finland from "./Finland";
+import France from "./France";
 import Germany from "./Germany";
 import Greece from "./Greece";
 import Guyana from "./Guyana";
@@ -53,6 +54,7 @@ const flags: React.ReactElement[] = [
     <Denmark key="denmark"/>,
     <Estonia key="estonia"/>,
     <Finland key="finland"/>,
+    <France key="france"/>,
     <Germany key="germany"/>,
     <Greece key="greece"/>,
     <Guyana key="guyana"/>,
