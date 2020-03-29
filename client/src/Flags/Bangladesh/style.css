@@ -1,0 +1,17 @@
+.flag-area-bangladesh {
+	--green: #006a4e;
+	--red: #f42a41;
+}
+
+.flag-area-bangladesh .flag {
+	--aspect-ratio: calc(3 / 5);
+
+	background-image:
+		radial-gradient(
+			circle at calc(4.5 / 10 * var(--width)) 50%,
+			var(--red) 0 calc(2 / 10 * var(--width)),
+			transparent 0 100%
+		)
+	;
+	background-color: var(--green);
+}
