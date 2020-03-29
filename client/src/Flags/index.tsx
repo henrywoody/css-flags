@@ -15,6 +15,7 @@ import Laos from "./Laos";
 import Maldives from "./Maldives";
 import NorthMacedonia from "./NorthMacedonia";
 import Palestine from "./Palestine";
+import PeoplesRepublicOfChina from "./PeoplesRepublicOfChina";
 import Qatar from "./Qatar";
 import RepublicOfArtsakh from "./RepublicOfArtsakh";
 import RepublicOfKorea from "./RepublicOfKorea";
@@ -47,6 +48,7 @@ const flags: React.ReactElement[] = [
     <Maldives key="maldives"/>,
     <NorthMacedonia key="north-macedonia"/>,
     <Palestine key="palestine"/>,
+    <PeoplesRepublicOfChina key="peoples-republic-of-china"/>,
     <Qatar key="qatar"/>,
     <RepublicOfArtsakh key="republic-of-artsakh"/>,
     <RepublicOfKorea key="republic-of-korea"/>,

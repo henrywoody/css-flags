@@ -9,7 +9,11 @@
     --sin-18: 0.30902;
     --cos-18: 0.95106;
     --tan-18: 0.32492;
+
+    --tan-36: 0.72654;
+
     --sin-54: 0.80902;
+    --cos-54: 0.58779;
     --tan-54: 1.37638;
 }
 
@@ -68,6 +72,7 @@ code {
             Sizing and position variables should be defined relative to --width and --height rather than using % units.
     */
     --star-interior-angle: 36deg;
+    --star-indent-angle: 108deg;
     --star-width: calc(var(--star-radius) * 2);
 	--star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
     --star-sizing: no-repeat var(--star-x-position) var(--star-y-position) / var(--star-width) var(--star-height);
