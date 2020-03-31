@@ -1,0 +1,24 @@
+.flag-area-united-arab-emirates {
+	--green: #00843d;
+	--white: #fff;
+	--black: #000;
+	--red: #ff0000;
+}
+
+.flag-area-united-arab-emirates .flag {
+	--aspect-ratio: calc(1 / 2);
+
+	background-image:
+		linear-gradient(
+			90deg,
+			var(--red) 0 calc(1 / 4 * var(--width)),
+			transparent 0 calc(4 / 4 * var(--width))
+		),
+		linear-gradient(
+			180deg,
+			var(--green) 0 calc(1 / 3 * var(--height)),
+			var(--white) 0 calc(2 / 3 * var(--height)),
+			var(--black) 0 calc(3 / 3 * var(--height))
+		)
+	;
+}
