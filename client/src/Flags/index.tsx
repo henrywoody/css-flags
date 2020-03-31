@@ -19,6 +19,7 @@ import Israel from "./Israel";
 import Jamaica from "./Jamaica";
 import Japan from "./Japan";
 import Laos from "./Laos";
+import Latvia from "./Latvia";
 import Maldives from "./Maldives";
 import NorthMacedonia from "./NorthMacedonia";
 import Norway from "./Norway";
@@ -64,6 +65,7 @@ const flags: React.ReactElement[] = [
     <Jamaica key="jamaica"/>,
     <Japan key="japan"/>,
     <Laos key="laos"/>,
+    <Latvia key="latvia"/>,
     <Maldives key="maldives"/>,
     <NorthMacedonia key="north-macedonia"/>,
     <Norway key="norway"/>,
