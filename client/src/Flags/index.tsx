@@ -39,6 +39,7 @@ import SaintLucia from "./SaintLucia";
 import SaintVincentAndTheGrenadines from "./SaintVincentAndTheGrenadines";
 import Seychelles from "./Seychelles";
 import SouthAfrica from "./SouthAfrica";
+import SouthSudan from "./SouthSudan";
 import Sudan from "./Sudan";
 import Suriname from "./Suriname";
 import Sweden from "./Sweden";
@@ -94,6 +95,7 @@ const flags: React.ReactElement[] = [
     <SaintVincentAndTheGrenadines key="saint-vincent-and-the-grenadines"/>,
     <Seychelles key="seychelles"/>,
     <SouthAfrica key="south-africa"/>,
+    <SouthSudan key="south-sudan"/>,
     <Sudan key="sudan"/>,
     <Suriname key="suriname"/>,
     <Sweden key="sweden"/>,
