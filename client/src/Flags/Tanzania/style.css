@@ -1,0 +1,23 @@
+.flag-area-tanzania {
+	--green: #1eb53a;
+	--yellow: #fcd116;
+	--black: #000;
+	--blue: #00a3dd;
+}
+
+.flag-area-tanzania .flag {
+	--aspect-ratio: calc(2 / 3);
+
+	--diagonal-angle: 33.69deg;
+
+	background-image:
+		linear-gradient(
+			calc(180deg - var(--diagonal-angle)),
+			var(--green) 0 calc(50% - 19 / 144 * var(--width)),
+			var(--yellow) 0 calc(50% - 13 / 144 * var(--width)),
+			var(--black) 0 calc(50% + 13 / 144 * var(--width)),
+			var(--yellow) 0 calc(50% + 19 / 144 * var(--width)),
+			var(--blue) 0 100%
+		)
+	;
+}
