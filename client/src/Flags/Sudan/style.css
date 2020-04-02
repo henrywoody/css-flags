@@ -1,0 +1,27 @@
+.flag-area-sudan {
+	--red: #c8102e;
+	--white: #fff;
+	--black: #000;
+	--green: #007a33;
+}
+
+.flag-area-sudan .flag {
+	--aspect-ratio: calc(1 / 2);
+
+	--tirangle-angle: 73.74deg;
+
+	background-image:
+		conic-gradient(
+			from calc(270deg - var(--tirangle-angle) / 2) at calc(1 / 3 * var(--width)) 50%,
+			var(--green) 0 var(--tirangle-angle),
+			transparent 0 360deg
+		),
+
+		linear-gradient(
+			180deg,
+			var(--red) 0 calc(1 / 3 * var(--height)),
+			var(--white) 0 calc(2 / 3 * var(--height)),
+			var(--black) 0 calc(3 / 3 * var(--height))
+		)
+	;
+}
