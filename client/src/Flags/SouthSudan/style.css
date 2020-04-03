@@ -1,13 +1,11 @@
-.flag-area-south-sudan {
+.flag-south-sudan {
     --black: #000;
     --white: #fff;
     --red: #da121a;
     --green: #078930;
     --blue: #0f47af;
     --gold: #fcdd09;
-}
 
-.flag-area-south-sudan .flag {
     --aspect-ratio: calc(1 / 2);
 
     --triangle-angle: 60deg;

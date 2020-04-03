@@ -1,12 +1,10 @@
-.flag-area-seychelles {
+.flag-seychelles {
     --blue: #002f6c;
     --yellow: #fed141;
     --red: #d22730;
     --white: #fff;
     --green: #007a33;
-}
 
-.flag-area-seychelles .flag {
     --aspect-ratio: calc(1 / 2);
 
     background-image:

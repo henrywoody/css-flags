@@ -1,10 +1,8 @@
-.flag-area-republic-of-china {
+.flag-republic-of-china {
     --blue: #000095;
     --red: #fe0000;
     --white: #fff;
-}
 
-.flag-area-republic-of-china .flag {
     --aspect-ratio: calc(2 / 3);
 
     --canton-width: calc(1 / 2 * var(--width));

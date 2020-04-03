@@ -1,11 +1,9 @@
-.flag-area-suriname {
+.flag-suriname {
     --green: #007a33;
     --white: #fff;
     --red: #c8102e;
     --yellow: #ffcd00;
-}
 
-.flag-area-suriname .flag {
     --aspect-ratio: calc(2 / 3);
 
     --star-color: var(--yellow);

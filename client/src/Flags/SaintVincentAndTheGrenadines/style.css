@@ -1,10 +1,8 @@
-.flag-area-saint-vincent-and-the-grenadines {
+.flag-saint-vincent-and-the-grenadines {
     --blue: #005eb8;
     --yellow: #ffcd00;
     --green: #009a44;
-}
 
-.flag-area-saint-vincent-and-the-grenadines .flag {
     --aspect-ratio: calc(2 / 3);
 
     --diamond-narrow-angle: 53.14deg;

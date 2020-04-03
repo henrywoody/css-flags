@@ -1,9 +1,7 @@
-.flag-area-israel {
+.flag-israel {
     --blue: #00205b;
     --white: #fff;
-}
 
-.flag-area-israel .flag {
     --aspect-ratio: calc(8 / 11);
 
     --circle-radius: calc(69 / 440 * var(--width));

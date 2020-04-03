@@ -1,10 +1,8 @@
-.flag-area-lithuania {
+.flag-lithuania {
     --yellow: #fdb913;
     --green: #006a44;
     --red: #c1272d;
-}
 
-.flag-area-lithuania .flag {
     --aspect-ratio: calc(3 / 5);
 
     background-image:

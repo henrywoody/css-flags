@@ -1,9 +1,7 @@
-.flag-area-denmark {
+.flag-denmark {
     --red: #e4002b;
     --white: #fff;
-}
 
-.flag-area-denmark .flag {
     --aspect-ratio: calc(28 / 37);
 
     background-image:

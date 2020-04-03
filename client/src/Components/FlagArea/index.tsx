@@ -21,8 +21,7 @@ const FlagArea: React.FC<FlagAreaProps> = ({ title, flagName, children }) => {
             </div>
 
             <div className="flag-container">
-                <div className="flag">
-                </div>
+                <div className={ `flag flag-${titleToKebabCase(title)}` }/>
             </div>
 
             { !!children && (

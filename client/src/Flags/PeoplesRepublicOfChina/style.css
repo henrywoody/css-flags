@@ -1,9 +1,7 @@
-.flag-area-peoples-republic-of-china {
+.flag-peoples-republic-of-china {
     --red: #de2910;
     --gold: #ffde00;
-}
 
-.flag-area-peoples-republic-of-china .flag {
     --aspect-ratio: calc(2 / 3);
 
     --star-color: var(--gold);

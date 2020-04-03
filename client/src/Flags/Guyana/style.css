@@ -1,12 +1,10 @@
-.flag-area-guyana {
+.flag-guyana {
     --red: #ce1126;
     --black: #000;
     --yellow: #fcd116;
     --white: #fff;
     --green: #009e49;
-}
 
-.flag-area-guyana .flag {
     --aspect-ratio: calc(3 / 5);
 
     --inner-triangle-angle: calc(30.96deg * 2);

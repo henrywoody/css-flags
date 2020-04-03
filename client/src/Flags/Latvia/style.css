@@ -1,9 +1,7 @@
-.flag-area-latvia {
+.flag-latvia {
     --white: #fff;
     --carmine: #9d2235;
-}
 
-.flag-area-latvia .flag {
     --aspect-ratio: calc(1 / 2);
 
     background-image:

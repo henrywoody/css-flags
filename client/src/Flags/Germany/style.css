@@ -1,10 +1,8 @@
-.flag-area-germany {
+.flag-germany {
     --black: #000;
     --red: #ff0000;
     --gold: #ffcc00;
-}
 
-.flag-area-germany .flag {
     --aspect-ratio: calc(3 / 5);
 
     background-image:

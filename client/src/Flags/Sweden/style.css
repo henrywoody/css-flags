@@ -1,9 +1,7 @@
-.flag-area-sweden {
+.flag-sweden {
     --blue: #004b87;
     --gold: #ffcd00;
-}
 
-.flag-area-sweden .flag {
     --aspect-ratio: calc(5 / 8);
 
     background-image:

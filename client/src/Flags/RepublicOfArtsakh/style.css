@@ -1,11 +1,9 @@
-.flag-area-republic-of-artsakh {
+.flag-republic-of-artsakh {
     --red: #d30017;
     --blue: #0024a1;
     --yellow: #ebab16;
     --white: #fff;
-}
 
-.flag-area-republic-of-artsakh .flag {
     --aspect-ratio: calc(1 / 2);
 
     background:

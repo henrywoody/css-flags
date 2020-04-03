@@ -1,9 +1,7 @@
-.flag-area-north-macedonia {
+.flag-north-macedonia {
     --red: #ce2028;
     --yellow: #f9d616;
-}
 
-.flag-area-north-macedonia .flag {
     --aspect-ratio: calc(1 / 2);
 
     --circle-radius: calc(var(--height) / 7);

@@ -1,9 +1,7 @@
-.flag-area-finland {
+.flag-finland {
     --white: #fff;
     --blue: #002f6c;
-}
 
-.flag-area-finland .flag {
     --aspect-ratio: calc(11 / 18);
 
     background-image:

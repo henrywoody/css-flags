@@ -1,10 +1,8 @@
-.flag-area-france {
+.flag-france {
     --blue: #0055a4;
     --white: #fff;
     --red: #ef4135;
-}
 
-.flag-area-france .flag {
     --aspect-ratio: calc(2 / 3);
 
     background-image:

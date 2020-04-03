@@ -1,8 +1,10 @@
-.flag-area-japan {
+.flag-japan {
     --white: #fff;
     --crimson-glory: #bc002d;
-}
 
-.flag-area-japan .flag {
-    background-image: radial-gradient(circle, var(--crimson-glory) 30%, var(--white) 30%);
+    background-image: radial-gradient(
+        circle at center,
+        var(--crimson-glory) 0 30%,
+        var(--white) 0 100%
+    );
 }

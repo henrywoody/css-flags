@@ -1,10 +1,8 @@
-.flag-area-united-states-of-america {
+.flag-united-states-of-america {
     --old-glory-red: #b22234;
     --white: #fff;
     --old-glory-blue: #3c3b6e;
-}
 
-.flag-area-united-states-of-america .flag {
     --aspect-ratio: calc(10 / 19);
 
     position: relative;
@@ -27,8 +25,8 @@
     ;
 }
 
-.flag-area-united-states-of-america .flag::before,
-.flag-area-united-states-of-america .flag::after {
+.flag-united-states-of-america::before,
+.flag-united-states-of-america::after {
     content: "";
     display: block;
     width: var(--canton-width);
@@ -88,11 +86,11 @@
     ;
 }
 
-.flag-area-united-states-of-america .flag::before {
+.flag-united-states-of-america::before {
     background-color: var(--old-glory-blue);
 }
 
-.flag-area-united-states-of-america .flag::after {
+.flag-united-states-of-america::after {
     width: calc(var(--canton-width) - var(--star-box-width));
     height: calc(var(--canton-height) - var(--star-box-height));
     top: calc(var(--star-box-height) / 2);

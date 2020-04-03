@@ -1,12 +1,10 @@
-.flag-area-central-african-republic {
+.flag-central-african-republic {
     --blue: #003082;
     --white: #fff;
     --green: #289728;
     --yellow: #ffce00;
     --red: #d21034;
-}
 
-.flag-area-central-african-republic .flag {
     --aspect-ratio: calc(3 / 5);
 
     --stripe-width: calc(1 / 4 * var(--height));

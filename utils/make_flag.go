@@ -130,18 +130,15 @@ export default %s;
 }
 
 func makeFlagStyleCSS(ownerName, flagDir string) error {
-	flagAreaClassName := getFlagAreaCSSClassName(ownerName)
+	flagClassName := getFlagCSSClassName(ownerName)
 
 	fileContents := fmt.Sprintf(`%s {
     /* Define colors here */
-}
 
-%s .flag {
     --aspect-ratio: calc(2 / 3);
 }
 `,
-		flagAreaClassName,
-		flagAreaClassName,
+		flagClassName,
 	)
 
 	return ioutil.WriteFile(path.Join(flagDir, "style.css"), []byte(fileContents), 0644)
@@ -151,8 +148,8 @@ func getComponentName(ownerName string) string {
 	return toPascalCase(ownerName)
 }
 
-func getFlagAreaCSSClassName(ownerName string) string {
-	return ".flag-area-" + toKebabCase(ownerName)
+func getFlagCSSClassName(ownerName string) string {
+	return ".flag-" + toKebabCase(ownerName)
 }
 
 func getFlagKey(ownerName string) string {

@@ -1,11 +1,9 @@
-.flag-area-united-arab-emirates {
+.flag-united-arab-emirates {
     --green: #00843d;
     --white: #fff;
     --black: #000;
     --red: #ff0000;
-}
 
-.flag-area-united-arab-emirates .flag {
     --aspect-ratio: calc(1 / 2);
 
     background-image:

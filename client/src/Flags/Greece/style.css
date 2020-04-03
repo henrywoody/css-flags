@@ -1,9 +1,7 @@
-.flag-area-greece {
+.flag-greece {
     --blue: #005bae;
     --white: #fff;
-}
 
-.flag-area-greece .flag {
     background-image:
         repeating-linear-gradient(
             0deg,
@@ -15,7 +13,7 @@
     position: relative;
 }
 
-.flag-area-greece .flag::before {
+.flag-greece::before {
     content: "";
     background-color: var(--blue);
     background-image:

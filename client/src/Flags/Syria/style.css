@@ -1,11 +1,9 @@
-.flag-area-syria {
+.flag-syria {
     --red: #ce1126;
     --white: #fff;
     --black: #000;
     --green: #007a3d;
-}
 
-.flag-area-syria .flag {
     --aspect-ratio: calc(2 / 3);
 
     --star-color: var(--green);

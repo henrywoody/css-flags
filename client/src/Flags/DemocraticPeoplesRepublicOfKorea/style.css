@@ -1,10 +1,8 @@
-.flag-area-democratic-peoples-republic-of-korea {
+.flag-democratic-peoples-republic-of-korea {
     --blue: #024fa2;
     --red: #ed1c27;
     --white: #fff;
-}
 
-.flag-area-democratic-peoples-republic-of-korea .flag {
     --aspect-ratio: calc(1 / 2);
 
     --star-color: var(--red);

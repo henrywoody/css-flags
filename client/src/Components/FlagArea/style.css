@@ -26,7 +26,7 @@
     position: relative;
 }
 
-.flag-area .flag {
+.flag {
     --aspect-ratio: var(--default-flag-aspect-ratio);
 
     --width: 70vw;
@@ -43,7 +43,7 @@
 }
 
 @media all and (min-aspect-ratio: 2/1) {
-    .flag-area .flag {
+    .flag {
         --height: 70vh;
         --width: calc(var(--height) / var(--aspect-ratio));
     }

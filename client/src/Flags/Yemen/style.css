@@ -1,10 +1,8 @@
-.flag-area-yemen {
+.flag-yemen {
     --red: #cf0820;
     --white: #fff;
     --black: #000;
-}
 
-.flag-area-yemen .flag {
     --aspect-ratio: calc(2 / 3);
 
     background-image:

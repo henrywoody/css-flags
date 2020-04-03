@@ -1,10 +1,8 @@
-.flag-area-russia {
+.flag-russia {
     --white: #fff;
     --blue: #0039a6;
     --red: #d00b0e;
-}
 
-.flag-area-russia .flag {
     --aspect-ratio: calc(2 / 3);
 
     background-image:

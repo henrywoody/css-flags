@@ -1,9 +1,7 @@
-.flag-area-switzerland {
+.flag-switzerland {
     --red: #da291c;
     --white: #fff;
-}
 
-.flag-area-switzerland .flag {
     --aspect-ratio: 1;
     --width: 70vmin;
 

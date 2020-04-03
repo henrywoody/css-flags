@@ -1,10 +1,8 @@
-.flag-area-democratic-republic-of-the-congo {
+.flag-democratic-republic-of-the-congo {
     --blue: #007fff;
     --red: #ce1021;
     --yellow: #f7d618;
-}
 
-.flag-area-democratic-republic-of-the-congo .flag {
     --aspect-ratio: calc(3 / 4);
 
     --diagonal-angle: -31deg;

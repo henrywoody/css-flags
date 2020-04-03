@@ -1,11 +1,9 @@
-.flag-area-togo {
+.flag-togo {
     --red: #c8102e;
     --white: #fff;
     --green: #00b140;
     --yellow: #fdda25;
-}
 
-.flag-area-togo .flag {
     --aspect-ratio: calc(1 / 1.618);
 
     --star-color: var(--white);

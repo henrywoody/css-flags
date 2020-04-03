@@ -1,13 +1,11 @@
-.flag-area-south-africa {
+.flag-south-africa {
     --red: #E03C31;
     --blue: #001489;
     --green: #007749;
     --white: #fff;
     --gold: #FFB81C;
     --black: #000;
-}
 
-.flag-area-south-africa .flag {
     --aspect-ratio: calc(2 / 3);
 
     --triangle-angle: 67.38deg;

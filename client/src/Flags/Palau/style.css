@@ -1,9 +1,7 @@
-.flag-area-palau {
+.flag-palau {
     --blue: #418fde;
     --yellow: #f7ea48;
-}
 
-.flag-area-palau .flag {
     --aspect-ratio: calc(5 / 8);
 
     background-image:

@@ -1,11 +1,9 @@
-.flag-area-republic-of-korea {
+.flag-republic-of-korea {
     --white: #fff;
     --black: #000;
     --red: #cd2e3a;
     --blue: #0047a0;
-}
 
-.flag-area-republic-of-korea .flag {
     --aspect-ratio: calc(2 / 3);
 
     --acute-angle: 33.69deg;
@@ -45,8 +43,8 @@
     justify-content: center;
 }
 
-.flag-area-republic-of-korea .flag::before,
-.flag-area-republic-of-korea .flag::after {
+.flag-republic-of-korea::before,
+.flag-republic-of-korea::after {
     content: "";
     display: block;
     --width-padding: 16px;
@@ -74,7 +72,7 @@
     ;
 }
 
-.flag-area-republic-of-korea .flag::before {
+.flag-republic-of-korea::before {
     transform: rotate(calc(180deg - var(--acute-angle)));
     background:
         linear-gradient(
@@ -93,7 +91,7 @@
     ;
 }
 
-.flag-area-republic-of-korea .flag::after {
+.flag-republic-of-korea::after {
     transform: rotate(var(--acute-angle));
     background:
         linear-gradient(

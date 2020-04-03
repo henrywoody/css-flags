@@ -1,10 +1,8 @@
-.flag-area-trinidad-and-tobago {
+.flag-trinidad-and-tobago {
     --red: #c8102e;
     --white: #fff;
     --black: #000;
-}
 
-.flag-area-trinidad-and-tobago .flag {
     --aspect-ratio: calc(3 / 5);
 
     background-image:

@@ -1,11 +1,9 @@
-.flag-area-kuwait {
+.flag-kuwait {
     --green: #007a3d;
     --white: #fff;
     --red: #ce1126;
     --black: #000;
-}
 
-.flag-area-kuwait .flag {
     --aspect-ratio: calc(1 / 2);
 
     --triangle-angle: 67.38deg;

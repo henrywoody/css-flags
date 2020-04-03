@@ -1,10 +1,8 @@
-.flag-area-luxembourg {
+.flag-luxembourg {
     --red: #ef3340;
     --white: #fff;
     --blue: #00a3e0;
-}
 
-.flag-area-luxembourg .flag {
     --aspect-ratio: calc(3 / 5);
 
     background-image:

@@ -1,10 +1,8 @@
-.flag-area-the-bahamas {
+.flag-the-bahamas {
     --black: #000;
     --aquamarine: #00778b;
     --gold: #ffc72c;
-}
 
-.flag-area-the-bahamas .flag {
     --aspect-ratio: calc(1 / 2);
 
     --root-three: 1.73205;

@@ -1,9 +1,7 @@
-.flag-area-pakistan {
+.flag-pakistan {
     --green: #01411c;
     --white: #fff;
-}
 
-.flag-area-pakistan .flag {
     --aspect-ratio: calc(2 / 3);
 
     --diagonal-angle: 41.63deg;
@@ -34,8 +32,6 @@
     --star-left-angle: calc(var(--star-top-angle) - 144deg);
     --star-left-sin: -0.09810;
     --star-left-cos: -0.99518;
-
-
 
     background:
         /* Star */

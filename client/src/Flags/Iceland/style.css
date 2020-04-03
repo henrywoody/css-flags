@@ -1,10 +1,8 @@
-.flag-area-iceland {
+.flag-iceland {
     --blue: #02529c;
     --white: #fff;
     --red: #dc1e35;
-}
 
-.flag-area-iceland .flag {
     --aspect-ratio: calc(18 / 25);
     background-image:
         linear-gradient(

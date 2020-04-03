@@ -1,12 +1,10 @@
-.flag-area-saint-kitts-and-nevis {
+.flag-saint-kitts-and-nevis {
     --green: #009e49;
     --yellow: #fcd116;
     --black: #000;
     --white: #fff;
     --red: #ce1126;
-}
 
-.flag-area-saint-kitts-and-nevis .flag {
     --aspect-ratio: calc(2 / 3);
 
     --diagonal-angle: 33.69deg;

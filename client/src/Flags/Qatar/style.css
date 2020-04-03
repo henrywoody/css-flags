@@ -1,9 +1,7 @@
-.flag-area-qatar {
+.flag-qatar {
     --white: #fff;
     --maroon: #8a1538;
-}
 
-.flag-area-qatar .flag {
     --aspect-ratio: calc(11 / 28);
 
     --serration-angle: 16.99deg;

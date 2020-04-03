@@ -1,9 +1,7 @@
-.flag-area-bangladesh {
+.flag-bangladesh {
     --green: #006a4e;
     --red: #f42a41;
-}
 
-.flag-area-bangladesh .flag {
     --aspect-ratio: calc(3 / 5);
 
     background-image:

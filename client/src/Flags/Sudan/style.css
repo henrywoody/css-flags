@@ -1,11 +1,9 @@
-.flag-area-sudan {
+.flag-sudan {
     --red: #c8102e;
     --white: #fff;
     --black: #000;
     --green: #007a33;
-}
 
-.flag-area-sudan .flag {
     --aspect-ratio: calc(1 / 2);
 
     --tirangle-angle: 73.74deg;
