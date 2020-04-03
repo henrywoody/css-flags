@@ -27,10 +27,10 @@ const Denmark: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Denmark">"Flag of Denmark"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/denmark_flag.html">"Denmark"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/denmark_flag.html">"Denmark"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Denmark">"Flag of Denmark"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

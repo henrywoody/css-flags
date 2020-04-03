@@ -23,13 +23,13 @@ const SouthSudan: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_South_Sudan">"Flag of South Sudan"</ExternalLink>
+						Scheme Color: <ExternalLink href="https://www.schemecolor.com/south-sudan-flag-colors.php">"South Sudan Flag Colors"</ExternalLink>
 					</li>
 					<li>
 						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/south_sudan_flag.html">"South Sudan"</ExternalLink>
 					</li>
 					<li>
-						Scheme Color: <ExternalLink href="https://www.schemecolor.com/south-sudan-flag-colors.php">"South Sudan Flag Colors"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_South_Sudan">"Flag of South Sudan"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

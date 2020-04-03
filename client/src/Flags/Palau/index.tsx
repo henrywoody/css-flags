@@ -23,10 +23,10 @@ const Palau: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Palau">"Flag of Palau"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/palau_flag.html">"Palau"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/palau_flag.html">"Palau"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Palau">"Flag of Palau"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

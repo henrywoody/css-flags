@@ -23,13 +23,13 @@ const Kuwait: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Kuwait">"Flag of Kuwait"</ExternalLink>
-					</li>
-					<li>
 						Scheme Color: <ExternalLink href="https://www.schemecolor.com/kuwait-flag-colors.php">"Kuwait Flag Colors"</ExternalLink>
 					</li>
 					<li>
 						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/kuwait_flag.html">"Kuwait"</ExternalLink>
+					</li>
+					<li>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Kuwait">"Flag of Kuwait"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

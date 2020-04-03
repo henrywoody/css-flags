@@ -24,10 +24,10 @@ const Qatar: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Qatar">"Flag of Qatar"</ExternalLink>
+                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/qatar_flag.html">"Qatar"</ExternalLink>
                     </li>
                     <li>
-                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/qatar_flag.html">"Qatar"</ExternalLink>
+                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Qatar">"Flag of Qatar"</ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>

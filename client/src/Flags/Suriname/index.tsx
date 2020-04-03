@@ -24,10 +24,10 @@ const Suriname: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Suriname">"Flag of Suriname"</ExternalLink>
+                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/suriname_flag.html">"Suriname"</ExternalLink>
                     </li>
                     <li>
-                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/suriname_flag.html">"Suriname"</ExternalLink>
+                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Suriname">"Flag of Suriname"</ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>

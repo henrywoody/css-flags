@@ -24,10 +24,10 @@ const Israel: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Israel">"Flag of Israel"</ExternalLink>
+                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/israel_flag.html">"Israel"</ExternalLink>
                     </li>
                     <li>
-                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/israel_flag.html">"Israel"</ExternalLink>
+                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Israel">"Flag of Israel"</ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>

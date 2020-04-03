@@ -23,11 +23,10 @@ const SouthAfrica: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_South_Africa">"Flag of South Africa"</ExternalLink>
-                    </li>
-
-                    <li>
                         Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/south_africa_flag.html">"South Africa"</ExternalLink>
+                    </li>
+                    <li>
+                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_South_Africa">"Flag of South Africa"</ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>

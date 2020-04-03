@@ -23,13 +23,13 @@ const SaintKittsAndNevis: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Saint_Kitts_and_Nevis">"Flag of Saint Kitts and Nevis"</ExternalLink>
+						Scheme Color: <ExternalLink href="https://www.schemecolor.com/saint-kitts-and-nevis-flag-colors.php">"Saint Kitts and Nevis Flag Colors"</ExternalLink>
 					</li>
 					<li>
 						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/saint_kitts_flag.html">"Saint Kitts and Nevis"</ExternalLink>
 					</li>
 					<li>
-						Scheme Color: <ExternalLink href="https://www.schemecolor.com/saint-kitts-and-nevis-flag-colors.php">"Saint Kitts and Nevis Flag Colors"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Saint_Kitts_and_Nevis">"Flag of Saint Kitts and Nevis"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

@@ -25,10 +25,10 @@ const RepublicOfChina: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China">"Flag of the Republic of China"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/taiwan_flag.html">"Taiwan"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/taiwan_flag.html">"Taiwan"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China">"Flag of the Republic of China"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

@@ -23,10 +23,10 @@ const TrinidadAndTobago: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Trinidad_and_Tobago">"Flag of Trinidad and Tobago"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/trinidad_and_tobago_flag.html">"Trinidad and Tobago"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/trinidad_and_tobago_flag.html">"Trinidad and Tobago"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Trinidad_and_Tobago">"Flag of Trinidad and Tobago"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

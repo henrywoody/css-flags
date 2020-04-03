@@ -23,10 +23,10 @@ const Sweden: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Sweden">"Flag of Sweden"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/sweden_flag.html">"Sweden"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/sweden_flag.html">"Sweden"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Sweden">"Flag of Sweden"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

@@ -24,10 +24,10 @@ const Jamaica: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Jamaica">"Flag of Jamaica"</ExternalLink>
+                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/jamaica_flag.html">"Jamaica"</ExternalLink>
                     </li>
                     <li>
-                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/jamaica_flag.html">"Jamaica"</ExternalLink>
+                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Jamaica">"Flag of Jamaica"</ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>

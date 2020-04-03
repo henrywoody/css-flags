@@ -29,10 +29,10 @@ const UnitedStatesOfAmerica: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_United_States">"Flag of the United States"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/united_states_of_america_flag.html">"United States of America"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/united_states_of_america_flag.html">"United States of America"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_United_States">"Flag of the United States"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

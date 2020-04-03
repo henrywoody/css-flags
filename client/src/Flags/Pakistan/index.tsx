@@ -25,10 +25,10 @@ const Pakistan: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Pakistan">"Flag of Pakistan"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/pakistan_flag.html">"Pakistan"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/pakistan_flag.html">"Pakistan"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Pakistan">"Flag of Pakistan"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

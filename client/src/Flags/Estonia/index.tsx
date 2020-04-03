@@ -23,10 +23,10 @@ const Estonia: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Estonia">"Flag of Estonia"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/estonia_flag.html">"Estonia"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/estonia_flag.html">"Estonia"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Estonia">"Flag of Estonia"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

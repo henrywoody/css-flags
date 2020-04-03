@@ -23,10 +23,10 @@ const Yemen: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Yemen">"Flag of Yemen"</ExternalLink>
+						Scheme Color: <ExternalLink href="https://www.schemecolor.com/yemen-arab-republic-flag-colors.php">"Yemen Arab Republic Flag Colors"</ExternalLink>
 					</li>
 					<li>
-						Scheme Color: <ExternalLink href="https://www.schemecolor.com/yemen-arab-republic-flag-colors.php">"Yemen Arab Republic Flag Colors"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Yemen">"Flag of Yemen"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

@@ -28,10 +28,10 @@ const SaintVincentAndTheGrenadines: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Saint_Vincent_and_the_Grenadines">"Flag of Saint Vincent and the Grenadines"</ExternalLink>
+                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/saint_vincent_and_the_grenadines_flag.html">"Saint Vincent and the Grenadines"</ExternalLink>
                     </li>
                     <li>
-                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/saint_vincent_and_the_grenadines_flag.html">"Saint Vincent and the Grenadines"</ExternalLink>
+                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Saint_Vincent_and_the_Grenadines">"Flag of Saint Vincent and the Grenadines"</ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>

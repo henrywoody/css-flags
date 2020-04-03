@@ -23,10 +23,10 @@ const Palestine: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Palestine">"Flag of Palestine"</ExternalLink>
+                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/palestine_flag.html">"Palestine"</ExternalLink>
                     </li>
                     <li>
-                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/palestine_flag.html">"Palestine"</ExternalLink>
+                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Palestine">"Flag of Palestine"</ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>

@@ -23,13 +23,13 @@ const Tanzania: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Tanzania">"Flag of Tanzania"</ExternalLink>
+						Scheme Color: <ExternalLink href="https://www.schemecolor.com/tanzania-flag-colors.php">"Tanzania Flag Colors"</ExternalLink>
 					</li>
 					<li>
 						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/tanzania_flag.html">"Tanzania"</ExternalLink>
 					</li>
 					<li>
-						Scheme Color: <ExternalLink href="https://www.schemecolor.com/tanzania-flag-colors.php">"Tanzania Flag Colors"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Tanzania">"Flag of Tanzania"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

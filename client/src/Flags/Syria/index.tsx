@@ -23,10 +23,10 @@ const Syria: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Syria">"Flag of Syria"</ExternalLink>
+						Wikimedia: <ExternalLink href="https://commons.wikimedia.org/wiki/File:Approximate_Construction_of_the_Flag_of_Syria.svg">"Approximate Construction of the Flag of Syria"</ExternalLink>
 					</li>
 					<li>
-						Wikimedia: <ExternalLink href="https://commons.wikimedia.org/wiki/File:Approximate_Construction_of_the_Flag_of_Syria.svg">"Approximate Construction of the Flag of Syria"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Syria">"Flag of Syria"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

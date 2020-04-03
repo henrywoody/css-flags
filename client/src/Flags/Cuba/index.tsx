@@ -23,10 +23,10 @@ const Cuba: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Cuba">"Flag of Cuba"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/cuba_flag.html">"Cuba"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/cuba_flag.html">"Cuba"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Cuba">"Flag of Cuba"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

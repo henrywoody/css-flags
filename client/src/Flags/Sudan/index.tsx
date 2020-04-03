@@ -23,10 +23,10 @@ const Sudan: React.FC = () => {
 			<DescriptionSection title="Sources">
 				<ul className="citation-list">
 					<li>
-						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Sudan">"Flag of Sudan"</ExternalLink>
+						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/sudan_flag.html">"Sudan"</ExternalLink>
 					</li>
 					<li>
-						Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/sudan_flag.html">"Sudan"</ExternalLink>
+						Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Sudan">"Flag of Sudan"</ExternalLink>
 					</li>
 				</ul>
 			</DescriptionSection>

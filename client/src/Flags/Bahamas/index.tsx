@@ -23,10 +23,10 @@ const Bahamas: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_Bahamas">"Flag of the Bahamas"</ExternalLink>
+                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/bahamas_flag.html">"The Bahamas"</ExternalLink>
                     </li>
                     <li>
-                        Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/bahamas_flag.html">"The Bahamas"</ExternalLink>
+                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_Bahamas">"Flag of the Bahamas"</ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>
