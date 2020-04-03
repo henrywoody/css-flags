@@ -1,0 +1,17 @@
+.flag-vietnam {
+    --red: #da251d;
+    --yellow: #ffff00;
+
+    --aspect-ratio: calc(2 / 3);
+
+    --star-color: var(--yellow);
+    --star-background-color: var(--red);
+    --star-radius: calc(1 / 5 * var(--width));
+    --star-x-position: calc(1 / 2 * var(--width) - var(--star-width) / 2);
+    --star-y-position: calc(1 / 2 * var(--height) - var(--star-height) / 2);
+
+    background:
+        var(--single-five-pointed-star)
+    ;
+    background-color: var(--red);
+}

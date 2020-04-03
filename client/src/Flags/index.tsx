@@ -52,6 +52,7 @@ import TrinidadAndTobago from "./TrinidadAndTobago";
 import UnitedArabEmirates from "./UnitedArabEmirates";
 import UnitedKingdom from "./UnitedKingdom";
 import UnitedStatesOfAmerica from "./UnitedStatesOfAmerica";
+import Vietnam from "./Vietnam";
 import Yemen from "./Yemen";
 
 
@@ -109,6 +110,7 @@ const flags: React.ReactElement[] = [
     <UnitedArabEmirates key="united-arab-emirates"/>,
     <UnitedKingdom key="united-kingdom"/>,
     <UnitedStatesOfAmerica key="united-states-of-america"/>,
+    <Vietnam key="vietnam"/>,
     <Yemen key="yemen"/>,
 ]
 
