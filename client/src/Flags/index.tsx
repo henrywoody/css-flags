@@ -35,6 +35,7 @@ import RepublicOfArtsakh from "./RepublicOfArtsakh";
 import RepublicOfChina from "./RepublicOfChina";
 import RepublicOfKorea from "./RepublicOfKorea";
 import Russia from "./Russia";
+import SaintKittsAndNevis from "./SaintKittsAndNevis";
 import SaintLucia from "./SaintLucia";
 import SaintVincentAndTheGrenadines from "./SaintVincentAndTheGrenadines";
 import Seychelles from "./Seychelles";
@@ -91,6 +92,7 @@ const flags: React.ReactElement[] = [
     <RepublicOfChina key="republic-of-china"/>,
     <RepublicOfKorea key="republic-of-korea"/>,
     <Russia key="russia"/>,
+    <SaintKittsAndNevis key="saint-kitts-and-nevis"/>,
     <SaintLucia key="saint-lucia"/>,
     <SaintVincentAndTheGrenadines key="saint-vincent-and-the-grenadines"/>,
     <Seychelles key="seychelles"/>,
