@@ -1,18 +1,18 @@
 .flag-area-russia {
-	--white: #fff;
-	--blue: #0039a6;
-	--red: #d00b0e;
+    --white: #fff;
+    --blue: #0039a6;
+    --red: #d00b0e;
 }
 
 .flag-area-russia .flag {
-	--aspect-ratio: calc(2 / 3);
+    --aspect-ratio: calc(2 / 3);
 
-	background-image:
-		linear-gradient(
-			180deg,
-			var(--white) 0 calc(1 / 3 * var(--height)),
-			var(--blue) 0 calc(2 / 3 * var(--height)),
-			var(--red) 0 calc(3 / 3 * var(--height))
-		)
-	;
+    background-image:
+        linear-gradient(
+            180deg,
+            var(--white) 0 calc(1 / 3 * var(--height)),
+            var(--blue) 0 calc(2 / 3 * var(--height)),
+            var(--red) 0 calc(3 / 3 * var(--height))
+        )
+    ;
 }

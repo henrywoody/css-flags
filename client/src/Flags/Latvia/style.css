@@ -1,17 +1,17 @@
 .flag-area-latvia {
-	--white: #fff;
-	--carmine: #9d2235;
+    --white: #fff;
+    --carmine: #9d2235;
 }
 
 .flag-area-latvia .flag {
-	--aspect-ratio: calc(1 / 2);
+    --aspect-ratio: calc(1 / 2);
 
-	background-image:
-		linear-gradient(
-			180deg,
-			var(--carmine) 0 calc(2 / 5 * var(--height)),
-			var(--white) 0 calc(3 / 5 * var(--height)),
-			var(--carmine) 0 calc(5 / 5 * var(--height))
-		)
-	;
+    background-image:
+        linear-gradient(
+            180deg,
+            var(--carmine) 0 calc(2 / 5 * var(--height)),
+            var(--white) 0 calc(3 / 5 * var(--height)),
+            var(--carmine) 0 calc(5 / 5 * var(--height))
+        )
+    ;
 }

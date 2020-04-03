@@ -1,39 +1,39 @@
 .flag-area-democratic-peoples-republic-of-korea {
-	--blue: #024fa2;
-	--red: #ed1c27;
-	--white: #fff;
+    --blue: #024fa2;
+    --red: #ed1c27;
+    --white: #fff;
 }
 
 .flag-area-democratic-peoples-republic-of-korea .flag {
-	--aspect-ratio: calc(1 / 2);
+    --aspect-ratio: calc(1 / 2);
 
-	--star-color: var(--red);
-	--star-background-color: var(--white);
-	--star-radius: calc(15.5 / 144 * var(--width));
-	--star-x-position: calc(48 / 144 * var(--width) - var(--star-radius));
-	--star-y-position: calc(36 / 72 * var(--star-height) + var(--star-radius) * 13 / 32);
+    --star-color: var(--red);
+    --star-background-color: var(--white);
+    --star-radius: calc(15.5 / 144 * var(--width));
+    --star-x-position: calc(48 / 144 * var(--width) - var(--star-radius));
+    --star-y-position: calc(36 / 72 * var(--star-height) + var(--star-radius) * 13 / 32);
 
-	--star-circle-radius: calc(16 / 144 * var(--width));
+    --star-circle-radius: calc(16 / 144 * var(--width));
 
-	background:
-		/* Star */
-		var(--single-five-pointed-star),
+    background:
+        /* Star */
+        var(--single-five-pointed-star),
 
-		/* Star Circle */
-		radial-gradient(
-			circle at calc(48 / 144 * var(--width)) 50%,
-			var(--white) 0 var(--star-circle-radius),
-			transparent 0 100%
-		),
+        /* Star Circle */
+        radial-gradient(
+            circle at calc(48 / 144 * var(--width)) 50%,
+            var(--white) 0 var(--star-circle-radius),
+            transparent 0 100%
+        ),
 
-		/* Background */
-		linear-gradient(
-			0deg,
-			var(--blue) 0 calc(12 / 72 * var(--height)),
-			var(--white) 0 calc(14 / 72 * var(--height)),
-			var(--red) 0 calc(58 / 72 * var(--height)),
-			var(--white) 0 calc(60 / 72 * var(--height)),
-			var(--blue) 0 calc(72 / 72 * var(--height))
-		)
-	;
+        /* Background */
+        linear-gradient(
+            0deg,
+            var(--blue) 0 calc(12 / 72 * var(--height)),
+            var(--white) 0 calc(14 / 72 * var(--height)),
+            var(--red) 0 calc(58 / 72 * var(--height)),
+            var(--white) 0 calc(60 / 72 * var(--height)),
+            var(--blue) 0 calc(72 / 72 * var(--height))
+        )
+    ;
 }

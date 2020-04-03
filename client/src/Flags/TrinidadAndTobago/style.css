@@ -1,20 +1,20 @@
 .flag-area-trinidad-and-tobago {
-	--red: #c8102e;
-	--white: #fff;
-	--black: #000;
+    --red: #c8102e;
+    --white: #fff;
+    --black: #000;
 }
 
 .flag-area-trinidad-and-tobago .flag {
-	--aspect-ratio: calc(3 / 5);
+    --aspect-ratio: calc(3 / 5);
 
-	background-image:
-		linear-gradient(
-			40.82deg,
-			var(--red) 0 calc(50% - 3 / 30 * var(--width)),
-			var(--white) 0 calc(50% - 2 / 30 * var(--width)),
-			var(--black) 0 calc(50% + 2 / 30 * var(--width)),
-			var(--white) 0 calc(50% + 3 / 30 * var(--width)),
-			var(--red) 0 100%
-		)
-	;
+    background-image:
+        linear-gradient(
+            40.82deg,
+            var(--red) 0 calc(50% - 3 / 30 * var(--width)),
+            var(--white) 0 calc(50% - 2 / 30 * var(--width)),
+            var(--black) 0 calc(50% + 2 / 30 * var(--width)),
+            var(--white) 0 calc(50% + 3 / 30 * var(--width)),
+            var(--red) 0 100%
+        )
+    ;
 }

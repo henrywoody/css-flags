@@ -1,100 +1,100 @@
 .flag-area-united-states-of-america {
-	--old-glory-red: #b22234;
-	--white: #fff;
-	--old-glory-blue: #3c3b6e;
+    --old-glory-red: #b22234;
+    --white: #fff;
+    --old-glory-blue: #3c3b6e;
 }
 
 .flag-area-united-states-of-america .flag {
-	--aspect-ratio: calc(10 / 19);
+    --aspect-ratio: calc(10 / 19);
 
-	position: relative;
+    position: relative;
 
-	--canton-width: calc(2 / 5 * var(--width));
-	--canton-height: calc(7 / 13 * var(--height));
-	--stripe-height: calc(1 / 13 * var(--height));
+    --canton-width: calc(2 / 5 * var(--width));
+    --canton-height: calc(7 / 13 * var(--height));
+    --stripe-height: calc(1 / 13 * var(--height));
 
-	background:
-		linear-gradient( /* To fix pixel issues at the top */
-			180deg,
-			var(--old-glory-red) 0 var(--stripe-height),
-			transparent 0 100%
-		),
-		repeating-linear-gradient(
-			0deg,
-			var(--old-glory-red) 0 var(--stripe-height),
-			var(--white) 0 calc(2 * var(--stripe-height))
-		)
-	;
+    background:
+        linear-gradient( /* To fix pixel issues at the top */
+            180deg,
+            var(--old-glory-red) 0 var(--stripe-height),
+            transparent 0 100%
+        ),
+        repeating-linear-gradient(
+            0deg,
+            var(--old-glory-red) 0 var(--stripe-height),
+            var(--white) 0 calc(2 * var(--stripe-height))
+        )
+    ;
 }
 
 .flag-area-united-states-of-america .flag::before,
 .flag-area-united-states-of-america .flag::after {
-	content: "";
-	display: block;
-	width: var(--canton-width);
-	height: var(--canton-height);
+    content: "";
+    display: block;
+    width: var(--canton-width);
+    height: var(--canton-height);
 
-	position: absolute;
-	top: 0;
-	left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-	--star-color: var(--white);
-	--star-background-color: var(--old-glory-blue);
-	--star-interior-angle: 36deg;
-	--star-radius: calc(2 / 5 * var(--stripe-height));
-	--star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
+    --star-color: var(--white);
+    --star-background-color: var(--old-glory-blue);
+    --star-interior-angle: 36deg;
+    --star-radius: calc(2 / 5 * var(--stripe-height));
+    --star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
     --star-box-width: calc(1 / 6 * var(--canton-width));
-	--star-box-height: calc(1 / 5 * var(--canton-height));
-	--star-top-in-star-box: calc(var(--star-box-height) - var(--star-height));
-	--star-h-offset: calc(var(--star-box-height) - var(--star-radius) * var(--sin-54));
-	--star-sizing: repeat 0% var(--star-h-offset) / var(--star-box-width) var(--star-box-height);
-	--star-sizing-bottom-coverer: repeat 0% calc(var(--star-h-offset) + 1px) / var(--star-box-width) var(--star-box-height);
-	--star-side-point-v-size-and-position:
-		calc(var(--star-h-offset) + var(--star-top-in-star-box) + var(--star-radius) - var(--star-radius) * var(--sin-18))
-		/ var(--star-box-width) var(--star-box-height)
-	;
-	--star-left-point-position:
-		repeat
-		calc(-1 * var(--star-box-width) / 2)
-		var(--star-side-point-v-size-and-position)
-	;
-	--star-right-point-position:
-		repeat
-		calc(var(--star-box-width) / 2)
-		var(--star-side-point-v-size-and-position)
-	;
+    --star-box-height: calc(1 / 5 * var(--canton-height));
+    --star-top-in-star-box: calc(var(--star-box-height) - var(--star-height));
+    --star-h-offset: calc(var(--star-box-height) - var(--star-radius) * var(--sin-54));
+    --star-sizing: repeat 0% var(--star-h-offset) / var(--star-box-width) var(--star-box-height);
+    --star-sizing-bottom-coverer: repeat 0% calc(var(--star-h-offset) + 1px) / var(--star-box-width) var(--star-box-height);
+    --star-side-point-v-size-and-position:
+        calc(var(--star-h-offset) + var(--star-top-in-star-box) + var(--star-radius) - var(--star-radius) * var(--sin-18))
+        / var(--star-box-width) var(--star-box-height)
+    ;
+    --star-left-point-position:
+        repeat
+        calc(-1 * var(--star-box-width) / 2)
+        var(--star-side-point-v-size-and-position)
+    ;
+    --star-right-point-position:
+        repeat
+        calc(var(--star-box-width) / 2)
+        var(--star-side-point-v-size-and-position)
+    ;
 
-	background:
-		linear-gradient(
-			calc(216deg),
-			var(--star-color) 0 10.65%,
-			transparent 0 100%
-		) var(--star-left-point-position),
-		linear-gradient(
-			calc(-216deg),
-			var(--star-color) 0 10.65%,
-			transparent 0 100%
-		) var(--star-right-point-position),
-		conic-gradient(
-			from calc(180deg - 108deg / 2) at 50% calc(100% - var(--star-height) * var(--tan-18) / var(--tan-54) - 1px),
+    background:
+        linear-gradient(
+            calc(216deg),
+            var(--star-color) 0 10.65%,
+            transparent 0 100%
+        ) var(--star-left-point-position),
+        linear-gradient(
+            calc(-216deg),
+            var(--star-color) 0 10.65%,
+            transparent 0 100%
+        ) var(--star-right-point-position),
+        conic-gradient(
+            from calc(180deg - 108deg / 2) at 50% calc(100% - var(--star-height) * var(--tan-18) / var(--tan-54) - 1px),
             var(--star-background-color) 0 108deg,
             transparent 0 360deg
-		) var(--star-sizing-bottom-coverer),
-		conic-gradient(
-			from calc(180deg - var(--star-interior-angle) / 2) at 50% var(--star-top-in-star-box),
-			var(--star-color) 0 36deg,
-			transparent 0 360deg
-		) var(--star-sizing)
-	;
+        ) var(--star-sizing-bottom-coverer),
+        conic-gradient(
+            from calc(180deg - var(--star-interior-angle) / 2) at 50% var(--star-top-in-star-box),
+            var(--star-color) 0 36deg,
+            transparent 0 360deg
+        ) var(--star-sizing)
+    ;
 }
 
 .flag-area-united-states-of-america .flag::before {
-	background-color: var(--old-glory-blue);
+    background-color: var(--old-glory-blue);
 }
 
 .flag-area-united-states-of-america .flag::after {
-	width: calc(var(--canton-width) - var(--star-box-width));
-	height: calc(var(--canton-height) - var(--star-box-height));
-	top: calc(var(--star-box-height) / 2);
-	left: calc(var(--star-box-width) / 2);
+    width: calc(var(--canton-width) - var(--star-box-width));
+    height: calc(var(--canton-height) - var(--star-box-height));
+    top: calc(var(--star-box-height) / 2);
+    left: calc(var(--star-box-width) / 2);
 }

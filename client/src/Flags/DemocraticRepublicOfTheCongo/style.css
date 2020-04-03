@@ -10,10 +10,10 @@
     --diagonal-angle: -31deg;
 
     --star-color: var(--yellow);
-	--star-background-color: var(--blue);
+    --star-background-color: var(--blue);
     --star-radius: calc(0.157 * var(--width));
-	--star-x-position: calc(0.034 * var(--width));
-	--star-y-position: calc(0.051 * var(--height));
+    --star-x-position: calc(0.034 * var(--width));
+    --star-y-position: calc(0.051 * var(--height));
 
     background:
         /* Star */

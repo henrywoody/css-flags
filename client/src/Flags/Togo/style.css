@@ -1,37 +1,37 @@
 .flag-area-togo {
-	--red: #c8102e;
-	--white: #fff;
-	--green: #00b140;
-	--yellow: #fdda25;
+    --red: #c8102e;
+    --white: #fff;
+    --green: #00b140;
+    --yellow: #fdda25;
 }
 
 .flag-area-togo .flag {
-	--aspect-ratio: calc(1 / 1.618);
+    --aspect-ratio: calc(1 / 1.618);
 
-	--star-color: var(--white);
-	--star-background-color: var(--red);
-	--star-radius: calc(19 / 100 * var(--height));
-	--star-position: calc(1.5 / 5 * var(--height) - var(--star-radius));
-	--star-x-position: var(--star-position);
-	--star-y-position: var(--star-position);
+    --star-color: var(--white);
+    --star-background-color: var(--red);
+    --star-radius: calc(19 / 100 * var(--height));
+    --star-position: calc(1.5 / 5 * var(--height) - var(--star-radius));
+    --star-x-position: var(--star-position);
+    --star-y-position: var(--star-position);
 
-	--canton-size: calc(3 / 5 * var(--height));
+    --canton-size: calc(3 / 5 * var(--height));
 
-	background:
-		/* Star */
-		var(--single-five-pointed-star),
+    background:
+        /* Star */
+        var(--single-five-pointed-star),
 
-		/* Canton */
-		linear-gradient(
-			0deg,
-			var(--red) 0 10%
-		) no-repeat 0 0 / var(--canton-size) var(--canton-size),
+        /* Canton */
+        linear-gradient(
+            0deg,
+            var(--red) 0 10%
+        ) no-repeat 0 0 / var(--canton-size) var(--canton-size),
 
-		/* Field */
-		repeating-linear-gradient(
-			180deg,
-			var(--green) 0 20%,
-			var(--yellow) 0 40%
-		)
-	;
+        /* Field */
+        repeating-linear-gradient(
+            180deg,
+            var(--green) 0 20%,
+            var(--yellow) 0 40%
+        )
+    ;
 }

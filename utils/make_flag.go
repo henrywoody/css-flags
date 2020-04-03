@@ -93,31 +93,31 @@ import "./style.css";
 
 
 const %s: React.FC = () => {
-	return (
-		<FlagArea title="%s">
-			<DescriptionSection title="Description">
-				<p>
-					{/* [DESCRIPTION] */} (Source: <ExternalLink href=""></ExternalLink>)
-				</p>
-			</DescriptionSection>
+    return (
+        <FlagArea title="%s">
+            <DescriptionSection title="Description">
+                <p>
+                    {/* [DESCRIPTION] */} (Source: <ExternalLink href=""></ExternalLink>)
+                </p>
+            </DescriptionSection>
 
-			<DescriptionSection title="Construction">
-				<p>
-					{/* [Construction] */}
-				</p>
-			</DescriptionSection>
+            <DescriptionSection title="Construction">
+                <p>
+                    {/* [Construction] */}
+                </p>
+            </DescriptionSection>
 
-			<DescriptionSection title="Sources">
-				<ul className="citation-list">
-					{ /*
-						<li>
-							[SITE]: <ExternalLink href="[URL]">"[ARTICLE]"</ExternalLink>
-						</li>
-					*/ }
-				</ul>
-			</DescriptionSection>
-		</FlagArea>
-	)
+            <DescriptionSection title="Sources">
+                <ul className="citation-list">
+                    { /*
+                        <li>
+                            [SITE]: <ExternalLink href="[URL]">"[ARTICLE]"</ExternalLink>
+                        </li>
+                    */ }
+                </ul>
+            </DescriptionSection>
+        </FlagArea>
+    )
 }
 
 export default %s;
@@ -133,11 +133,11 @@ func makeFlagStyleCSS(ownerName, flagDir string) error {
 	flagAreaClassName := getFlagAreaCSSClassName(ownerName)
 
 	fileContents := fmt.Sprintf(`%s {
-	/* Define colors here */
+    /* Define colors here */
 }
 
 %s .flag {
-	--aspect-ratio: calc(2 / 3);
+    --aspect-ratio: calc(2 / 3);
 }
 `,
 		flagAreaClassName,

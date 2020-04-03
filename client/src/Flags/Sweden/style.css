@@ -1,24 +1,24 @@
 .flag-area-sweden {
-	--blue: #004b87;
-	--gold: #ffcd00;
+    --blue: #004b87;
+    --gold: #ffcd00;
 }
 
 .flag-area-sweden .flag {
-	--aspect-ratio: calc(5 / 8);
+    --aspect-ratio: calc(5 / 8);
 
-	background-image:
-		linear-gradient(
-			90deg,
-			transparent 0 calc(5 / 16 * var(--width)),
-			var(--gold) 0 calc(7 / 16 * var(--width)),
-			transparent 0 calc(16 / 16 * var(--width))
-		),
-		linear-gradient(
-			180deg,
-			transparent 0 calc(4 / 10 * var(--height)),
-			var(--gold) 0 calc(6 / 10 * var(--height)),
-			transparent 0 calc(10 / 10 * var(--height))
-		)
-	;
-	background-color: var(--blue);
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 0 calc(5 / 16 * var(--width)),
+            var(--gold) 0 calc(7 / 16 * var(--width)),
+            transparent 0 calc(16 / 16 * var(--width))
+        ),
+        linear-gradient(
+            180deg,
+            transparent 0 calc(4 / 10 * var(--height)),
+            var(--gold) 0 calc(6 / 10 * var(--height)),
+            transparent 0 calc(10 / 10 * var(--height))
+        )
+    ;
+    background-color: var(--blue);
 }

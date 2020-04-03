@@ -1,18 +1,18 @@
 .flag-area-france {
-	--blue: #0055a4;
-	--white: #fff;
-	--red: #ef4135;
+    --blue: #0055a4;
+    --white: #fff;
+    --red: #ef4135;
 }
 
 .flag-area-france .flag {
-	--aspect-ratio: calc(2 / 3);
+    --aspect-ratio: calc(2 / 3);
 
-	background-image:
-		linear-gradient(
-			90deg,
-			var(--blue) 0 calc(1 / 3 * var(--width)),
-			var(--white) 0 calc(2 / 3 * var(--width)),
-			var(--red) 0 calc(3 / 3 * var(--width))
-		)
-	;
+    background-image:
+        linear-gradient(
+            90deg,
+            var(--blue) 0 calc(1 / 3 * var(--width)),
+            var(--white) 0 calc(2 / 3 * var(--width)),
+            var(--red) 0 calc(3 / 3 * var(--width))
+        )
+    ;
 }

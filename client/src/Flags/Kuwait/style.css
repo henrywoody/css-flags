@@ -1,32 +1,32 @@
 .flag-area-kuwait {
-	--green: #007a3d;
-	--white: #fff;
-	--red: #ce1126;
-	--black: #000;
+    --green: #007a3d;
+    --white: #fff;
+    --red: #ce1126;
+    --black: #000;
 }
 
 .flag-area-kuwait .flag {
-	--aspect-ratio: calc(1 / 2);
+    --aspect-ratio: calc(1 / 2);
 
-	--triangle-angle: 67.38deg;
+    --triangle-angle: 67.38deg;
 
-	background:
-		linear-gradient(
-			180deg,
-			transparent 0 calc(1 / 3 * var(--height)),
-			var(--white) 0 calc(2 / 3 * var(--height)),
-			transparent 0 calc(3 / 3 * var(--height))
-		) no-repeat calc(3 / 12 * var(--width)) 0rem,
-		conic-gradient(
-			from calc(270deg - var(--triangle-angle) / 2) at calc(4.5 / 12 * var(--width)) 50%,
-			var(--black) 0 var(--triangle-angle),
-			transparent 0 360deg
-		),
-		linear-gradient(
-			180deg,
-			var(--green) 0 calc(1 / 3 * var(--height)),
-			transparent 0 calc(2 / 3 * var(--height)),
-			var(--red) 0 calc(3 / 3 * var(--height))
-		)
-	;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0 calc(1 / 3 * var(--height)),
+            var(--white) 0 calc(2 / 3 * var(--height)),
+            transparent 0 calc(3 / 3 * var(--height))
+        ) no-repeat calc(3 / 12 * var(--width)) 0rem,
+        conic-gradient(
+            from calc(270deg - var(--triangle-angle) / 2) at calc(4.5 / 12 * var(--width)) 50%,
+            var(--black) 0 var(--triangle-angle),
+            transparent 0 360deg
+        ),
+        linear-gradient(
+            180deg,
+            var(--green) 0 calc(1 / 3 * var(--height)),
+            transparent 0 calc(2 / 3 * var(--height)),
+            var(--red) 0 calc(3 / 3 * var(--height))
+        )
+    ;
 }

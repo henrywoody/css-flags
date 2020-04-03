@@ -1,24 +1,24 @@
 .flag-area-finland {
-	--white: #fff;
-	--blue: #002f6c;
+    --white: #fff;
+    --blue: #002f6c;
 }
 
 .flag-area-finland .flag {
-	--aspect-ratio: calc(11 / 18);
+    --aspect-ratio: calc(11 / 18);
 
-	background-image:
-		linear-gradient(
-			90deg,
-			transparent 0 calc(5 / 18 * var(--width)),
-			var(--blue) 0 calc(8 / 18 * var(--width)),
-			transparent 0 calc(18 / 18 * var(--width))
-		),
-		linear-gradient(
-			180deg,
-			transparent 0 calc(4 / 11 * var(--height)),
-			var(--blue) 0 calc(7 / 11 * var(--height)),
-			transparent 0 calc(11 / 11 * var(--height))
-		)
-	;
-	background-color: var(--white);
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 0 calc(5 / 18 * var(--width)),
+            var(--blue) 0 calc(8 / 18 * var(--width)),
+            transparent 0 calc(18 / 18 * var(--width))
+        ),
+        linear-gradient(
+            180deg,
+            transparent 0 calc(4 / 11 * var(--height)),
+            var(--blue) 0 calc(7 / 11 * var(--height)),
+            transparent 0 calc(11 / 11 * var(--height))
+        )
+    ;
+    background-color: var(--white);
 }

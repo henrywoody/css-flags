@@ -9,10 +9,10 @@
     --aspect-ratio: calc(2 / 3);
 
     --star-color: var(--yellow);
-	--star-background-color: var(--red);
+    --star-background-color: var(--red);
     --star-radius: calc(4 / 30 * var(--width));
-	--star-x-position: calc((var(--width) - var(--star-width)) / 2);
-	--star-y-position: calc((var(--height) - var(--star-height)) / 2);
+    --star-x-position: calc((var(--width) - var(--star-width)) / 2);
+    --star-y-position: calc((var(--height) - var(--star-height)) / 2);
 
     background:
         /* Star */

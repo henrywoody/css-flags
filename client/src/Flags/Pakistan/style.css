@@ -1,100 +1,100 @@
 .flag-area-pakistan {
-	--green: #01411c;
-	--white: #fff;
+    --green: #01411c;
+    --white: #fff;
 }
 
 .flag-area-pakistan .flag {
-	--aspect-ratio: calc(2 / 3);
+    --aspect-ratio: calc(2 / 3);
 
-	--diagonal-angle: 41.63deg;
-	--sin-diagonal-angle: 0.66432;
-	--cos-diagonal-angle: 0.74745;
+    --diagonal-angle: 41.63deg;
+    --sin-diagonal-angle: 0.66432;
+    --cos-diagonal-angle: 0.74745;
 
-	--crescent-x: calc(225 / 360 * var(--width));
-	--crescent-y: calc(120 / 240 * var(--height));
-	--crescent-radius: calc(72 / 360 * var(--width));
-	--diagonal-spacing: calc(24 / 360 * var(--width));
+    --crescent-x: calc(225 / 360 * var(--width));
+    --crescent-y: calc(120 / 240 * var(--height));
+    --crescent-radius: calc(72 / 360 * var(--width));
+    --diagonal-spacing: calc(24 / 360 * var(--width));
 
-	--star-color: var(--white);
-	--star-background-color: var(--green);
-	--star-radius: var(--diagonal-spacing);
-	--star-inner-radius: calc(
-		var(--star-radius) * var(--sin-54) - var(--star-radius) * var(--cos-54) * var(--tan-36)
-	);
-	--star-width: calc(var(--star-radius) * 2);
-	--star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
-	--star-x: calc(var(--crescent-x) + 2 * var(--diagonal-spacing) * var(--cos-diagonal-angle) - var(--star-radius));
-	--star-y: calc(var(--crescent-y) - 2 * var(--diagonal-spacing) * var(--sin-diagonal-angle) - var(--star-radius));
-	--star-top-angle: 228.37deg;
-	--star-top-sin: 0.66432;
-	--star-top-cos: 0.74745;
-	--star-right-angle: calc(var(--star-top-angle) + 144deg);
-	--star-right-sin: -0.97678;
-	--star-right-cos: -0.21422;
-	--star-left-angle: calc(var(--star-top-angle) - 144deg);
-	--star-left-sin: -0.09810;
-	--star-left-cos: -0.99518;
+    --star-color: var(--white);
+    --star-background-color: var(--green);
+    --star-radius: var(--diagonal-spacing);
+    --star-inner-radius: calc(
+        var(--star-radius) * var(--sin-54) - var(--star-radius) * var(--cos-54) * var(--tan-36)
+    );
+    --star-width: calc(var(--star-radius) * 2);
+    --star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
+    --star-x: calc(var(--crescent-x) + 2 * var(--diagonal-spacing) * var(--cos-diagonal-angle) - var(--star-radius));
+    --star-y: calc(var(--crescent-y) - 2 * var(--diagonal-spacing) * var(--sin-diagonal-angle) - var(--star-radius));
+    --star-top-angle: 228.37deg;
+    --star-top-sin: 0.66432;
+    --star-top-cos: 0.74745;
+    --star-right-angle: calc(var(--star-top-angle) + 144deg);
+    --star-right-sin: -0.97678;
+    --star-right-cos: -0.21422;
+    --star-left-angle: calc(var(--star-top-angle) - 144deg);
+    --star-left-sin: -0.09810;
+    --star-left-cos: -0.99518;
 
 
 
-	background:
-		/* Star */
-		/* covers */
-		conic-gradient(
-			from calc(var(--star-top-angle) - var(--star-indent-angle) / 2)
-			at calc(50% + var(--star-inner-radius) * -1 * var(--star-top-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-top-sin)),
-			var(--star-background-color) 0 var(--star-indent-angle),
-			transparent 0 360deg
-		) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
-		conic-gradient(
-			from calc(var(--star-right-angle) - var(--star-indent-angle) / 2)
-			at calc(50% + var(--star-inner-radius) * -1 * var(--star-right-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-right-sin)),
-			var(--star-background-color) 0 var(--star-indent-angle),
-			transparent 0 360deg
-		) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
-		conic-gradient(
-			from calc(var(--star-left-angle) - var(--star-indent-angle) / 2)
-			at calc(50% + var(--star-inner-radius) * -1 * var(--star-left-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-left-sin)),
-			var(--star-background-color) 0 var(--star-indent-angle),
-			transparent 0 360deg
-		) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
-		/* star */
-		conic-gradient(
-			from calc(var(--star-top-angle) - var(--star-interior-angle) / 2)
-			at calc(50% + var(--star-radius) * var(--star-top-cos)) calc(50% - var(--star-radius) * var(--star-top-sin)),
-			var(--star-color) 0 var(--star-interior-angle),
-			transparent 0 360deg
-		) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
-		conic-gradient(
-			from calc(var(--star-right-angle) - var(--star-interior-angle) / 2)
-			at calc(50% + var(--star-radius) * var(--star-right-cos)) calc(50% - var(--star-radius) * var(--star-right-sin)),
-			var(--star-color) 0 var(--star-interior-angle),
-			transparent 0 360deg
-		) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
-		conic-gradient(
-			from calc(var(--star-left-angle) - var(--star-interior-angle) / 2)
-			at calc(50% + var(--star-radius) * var(--star-left-cos)) calc(50% - var(--star-radius) * var(--star-left-sin)),
-			var(--star-color) 0 var(--star-interior-angle),
-			transparent 0 360deg
-		) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
+    background:
+        /* Star */
+        /* covers */
+        conic-gradient(
+            from calc(var(--star-top-angle) - var(--star-indent-angle) / 2)
+            at calc(50% + var(--star-inner-radius) * -1 * var(--star-top-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-top-sin)),
+            var(--star-background-color) 0 var(--star-indent-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
+        conic-gradient(
+            from calc(var(--star-right-angle) - var(--star-indent-angle) / 2)
+            at calc(50% + var(--star-inner-radius) * -1 * var(--star-right-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-right-sin)),
+            var(--star-background-color) 0 var(--star-indent-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
+        conic-gradient(
+            from calc(var(--star-left-angle) - var(--star-indent-angle) / 2)
+            at calc(50% + var(--star-inner-radius) * -1 * var(--star-left-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-left-sin)),
+            var(--star-background-color) 0 var(--star-indent-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
+        /* star */
+        conic-gradient(
+            from calc(var(--star-top-angle) - var(--star-interior-angle) / 2)
+            at calc(50% + var(--star-radius) * var(--star-top-cos)) calc(50% - var(--star-radius) * var(--star-top-sin)),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
+        conic-gradient(
+            from calc(var(--star-right-angle) - var(--star-interior-angle) / 2)
+            at calc(50% + var(--star-radius) * var(--star-right-cos)) calc(50% - var(--star-radius) * var(--star-right-sin)),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
+        conic-gradient(
+            from calc(var(--star-left-angle) - var(--star-interior-angle) / 2)
+            at calc(50% + var(--star-radius) * var(--star-left-cos)) calc(50% - var(--star-radius) * var(--star-left-sin)),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
 
-		/* Crescent */
-		radial-gradient(
-			circle at calc(var(--crescent-x) + var(--diagonal-spacing) * var(--cos-diagonal-angle)) calc(var(--crescent-y) - var(--diagonal-spacing) * var(--sin-diagonal-angle)),
-			var(--green) 0 calc(66 / 360 * var(--width)),
-			transparent 0 100%
-		),
-		radial-gradient(
-			circle at var(--crescent-x) var(--crescent-y),
-			var(--white) 0 var(--crescent-radius),
-			transparent 0 100%
-		),
+        /* Crescent */
+        radial-gradient(
+            circle at calc(var(--crescent-x) + var(--diagonal-spacing) * var(--cos-diagonal-angle)) calc(var(--crescent-y) - var(--diagonal-spacing) * var(--sin-diagonal-angle)),
+            var(--green) 0 calc(66 / 360 * var(--width)),
+            transparent 0 100%
+        ),
+        radial-gradient(
+            circle at var(--crescent-x) var(--crescent-y),
+            var(--white) 0 var(--crescent-radius),
+            transparent 0 100%
+        ),
 
-		/* Background */
-		linear-gradient(
-			90deg,
-			var(--white) 0 calc(90 / 360 * var(--width)),
-			var(--green) 0 calc(360 / 360 * var(--width))
-		)
-	;
+        /* Background */
+        linear-gradient(
+            90deg,
+            var(--white) 0 calc(90 / 360 * var(--width)),
+            var(--green) 0 calc(360 / 360 * var(--width))
+        )
+    ;
 }

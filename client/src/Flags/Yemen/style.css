@@ -1,18 +1,18 @@
 .flag-area-yemen {
-	--red: #cf0820;
-	--white: #fff;
-	--black: #000;
+    --red: #cf0820;
+    --white: #fff;
+    --black: #000;
 }
 
 .flag-area-yemen .flag {
-	--aspect-ratio: calc(2 / 3);
+    --aspect-ratio: calc(2 / 3);
 
-	background-image:
-		linear-gradient(
-			180deg,
-			var(--red) 0 calc(1 / 3 * var(--height)),
-			var(--white) 0 calc(2 / 3 * var(--height)),
-			var(--black) 0 calc(3 / 3 * var(--height))
-		)
-	;
+    background-image:
+        linear-gradient(
+            180deg,
+            var(--red) 0 calc(1 / 3 * var(--height)),
+            var(--white) 0 calc(2 / 3 * var(--height)),
+            var(--black) 0 calc(3 / 3 * var(--height))
+        )
+    ;
 }

@@ -1,44 +1,44 @@
 .flag-area-cuba {
-	--blue: #00205b;
-	--red: #c8102e;
-	--white: #fff;
+    --blue: #00205b;
+    --red: #c8102e;
+    --white: #fff;
 }
 
 .flag-area-cuba .flag {
-	--aspect-ratio: calc(1 / 2);
+    --aspect-ratio: calc(1 / 2);
 
-	--root-3: 1.73205;
+    --root-3: 1.73205;
 
-	--triangle-side-length: calc(1 / 2 * var(--height));
-	--triangle-width: calc(var(--triangle-side-length) * var(--root-3));
+    --triangle-side-length: calc(1 / 2 * var(--height));
+    --triangle-width: calc(var(--triangle-side-length) * var(--root-3));
 
-	--star-color: var(--white);
-	--star-background-color: var(--red);
-	--star-radius: calc(1 / 12 * var(--width));
-	--star-x-position: calc(var(--triangle-side-length) / 2 / var(--root-3)); /* center point of triangle */
-	--star-y-position: calc(50% - (2 * var(--star-radius) - var(--star-height)) / 2);
+    --star-color: var(--white);
+    --star-background-color: var(--red);
+    --star-radius: calc(1 / 12 * var(--width));
+    --star-x-position: calc(var(--triangle-side-length) / 2 / var(--root-3)); /* center point of triangle */
+    --star-y-position: calc(50% - (2 * var(--star-radius) - var(--star-height)) / 2);
 
-	background:
-		/* Star */
-		var(--single-five-pointed-star),
+    background:
+        /* Star */
+        var(--single-five-pointed-star),
 
-		/* Triangle */
-		conic-gradient(
-			from 240deg at var(--triangle-width) 50%,
-			var(--red) 0 60deg,
-			transparent 0 360deg
-		),
+        /* Triangle */
+        conic-gradient(
+            from 240deg at var(--triangle-width) 50%,
+            var(--red) 0 60deg,
+            transparent 0 360deg
+        ),
 
-		/* Background Stripes */
-		linear-gradient( /* to fix pixel issues */
-			180deg,
-			var(--blue) 0 calc(1 / 5 * var(--height)),
-			transparent 0 100%
-		),
-		repeating-linear-gradient(
-			0deg,
-			var(--blue) 0 calc(1 / 5 * var(--height)),
-			var(--white) 0 calc(2 / 5 * var(--height))
-		)
-	;
+        /* Background Stripes */
+        linear-gradient( /* to fix pixel issues */
+            180deg,
+            var(--blue) 0 calc(1 / 5 * var(--height)),
+            transparent 0 100%
+        ),
+        repeating-linear-gradient(
+            0deg,
+            var(--blue) 0 calc(1 / 5 * var(--height)),
+            var(--white) 0 calc(2 / 5 * var(--height))
+        )
+    ;
 }

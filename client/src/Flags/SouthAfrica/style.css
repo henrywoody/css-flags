@@ -15,7 +15,7 @@
     --green-triangle-h-position: calc(50% + 5.40833 / 45 * var(--width));
     --gold-triangle-h-position: calc(50% - 5.40833 / 45 * var(--width));
     --black-triangle-h-position: calc(50% - 9.01388 / 45 * var(--width));
-    
+
     background-image:
         conic-gradient(
             from calc(-90deg - var(--triangle-angle) / 2) at var(--black-triangle-h-position) 50%,
