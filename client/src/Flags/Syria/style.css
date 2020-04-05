@@ -12,8 +12,6 @@
     --star-inner-radius: calc(
         var(--star-radius) * var(--sin-54) - var(--star-radius) * var(--cos-54) * var(--tan-36)
     );
-    --star-width: calc(var(--star-radius) * 2);
-    --star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
 
     --star-top-angle: 180deg;
     --star-top-sin: 1.00000;
