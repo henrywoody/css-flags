@@ -24,6 +24,9 @@ const Togo: React.FC = () => {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
+                        Scheme Color: <ExternalLink href="https://www.schemecolor.com/togo-flag-colors.php">"Togo Flag Colors"</ExternalLink>
+                    </li>
+                    <li>
                         Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/togo_flag.html">"Togo"</ExternalLink>
                     </li>
                     <li>

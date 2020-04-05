@@ -7,7 +7,8 @@
 
     --circle-radius: calc(8 / 72 * var(--width));
 
-    background-image:
+    background:
+        /* Crescent */
         radial-gradient(
             circle at calc(42 / 72 * var(--width)) 50%,
             var(--green) 0 var(--circle-radius),
@@ -18,17 +19,12 @@
             var(--white) 0 var(--circle-radius),
             transparent 0 100%
         ),
+
+        /* Background */
         linear-gradient(
-            0deg,
-            var(--red) 0 calc(12 / 48 * var(--height)),
-            transparent 0 calc(36 / 48 * var(--height)),
-            var(--red) 0 calc(48 / 48 * var(--height))
-        ),
-        linear-gradient(
-            90deg,
-            var(--red) 0 calc(12 / 72 * var(--width)),
-            var(--green) 0 calc(60 / 72 * var(--width)),
-            var(--red) 0 calc(72 / 72 * var(--width))
-        )
+            180deg,
+            var(--green) 0 100%
+        ) no-repeat calc(12 / 72 * var(--width)) calc(12 / 48 * var(--height)) / calc(48 / 72 * var(--width)) calc(24 / 48 * var(--height))
     ;
+    background-color: var(--red);
 }

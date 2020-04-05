@@ -58,6 +58,13 @@ code {
     background-color: var(--accent-background-color);
 }
 
+blockquote {
+    background-color: var(--accent-background-color);
+    padding: .25rem .5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 .flag {
     /**
         Star

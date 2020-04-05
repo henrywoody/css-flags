@@ -10,7 +10,7 @@ const Bangladesh: React.FC = () => {
         <FlagArea title="Bangladesh" flagName="লাল সবুজ (Lal Shobuz—The Red &amp; Green)">
             <DescriptionSection title="Description">
                 <p>
-                    The national flag of Bangladesh (Bengali: বাংলাদেশের জাতীয় পতাকা, romanized: Bānlādēśēra jātīẏa patākā, pronounced [baŋlad̪eʃer dʒat̪io̪ pɔt̪aka]) was adopted officially on 17 January 1972. It consists of a red disc on top (similar to that on Japan's flag) of a green field. The red disc is offset slightly toward the hoist so that it appears centred when the flag is flying. The disc represents the sun rising over Bengal, and also the blood of those who died for the independence of Bangladesh. The green field stands for the lushness of the land of Bangladesh. (Source: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Bangladesh">Wikipedia</ExternalLink>)
+                    The national flag of Bangladesh (Bengali: বাংলাদেশের জাতীয় পতাকা, romanized: <em>Bānlādēśēra jātīẏa patākā</em>, pronounced [baŋlad̪eʃer dʒat̪io̪ pɔt̪aka]) was adopted officially on 17 January 1972. It consists of a red disc on top (similar to that on Japan's flag) of a green field. The red disc is offset slightly toward the hoist so that it appears centred when the flag is flying. The disc represents the sun rising over Bengal, and also the blood of those who died for the independence of Bangladesh. The green field stands for the lushness of the land of Bangladesh. (Source: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Bangladesh">Wikipedia</ExternalLink>)
                 </p>
             </DescriptionSection>
 

@@ -10,7 +10,8 @@ section.description-section .section-content {
     padding: 0 1rem;
 }
 
-section.description-section p:not(:last-of-type) {
+section.description-section blockquote:not(:last-child),
+section.description-section p:not(:last-child) {
     margin-bottom: .5rem;
 }
 

@@ -9,56 +9,56 @@
     background:
         linear-gradient(
             90deg,
-            var(--yellow) 0 calc(10 / 12 * 100%),
-            var(--white) 0 calc(12 / 12 * 100%),
+            var(--yellow) 0 calc(13 / 15 * 100%),
+            var(--white) 0 calc(15 / 15 * 100%),
             var(--yellow) 0 100%
         ) 0 calc(8 / 9 * var(--height)),
         linear-gradient(
             90deg,
-            var(--yellow) 0 calc(9 / 12 * 100%),
-            var(--white) 0 calc(11 / 12 * 100%),
+            var(--yellow) 0 calc(12 / 15 * 100%),
+            var(--white) 0 calc(14 / 15 * 100%),
             var(--yellow) 0 100%
         ) 0 calc(7 / 9 * var(--height)),
         linear-gradient(
             90deg,
-            var(--yellow) 0 calc(8 / 12 * 100%),
-            var(--white) 0 calc(10 / 12 * 100%),
+            var(--yellow) 0 calc(11 / 15 * 100%),
+            var(--white) 0 calc(13 / 15 * 100%),
             var(--yellow) 0 100%
         ) 0 calc(6 / 9 * var(--height)),
         linear-gradient(
             90deg,
-            var(--blue) 0 calc(7 / 12 * 100%),
-            var(--white) 0 calc(9 / 12 * 100%),
+            var(--blue) 0 calc(10 / 15 * 100%),
+            var(--white) 0 calc(12 / 15 * 100%),
             var(--blue) 0 100%
         ) 0 calc(5 / 9 * var(--height)),
         linear-gradient(
             90deg,
-            var(--blue) 0 calc(6 / 12 * 100%),
-            var(--white) 0 calc(8 / 12 * 100%),
+            var(--blue) 0 calc(9 / 15 * 100%),
+            var(--white) 0 calc(11 / 15 * 100%),
             var(--blue) 0 100%
         ) 0 calc(4 / 9 * var(--height)),
         linear-gradient(
             90deg,
-            var(--blue) 0 calc(7 / 12 * 100%),
-            var(--white) 0 calc(9 / 12 * 100%),
+            var(--blue) 0 calc(10 / 15 * 100%),
+            var(--white) 0 calc(12 / 15 * 100%),
             var(--blue) 0 100%
         ) 0 calc(3 / 9 * var(--height)),
         linear-gradient(
             90deg,
-            var(--red) 0 calc(8 / 12 * 100%),
-            var(--white) 0 calc(10 / 12 * 100%),
+            var(--red) 0 calc(11 / 15 * 100%),
+            var(--white) 0 calc(13 / 15 * 100%),
             var(--red) 0 100%
         ) 0 calc(2 / 9 * var(--height)),
         linear-gradient(
             90deg,
-            var(--red) 0 calc(9 / 12 * 100%),
-            var(--white) 0 calc(11 / 12 * 100%),
+            var(--red) 0 calc(12 / 15 * 100%),
+            var(--white) 0 calc(14 / 15 * 100%),
             var(--red) 0 100%
         ) 0 calc(1 / 9 * var(--height)),
         linear-gradient(
             90deg,
-            var(--red) 0 calc(10 / 12 * 100%),
-            var(--white) 0 calc(12 / 12 * 100%),
+            var(--red) 0 calc(13 / 15 * 100%),
+            var(--white) 0 calc(15 / 15 * 100%),
             var(--red) 0 100%
         ) 0 calc(0 / 9 * var(--height))
     ;

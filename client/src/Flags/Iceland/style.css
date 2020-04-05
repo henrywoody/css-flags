@@ -4,6 +4,7 @@
     --red: #dc1e35;
 
     --aspect-ratio: calc(18 / 25);
+
     background-image:
         linear-gradient(
             180deg,

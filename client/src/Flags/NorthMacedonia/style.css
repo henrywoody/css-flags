@@ -5,7 +5,7 @@
     --aspect-ratio: calc(1 / 2);
 
     --circle-radius: calc(var(--height) / 7);
-    --circle-outline-radius: calc(var(--circle-radius) * 9 / 8);
+    --circle-outline-radius: calc(var(--circle-radius) + var(--circle-radius) * 2 / 8);
 
     --vertical-ray-angular-width: 14.28deg;
     --vertical-ray-offset: calc(6 / 56 * var(--height));

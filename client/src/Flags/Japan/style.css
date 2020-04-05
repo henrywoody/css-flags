@@ -4,7 +4,7 @@
 
     background-image: radial-gradient(
         circle at center,
-        var(--crimson-glory) 0 30%,
+        var(--crimson-glory) 0 calc(3 / 5 * var(--height) / 2),
         var(--white) 0 100%
     );
 }
