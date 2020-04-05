@@ -28,8 +28,10 @@
         /* Field */
         repeating-linear-gradient(
             180deg,
-            var(--green) 0 20%,
-            var(--yellow) 0 40%
+            var(--green) calc(0 / 5 * var(--height)),
+            var(--green) calc(1 / 5 * var(--height)),
+            var(--yellow) calc(1 / 5 * var(--height)),
+            var(--yellow) calc(2 / 5 * var(--height))
         )
     ;
 }

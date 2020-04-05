@@ -19,8 +19,10 @@
         ),
         repeating-linear-gradient(
             0deg,
-            var(--old-glory-red) 0 var(--stripe-height),
-            var(--white) 0 calc(2 * var(--stripe-height))
+            var(--old-glory-red) calc(0 * var(--stripe-height)),
+            var(--old-glory-red) calc(1 * var(--stripe-height)),
+            var(--white) calc(1 * var(--stripe-height)),
+            var(--white) calc(2 * var(--stripe-height))
         )
     ;
 }

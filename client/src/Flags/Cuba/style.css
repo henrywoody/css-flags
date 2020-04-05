@@ -35,8 +35,10 @@
         ),
         repeating-linear-gradient(
             0deg,
-            var(--blue) 0 calc(1 / 5 * var(--height)),
-            var(--white) 0 calc(2 / 5 * var(--height))
+            var(--blue) calc(0 / 5 * var(--height)),
+            var(--blue) calc(1 / 5 * var(--height)),
+            var(--white) calc(1 / 5 * var(--height)),
+            var(--white) calc(2 / 5 * var(--height))
         )
     ;
 }
