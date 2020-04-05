@@ -1,0 +1,85 @@
+.flag-east-timor {
+    --red: #da291c;
+    --yellow: #ffc72c;
+    --black: #000;
+    --white: #fff;
+
+    --aspect-ratio: calc(1 / 2);
+
+    --black-triangle-angle: 73.74deg;
+    --yellow-triangle-angle: 53.14deg;
+
+    --star-color: var(--white);
+    --star-background-color: var(--black);
+    --star-radius: calc(1 / 12 * var(--width));
+    --star-inner-radius: calc(
+        var(--star-radius) * var(--sin-54) - var(--star-radius) * var(--cos-54) * var(--tan-36)
+    );
+    --star-x: calc(1.33333 / 12 * var(--width) - var(--star-radius));
+    --star-y: 50%;
+
+    --star-top-angle: 156.03751deg;
+	--star-top-sin: 0.91381;
+	--star-top-cos: -0.40614;
+	--star-right-angle: calc(var(--star-top-angle) + 144deg);
+	--star-right-sin: -0.50057;
+	--star-right-cos: 0.86570;
+	--star-left-angle: calc(var(--star-top-angle) - 144deg);
+	--star-left-sin: -0.97801;
+    --star-left-cos: -0.20855;
+
+    background:
+        /* Star */
+        /* covers */
+        conic-gradient(
+            from calc(var(--star-top-angle) - var(--star-indent-angle) / 2)
+            at calc(50% + var(--star-inner-radius) * -1 * var(--star-top-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-top-sin)),
+            var(--star-background-color) 0 var(--star-indent-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
+        conic-gradient(
+            from calc(var(--star-right-angle) - var(--star-indent-angle) / 2)
+            at calc(50% + var(--star-inner-radius) * -1 * var(--star-right-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-right-sin)),
+            var(--star-background-color) 0 var(--star-indent-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
+        conic-gradient(
+            from calc(var(--star-left-angle) - var(--star-indent-angle) / 2)
+            at calc(50% + var(--star-inner-radius) * -1 * var(--star-left-cos)) calc(50% - var(--star-inner-radius) * -1 * var(--star-left-sin)),
+            var(--star-background-color) 0 var(--star-indent-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - 1px) calc(var(--star-y) - 1px) / calc(2 * var(--star-radius) + 2px) calc(2 * var(--star-radius) + 2px),
+        /* star */
+        conic-gradient(
+            from calc(var(--star-top-angle) - var(--star-interior-angle) / 2)
+            at calc(50% + var(--star-radius) * var(--star-top-cos)) calc(50% - var(--star-radius) * var(--star-top-sin)),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
+        conic-gradient(
+            from calc(var(--star-right-angle) - var(--star-interior-angle) / 2)
+            at calc(50% + var(--star-radius) * var(--star-right-cos)) calc(50% - var(--star-radius) * var(--star-right-sin)),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
+        conic-gradient(
+            from calc(var(--star-left-angle) - var(--star-interior-angle) / 2)
+            at calc(50% + var(--star-radius) * var(--star-left-cos)) calc(50% - var(--star-radius) * var(--star-left-sin)),
+            var(--star-color) 0 var(--star-interior-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) var(--star-y) / calc(2 * var(--star-radius)) calc(2 * var(--star-radius)),
+
+        /* Triangles */
+        conic-gradient(
+            from calc(270deg - var(--black-triangle-angle) / 2) at calc(4 / 12 * var(--width)) 50%,
+            var(--black) 0 var(--black-triangle-angle),
+            transparent 0 360deg
+        ),
+        conic-gradient(
+            from calc(270deg - var(--yellow-triangle-angle) / 2) at calc(6 / 12 * var(--width)) 50%,
+            var(--yellow) 0 var(--yellow-triangle-angle),
+            transparent 0 360deg
+        )
+    ;
+    background-color: var(--red);
+}

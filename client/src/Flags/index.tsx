@@ -8,6 +8,7 @@ import Cuba from "./Cuba";
 import DemocraticPeoplesRepublicOfKorea from "./DemocraticPeoplesRepublicOfKorea";
 import DemocraticRepublicOfTheCongo from "./DemocraticRepublicOfTheCongo";
 import Denmark from "./Denmark";
+import EastTimor from "./EastTimor";
 import Estonia from "./Estonia";
 import Finland from "./Finland";
 import France from "./France";
@@ -66,6 +67,7 @@ const flags: React.ReactElement[] = [
     <DemocraticPeoplesRepublicOfKorea key="democratic-peoples-republic-of-korea"/>,
     <DemocraticRepublicOfTheCongo key="democratic-republic-of-the-congo"/>,
     <Denmark key="denmark"/>,
+    <EastTimor key="east-timor"/>,
     <Estonia key="estonia"/>,
     <Finland key="finland"/>,
     <France key="france"/>,
