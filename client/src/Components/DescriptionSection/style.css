@@ -15,6 +15,6 @@ section.description-section p:not(:last-child) {
     margin-bottom: .5rem;
 }
 
-section.description-section .citation-list {
+section.description-section ul {
     padding-left: 1.5rem;
 }
