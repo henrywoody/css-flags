@@ -9,7 +9,8 @@
     --root-two: 1.41421;
 
     --overflow-cover-size: calc(var(--circle-radius) / 2);
-    --overflow-diagonal-offset: calc(var(--circle-radius) / (2 * var(--root-two)));
+    --overflow-diagonal-offset-frac:  calc(2 * var(--root-two)); /* put here separately for build compatibility: parentheses get removed when all on one line */
+    --overflow-diagonal-offset: calc(var(--circle-radius) / var(--overflow-diagonal-offset-frac));
 
     background:
         /* Trim Overflow */
