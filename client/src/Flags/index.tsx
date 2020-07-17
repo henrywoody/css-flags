@@ -48,6 +48,7 @@ import Sweden from "./Sweden";
 import Switzerland from "./Switzerland";
 import Syria from "./Syria";
 import Tanzania from "./Tanzania";
+import Thailand from "./Thailand";
 import Togo from "./Togo";
 import TrinidadAndTobago from "./TrinidadAndTobago";
 import UnitedArabEmirates from "./UnitedArabEmirates";
@@ -107,6 +108,7 @@ const flags: React.ReactElement[] = [
     <Switzerland key="switzerland"/>,
     <Syria key="syria"/>,
     <Tanzania key="tanzania"/>,
+    <Thailand key="thailand"/>,
     <Togo key="togo"/>,
     <TrinidadAndTobago key="trinidad-and-tobago"/>,
     <UnitedArabEmirates key="united-arab-emirates"/>,

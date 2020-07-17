@@ -1,0 +1,18 @@
+.flag-thailand {
+    --red: #a71a30;
+    --white: #f4f5f8;
+    --blue: #282b4a;
+
+    --aspect-ratio: calc(2 / 3);
+
+    background-image:
+        linear-gradient(
+            180deg,
+            var(--red) 0 calc(1 / 6 * var(--height)),
+            var(--white) 0 calc(2 / 6 * var(--height)),
+            var(--blue) 0 calc(4 / 6 * var(--height)),
+            var(--white) 0 calc(5 / 6 * var(--height)),
+            var(--red) 0 calc(6 / 6 * var(--height))
+        )
+    ;
+}
