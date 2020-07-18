@@ -30,6 +30,7 @@ import Norway from "./Norway";
 import Pakistan from "./Pakistan";
 import Palau from "./Palau";
 import Palestine from "./Palestine";
+import Panama from "./Panama";
 import PeoplesRepublicOfChina from "./PeoplesRepublicOfChina";
 import Qatar from "./Qatar";
 import RepublicOfArtsakh from "./RepublicOfArtsakh";
@@ -91,6 +92,7 @@ const flags: React.ReactElement[] = [
     <Pakistan key="pakistan"/>,
     <Palau key="palau"/>,
     <Palestine key="palestine"/>,
+    <Panama key="panama"/>,
     <PeoplesRepublicOfChina key="peoples-republic-of-china"/>,
     <Qatar key="qatar"/>,
     <RepublicOfArtsakh key="republic-of-artsakh"/>,
