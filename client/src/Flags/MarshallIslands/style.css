@@ -1,0 +1,169 @@
+.flag-marshall-islands {
+    --blue: #003087;
+    --white: #fff;
+    --orange: #e57200;
+
+    --aspect-ratio: calc(10 / 19);
+
+    --width-scale: calc(var(--width) / 950);
+    --height-scale: calc(var(--height) / 500);
+
+    --long-ray-angle: 6.92deg;
+    --short-ray-angle: 11.84deg;
+    --ray-angle-rotation: 15deg;
+
+    --star-inner-radius: calc(49 * var(--width-scale));
+    --star-middle-radius: calc(111 * var(--width-scale));
+    --star-outer-radius: calc(155 * var(--width-scale));
+
+    --star-center-x: calc(183 * var(--width-scale));
+    --star-center-y: calc(183 * var(--height-scale));
+
+    --stripe-x: calc(-84.444 * var(--width-scale));
+    --stripe-y: calc(var(--height) + 17.6 * var(--height-scale));
+
+    background:
+        /* Star */
+        /* top */
+        conic-gradient(
+            from calc(180deg + 0 * var(--ray-angle-rotation) - var(--long-ray-angle) / 2) at 50% 0,
+            var(--white) 0 var(--long-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-outer-radius)) calc(var(--star-center-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) var(--star-outer-radius),
+        conic-gradient(
+            from calc(180deg + 1 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(28.73 * var(--width-scale)) calc(var(--star-middle-radius) - 107.22 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 2 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(55.5 * var(--width-scale)) calc(var(--star-middle-radius) - 96.13 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 3 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(78.49 * var(--width-scale)) calc(var(--star-middle-radius) - 78.49 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 4 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(96.13 * var(--width-scale)) calc(var(--star-middle-radius) - 55.5 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 5 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(107.22 * var(--width-scale)) calc(var(--star-middle-radius) - 28.73 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        /* right */
+        conic-gradient(
+            from calc(180deg + 6 * var(--ray-angle-rotation) - var(--long-ray-angle) / 2) at 100% 50%,
+            var(--white) 0 var(--long-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) calc(var(--star-center-y) - var(--star-outer-radius)) / var(--star-outer-radius) calc(var(--star-outer-radius) * 2),
+        conic-gradient(
+            from calc(180deg + 7 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(107.22 * var(--width-scale)) calc(28.73 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 8 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(96.13 * var(--width-scale)) calc(55.5 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 9 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(78.49 * var(--width-scale)) calc(78.49 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 10 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(55.5 * var(--width-scale)) calc(96.13 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 11 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(28.73 * var(--width-scale)) calc(107.22 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-center-x) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        /* bottom */
+        conic-gradient(
+            from calc(180deg + 12 * var(--ray-angle-rotation) - var(--long-ray-angle) / 2) at 50% 100%,
+            var(--white) 0 var(--long-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-outer-radius)) var(--star-center-y) / calc(var(--star-outer-radius) * 2) var(--star-outer-radius),
+        conic-gradient(
+            from calc(180deg + 13 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 28.73 * var(--width-scale)) calc(107.22 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 14 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 55.5 * var(--width-scale)) calc(96.13 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 15 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 78.49 * var(--width-scale)) calc(78.49 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 16 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 96.13 * var(--width-scale)) calc(55.5 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 17 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 107.22 * var(--width-scale)) calc(28.73 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) var(--star-center-y) / var(--star-middle-radius) var(--star-middle-radius),
+        /* left */
+        conic-gradient(
+            from calc(180deg + 18 * var(--ray-angle-rotation) - var(--long-ray-angle) / 2) at 0 50%,
+            var(--white) 0 var(--long-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-outer-radius)) calc(var(--star-center-y) - var(--star-outer-radius)) / var(--star-outer-radius) calc(var(--star-outer-radius) * 2),
+        conic-gradient(
+            from calc(180deg + 19 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 107.22 * var(--width-scale)) calc(var(--star-middle-radius) - 28.73 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 20 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 96.13 * var(--width-scale)) calc(var(--star-middle-radius) - 55.5 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 21 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 78.49 * var(--width-scale)) calc(var(--star-middle-radius) - 78.49 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 22 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 55.5 * var(--width-scale)) calc(var(--star-middle-radius) - 96.13 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+        conic-gradient(
+            from calc(180deg + 23 * var(--ray-angle-rotation) - var(--short-ray-angle) / 2) at calc(var(--star-middle-radius) - 28.73 * var(--width-scale)) calc(var(--star-middle-radius) - 107.22 * var(--height-scale)),
+            var(--white) 0 var(--short-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-center-x) - var(--star-middle-radius)) calc(var(--star-center-y) - var(--star-middle-radius)) / var(--star-middle-radius) var(--star-middle-radius),
+
+        /* center */
+        radial-gradient(
+            circle at var(--star-center-x) var(--star-center-y),
+            var(--white) 0 var(--star-inner-radius),
+            transparent 0 100%
+        ),
+
+        /* Stripes */
+        conic-gradient(
+            from 63.77deg at var(--stripe-x) var(--stripe-y),
+            var(--orange) 0 4.53deg,
+            var(--white) 0 9.36deg,
+            transparent 0 360deg
+        )
+    ;
+
+    background-color: var(--blue);
+}
