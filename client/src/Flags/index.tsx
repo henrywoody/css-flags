@@ -28,6 +28,7 @@ import Lithuania from "./Lithuania";
 import Luxembourg from "./Luxembourg";
 import Maldives from "./Maldives";
 import MarshallIslands from "./MarshallIslands";
+import Nauru from "./Nauru";
 import NorthMacedonia from "./NorthMacedonia";
 import Norway from "./Norway";
 import Pakistan from "./Pakistan";
@@ -95,6 +96,7 @@ const flags: React.ReactElement[] = [
     <Luxembourg key="luxembourg"/>,
     <Maldives key="maldives"/>,
     <MarshallIslands key="marshall-islands"/>,
+    <Nauru key="nauru"/>,
     <NorthMacedonia key="north-macedonia"/>,
     <Norway key="norway"/>,
     <Pakistan key="pakistan"/>,
