@@ -53,7 +53,13 @@ a:visited {
     color: var(--visited-link-color);
 }
 
+ul,
+ol {
+    margin-bottom: .5rem;
+}
+
 code {
+    font-size: 1.1rem;
     font-family: monospace;
     background-color: var(--accent-background-color);
 }

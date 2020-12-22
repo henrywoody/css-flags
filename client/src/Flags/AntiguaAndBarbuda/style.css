@@ -18,8 +18,8 @@
     --sun-x: calc(var(--width) / 2);
     --sun-y: calc(36 * var(--height-scale));
 
-    --sun-ray-angle: 22.5deg;
-    --sun-ray-rotation: var(--sun-ray-angle);
+    --sun-ray-angle: 21.672102deg;
+    --sun-ray-rotation: 22.5deg;
     --cos-sun-ray-rotation: 0.92388;
     --sin-sun-ray-rotation: 0.38268;
     --cos-2-sun-ray-rotation: 0.70711;

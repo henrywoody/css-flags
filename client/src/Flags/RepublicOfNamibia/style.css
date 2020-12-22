@@ -1,0 +1,120 @@
+.flag-republic-of-namibia {
+    --blue: #002f6c;
+    --yellow: #ffcd00;
+    --green: #009a44;
+    --red: #c8102e;
+    --white: #fff;
+
+    --aspect-ratio: calc(2 / 3);
+
+    --scale: calc(var(--width) / 180);
+
+    --diagonal-angle: 33.69deg;
+
+    --sun-inner-radius: calc(10 * var(--scale));
+    --sun-middle-radius: calc(12 * var(--scale));
+    --sun-outer-radius: calc(20 * var(--scale));
+    --sun-x: calc(36 * var(--scale));
+    --sun-y: calc(33 * var(--scale));
+
+    --sun-ray-angle: 40.543478deg;
+    --sun-ray-rotation: 30deg;
+    --cos-sun-ray-rotation: 0.86603;
+    --sin-sun-ray-rotation: 0.5;
+    --cos-2-sun-ray-rotation: 0.5;
+    --sin-2-sun-ray-rotation: 0.86603;
+
+    background:
+        /* Sun */
+        /* center */
+        radial-gradient(
+            circle at var(--sun-x) var(--sun-y),
+            var(--yellow) 0 var(--sun-inner-radius),
+            transparent 0 100%
+        ),
+        radial-gradient(
+            circle at var(--sun-x) var(--sun-y),
+            var(--blue) 0 var(--sun-middle-radius),
+            transparent 0 100%
+        ),
+        /* rays (clockwise starting at bottom) */
+        conic-gradient(
+            from calc(0 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2) at 50% 100%,
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) var(--sun-y) / calc(var(--sun-outer-radius) * 2) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(1 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+            at calc(100% - var(--sun-outer-radius) * var(--cos-2-sun-ray-rotation)) calc(var(--sun-outer-radius) * var(--sin-2-sun-ray-rotation)),
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) var(--sun-y) / var(--sun-outer-radius) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(2 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+            at calc(100% - var(--sun-outer-radius) * var(--cos-sun-ray-rotation)) calc(var(--sun-outer-radius) * var(--sin-sun-ray-rotation)),
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) var(--sun-y) / var(--sun-outer-radius) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(3 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2) at 0 50%,
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) calc(var(--sun-outer-radius) * 2),
+        conic-gradient(
+            from calc(4 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+            at calc(100% - var(--sun-outer-radius) * var(--cos-sun-ray-rotation)) calc(100% - var(--sun-outer-radius) * var(--sin-sun-ray-rotation)),
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(5 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+            at calc(100% - var(--sun-outer-radius) * var(--cos-2-sun-ray-rotation)) calc(100% - var(--sun-outer-radius) * var(--sin-2-sun-ray-rotation)),
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(6 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2) at 50% 0,
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) calc(var(--sun-y) - var(--sun-outer-radius)) / calc(var(--sun-outer-radius) * 2) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(7 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+            at calc(var(--sun-outer-radius) * var(--cos-2-sun-ray-rotation)) calc(100% - var(--sun-outer-radius) * var(--sin-2-sun-ray-rotation)),
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--sun-x) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(8 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+            at calc(var(--sun-outer-radius) * var(--cos-sun-ray-rotation)) calc(100% - var(--sun-outer-radius) * var(--sin-sun-ray-rotation)),
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--sun-x) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(9 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2) at 100% 50%,
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--sun-x) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) calc(var(--sun-outer-radius) * 2),
+        conic-gradient(
+            from calc(10 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+            at calc(var(--sun-outer-radius) * var(--cos-sun-ray-rotation)) calc(var(--sun-outer-radius) * var(--sin-sun-ray-rotation)),
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--sun-x) var(--sun-y) / var(--sun-outer-radius) var(--sun-outer-radius),
+        conic-gradient(
+            from calc(11 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+            at calc(var(--sun-outer-radius) * var(--cos-2-sun-ray-rotation)) calc(var(--sun-outer-radius) * var(--sin-2-sun-ray-rotation)),
+            var(--yellow) 0 var(--sun-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--sun-x) var(--sun-y) / var(--sun-outer-radius) var(--sun-outer-radius),
+
+        /* Stripes */
+        linear-gradient(
+            calc(180deg - var(--diagonal-angle)),
+            var(--blue) 0 calc(50% - 20 * var(--scale)),
+            var(--white) 0 calc(50% - 15 * var(--scale)),
+            var(--red) 0 calc(50% + 15 * var(--scale)),
+            var(--white) 0 calc(50% + 20 * var(--scale)),
+            var(--green) 0 100%
+        )
+    ;
+}

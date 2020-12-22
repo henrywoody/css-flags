@@ -8,8 +8,8 @@
     --width-scale: calc(var(--width) / 950);
     --height-scale: calc(var(--height) / 500);
 
-    --long-ray-angle: 6.92deg;
-    --short-ray-angle: 11.84deg;
+    --long-ray-angle: 6.878667deg;
+    --short-ray-angle: 11.700789deg;
     --ray-angle-rotation: 15deg;
 
     --star-inner-radius: calc(49 * var(--width-scale));
