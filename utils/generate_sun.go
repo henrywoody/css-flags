@@ -32,8 +32,12 @@ func generateSun(innerRadius, outerRadius float64, numRays int) {
 	numDistinctAngles := numRays / 4 - 1
 
 
-	fmt.Println("Useful variables:")
+	fmt.Println("\nVariables:")
 
+	fmt.Printf("    --sun-outer-radius: calc(%f * var(--scale));\n", outerRadius)
+    fmt.Println("    --sun-x: ;")
+    fmt.Println("    --sun-y: ;")
+    fmt.Println("    --sun-color: ;")
 	fmt.Printf("    --sun-ray-rotation: %fdeg;\n", toDegrees(rayRotation))
 	fmt.Printf("    --sun-ray-angle: %fdeg;\n", toDegrees(rayAngle))
 
@@ -42,8 +46,7 @@ func generateSun(innerRadius, outerRadius float64, numRays int) {
 		fmt.Printf("    --cos-%d-sun-ray-rotation: %f;\n", i + 1, math.Cos(rayRotation * float64(i + 1)))
 	}
 
-	fmt.Println("\n\n")
-
+	fmt.Println("\nRays definition:")
 	generateRayCSS(numRays)
 }
 

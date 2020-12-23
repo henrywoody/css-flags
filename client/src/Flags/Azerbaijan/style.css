@@ -1,0 +1,92 @@
+.flag-azerbaijan {
+    --blue: #00b9e4;
+    --red: #ed2939;
+    --white: #fff;
+    --green: #3f9c35;
+
+    --aspect-ratio: calc(1 / 2);
+
+    --scale: calc(var(--width) / 240);
+
+    --star-outer-radius: calc(10 * var(--scale));
+    --star-x: calc(134 * var(--scale));
+    --star-y: calc(60 * var(--scale));
+    --star-color: var(--white);
+    --star-ray-rotation: 45.000000deg;
+    --star-ray-angle: 39.152190deg;
+    --sin-1-star-ray-rotation: 0.707107;
+    --cos-1-star-ray-rotation: 0.707107;
+
+    background:
+        /* Star */
+        /* rays (clockwise starting at bottom) */
+        conic-gradient(
+            from calc(0 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+            at 50% 100%,
+            var(--star-color) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - var(--star-outer-radius)) var(--star-y) / calc(var(--star-outer-radius) * 2) var(--star-outer-radius),
+        conic-gradient(
+            from calc(1 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+            at calc(100% - var(--star-outer-radius) * var(--cos-1-star-ray-rotation)) calc(var(--star-outer-radius) * var(--sin-1-star-ray-rotation)),
+            var(--star-color) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - var(--star-outer-radius)) var(--star-y) / var(--star-outer-radius) var(--star-outer-radius),
+        conic-gradient(
+            from calc(2 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+            at 0 50%,
+            var(--star-color) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - var(--star-outer-radius)) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) calc(var(--star-outer-radius) * 2),
+        conic-gradient(
+            from calc(3 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+            at calc(100% - var(--star-outer-radius) * var(--cos-1-star-ray-rotation)) calc(100% - var(--star-outer-radius) * var(--sin-1-star-ray-rotation)),
+            var(--star-color) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - var(--star-outer-radius)) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) var(--star-outer-radius),
+        conic-gradient(
+            from calc(4 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+            at 50% 0,
+            var(--star-color) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--star-x) - var(--star-outer-radius)) calc(var(--star-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) var(--star-outer-radius),
+        conic-gradient(
+            from calc(5 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+            at calc(var(--star-outer-radius) * var(--cos-1-star-ray-rotation)) calc(100% - var(--star-outer-radius) * var(--sin-1-star-ray-rotation)),
+            var(--star-color) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) var(--star-outer-radius),
+        conic-gradient(
+            from calc(6 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+            at 100% 50%,
+            var(--star-color) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) calc(var(--star-outer-radius) * 2),
+        conic-gradient(
+            from calc(7 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+            at calc(var(--star-outer-radius) * var(--cos-1-star-ray-rotation)) calc(var(--star-outer-radius) * var(--sin-1-star-ray-rotation)),
+            var(--star-color) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat var(--star-x) var(--star-y) / var(--star-outer-radius) var(--star-outer-radius),
+
+        /* Crescent */
+        radial-gradient(
+            circle at calc(118 * var(--scale)) calc(60 * var(--scale)),
+            var(--red) 0 calc(15 * var(--scale)),
+            transparent 0 100%
+        ),
+        radial-gradient(
+            circle at calc(114 * var(--scale)) calc(60 * var(--scale)),
+            var(--white) 0 calc(18 * var(--scale)),
+            transparent 0 100%
+        ),
+
+        /* Tricolor */
+        linear-gradient(
+            180deg,
+            var(--blue) 0 calc(40 * var(--scale)),
+            var(--red) 0 calc(80 * var(--scale)),
+            var(--green) 0 calc(120 * var(--scale))
+        )
+    ;
+}
