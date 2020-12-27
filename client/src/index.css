@@ -5,7 +5,10 @@
     --accent-background-color: #444;
     --shadow-color: #222;
 
-    /* Star constants */
+
+    /* Constants */
+    --root-3: 1.73205;
+
     --sin-18: 0.30902;
     --cos-18: 0.95106;
     --tan-18: 0.32492;

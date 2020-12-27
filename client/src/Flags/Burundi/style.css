@@ -1,0 +1,125 @@
+.flag-burundi {
+    --green: #1eb53a;
+    --white: #fff;
+    --red: #ce1126;
+
+    --aspect-ratio: calc(3 / 5);
+
+    --scale: calc(var(--width) / 2500);
+
+    --star-outer-radius: calc(100 * var(--scale));
+    --star-inner-radius: calc(82 * var(--scale));
+    --star-ray-angle: 60deg;
+
+    --disc-radius: calc(425 * var(--scale));
+    --star-circle-radius: calc(220 * var(--scale));
+
+    --half-x: calc(1250 * var(--scale));
+    --half-y: calc(750 * var(--scale));
+    --top-star-x: var(--half-x);
+    --top-star-y: calc(var(--half-y) - var(--star-circle-radius));
+    --side-star-x-offset: calc(var(--root-3) * var(--star-circle-radius) / 2);
+    --side-star-y-offset: calc(var(--star-circle-radius) / 2);
+    --left-star-x: calc(var(--half-x) - var(--side-star-x-offset));
+    --left-star-y: calc(var(--half-y) + var(--side-star-y-offset));
+    --right-star-x: calc(var(--half-x) + var(--side-star-x-offset));
+    --right-star-y: calc(var(--half-y) + var(--side-star-y-offset));
+
+    --fimbriation-width: calc(200 * var(--scale));
+    --diagonal-angle: 30.96deg;
+    --background-green-angle: calc(var(--diagonal-angle) * 2);
+    --background-red-angle: 118.08deg;
+
+    background:
+        /* Stars *
+        /* top */
+        conic-gradient(
+            from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+            var(--red) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--top-star-x) - var(--star-inner-radius)) calc(var(--top-star-y) - var(--star-inner-radius)) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+        conic-gradient(
+            from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+            var(--red) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--top-star-x) - var(--star-inner-radius)) calc(var(--top-star-y) - var(--star-inner-radius) / 2) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+        conic-gradient(
+            from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+            var(--green) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--top-star-x) - var(--star-outer-radius)) calc(var(--top-star-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+        conic-gradient(
+            from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+            var(--green) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--top-star-x) - var(--star-outer-radius)) calc(var(--top-star-y) - var(--star-outer-radius) / 2) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+        /* left */
+        conic-gradient(
+            from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+            var(--red) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--left-star-x) - var(--star-inner-radius)) calc(var(--left-star-y) - var(--star-inner-radius)) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+        conic-gradient(
+            from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+            var(--red) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--left-star-x) - var(--star-inner-radius)) calc(var(--left-star-y) - var(--star-inner-radius) / 2) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+        conic-gradient(
+            from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+            var(--green) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--left-star-x) - var(--star-outer-radius)) calc(var(--left-star-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+        conic-gradient(
+            from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+            var(--green) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--left-star-x) - var(--star-outer-radius)) calc(var(--left-star-y) - var(--star-outer-radius) / 2) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+        /* right */
+        conic-gradient(
+            from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+            var(--red) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--right-star-x) - var(--star-inner-radius)) calc(var(--right-star-y) - var(--star-inner-radius)) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+        conic-gradient(
+            from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+            var(--red) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--right-star-x) - var(--star-inner-radius)) calc(var(--right-star-y) - var(--star-inner-radius) / 2) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+        conic-gradient(
+            from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+            var(--green) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--right-star-x) - var(--star-outer-radius)) calc(var(--right-star-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+        conic-gradient(
+            from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+            var(--green) 0 var(--star-ray-angle),
+            transparent 0 360deg
+        ) no-repeat calc(var(--right-star-x) - var(--star-outer-radius)) calc(var(--right-star-y) - var(--star-outer-radius) / 2) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+
+        /* Disc */
+        radial-gradient(
+            circle at center,
+            var(--white) 0 var(--disc-radius),
+            transparent 0 100%
+        ),
+
+        /* Background */
+        linear-gradient(
+            var(--diagonal-angle),
+            transparent 0 calc(50% - var(--fimbriation-width) / 2),
+            var(--white) 0 calc(50% + var(--fimbriation-width) / 2),
+            transparent 0 100%
+        ),
+        linear-gradient(
+            calc(-1 * var(--diagonal-angle)),
+            transparent 0 calc(50% - var(--fimbriation-width) / 2),
+            var(--white) 0 calc(50% + var(--fimbriation-width) / 2),
+            transparent 0 100%
+        ),
+        repeating-conic-gradient(
+            from calc(-1 * var(--background-red-angle) / 2) at center,
+            var(--red) 0 var(--background-red-angle),
+            var(--green) 0 calc(var(--background-red-angle) + var(--background-green-angle))
+        )
+    ;
+}
