@@ -26,15 +26,15 @@ func GetStarVariables(variablePrefix string, rotation float64) {
 	leftCSSAngle := topCSSAngle - 144.0
 	leftSin, leftCos := getTriangleTrigValues(leftCSSAngle)
 
-	fmt.Printf(`--%s-top-angle: %.5fdeg;
-	--%s-top-sin: %.5f;
-	--%s-top-cos: %.5f;
-	--%s-right-angle: calc(var(--%s-top-angle) + 144deg);
-	--%s-right-sin: %.5f;
-	--%s-right-cos: %.5f;
-	--%s-left-angle: calc(var(--%s-top-angle) - 144deg);
-	--%s-left-sin: %.5f;
-	--%s-left-cos: %.5f;`,
+	fmt.Printf(`    --%s-top-angle: %.5fdeg;
+    --%s-top-sin: %.5f;
+    --%s-top-cos: %.5f;
+    --%s-right-angle: calc(var(--%s-top-angle) + 144deg);
+    --%s-right-sin: %.5f;
+    --%s-right-cos: %.5f;
+    --%s-left-angle: calc(var(--%s-top-angle) - 144deg);
+    --%s-left-sin: %.5f;
+    --%s-left-cos: %.5f;`,
 		variablePrefix,
 		topCSSAngle,
 		variablePrefix,
