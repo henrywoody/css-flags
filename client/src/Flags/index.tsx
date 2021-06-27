@@ -29,6 +29,7 @@ import Laos from "./Laos";
 import Latvia from "./Latvia";
 import Lithuania from "./Lithuania";
 import Luxembourg from "./Luxembourg";
+import Malaysia from "./Malaysia";
 import Maldives from "./Maldives";
 import MarshallIslands from "./MarshallIslands";
 import Nauru from "./Nauru";
@@ -68,7 +69,6 @@ import UnitedStatesOfAmerica from "./UnitedStatesOfAmerica";
 import Vietnam from "./Vietnam";
 import Yemen from "./Yemen";
 
-
 const flags: React.ReactElement[] = [
     <Algeria key="algeria"/>,
     <AntiguaAndBarbuda key="antigua-and-barbuda"/>,
@@ -100,6 +100,7 @@ const flags: React.ReactElement[] = [
     <Latvia key="latvia"/>,
     <Lithuania key="lithuania"/>,
     <Luxembourg key="luxembourg"/>,
+    <Malaysia key="malaysia"/>,
     <Maldives key="maldives"/>,
     <MarshallIslands key="marshall-islands"/>,
     <Nauru key="nauru"/>,
