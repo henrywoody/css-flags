@@ -12,4 +12,4 @@ Build `utils/make_flag.go` with `go build -o utils/make_flag.exe utils/make_flag
 
 ### Solving Suns
 
-For stars with a large number of points (more than 5, those that might also be called a sun), construction is often described by only an inner and outer radius (as well as the number of rays that fully surround the center). The angle of each ray must be calculated to create a `conic-gradient` for that ray. In these cases, use `utils/generate_sun`. This will provide the angles for the rays and, if possible (number of rays is divisible by 4), generate CSS code for the rays.
+For stars with a large number of points (more than 5, those that might also be called a sun), construction is often described by only an inner and outer radius (as well as the number of rays that fully surround the center). The angle of each ray must be calculated to create a `conic-gradient` for that ray. In these cases, use `utils/generate_sun`. This will provide the angles for the rays and, if possible (number of rays is even), generate CSS code for the rays.
