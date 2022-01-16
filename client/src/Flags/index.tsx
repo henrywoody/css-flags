@@ -16,6 +16,7 @@ import EastTimor from "./EastTimor";
 import Estonia from "./Estonia";
 import Finland from "./Finland";
 import France from "./France";
+import Georgia from "./Georgia";
 import Germany from "./Germany";
 import Greece from "./Greece";
 import Guyana from "./Guyana";
@@ -87,6 +88,7 @@ const flags: React.ReactElement[] = [
     <Estonia key="estonia"/>,
     <Finland key="finland"/>,
     <France key="france"/>,
+    <Georgia key="georgia"/>,
     <Germany key="germany"/>,
     <Greece key="greece"/>,
     <Guyana key="guyana"/>,

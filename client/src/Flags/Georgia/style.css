@@ -1,0 +1,212 @@
+.flag-georgia {
+    --red: #f00;
+    --white: #fff;
+
+    --aspect-ratio: calc(2 / 3);
+
+    --scale: calc(var(--width) / 300);
+
+    --cross-size: calc(var(--scale) * 40);
+    --cross-v-offset: calc(var(--scale) * 20);
+    --cross-h-offset: calc(var(--scale) * 45);
+    --cross-bottom-v-offset: calc(var(--cross-v-offset) + var(--scale) * 120);
+    --cross-right-h-offset: calc(var(--cross-h-offset) + var(--scale) * 170);
+    --cross-big-circle-offset: calc(var(--scale) * 89);
+    --cross-big-circle-radius: calc(var(--scale) * 104);
+    --cross-small-circle-offset: calc(var(--scale) * 54);
+    --cross-small-circle-radius: calc(var(--scale) * 56);
+
+    background:
+        /* Top Left Cross */
+        /* small circles */
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(-1 * var(--cross-small-circle-offset)),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(var(--cross-size) + var(--cross-small-circle-offset)),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(-1 * var(--cross-small-circle-offset)) calc(var(--cross-size) / 2),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) + var(--cross-small-circle-offset)) calc(var(--cross-size) / 2),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-v-offset) / var(--cross-size) var(--cross-size),
+        /* big circles */
+        radial-gradient(
+            circle at calc(-1 * var(--cross-big-circle-offset)) calc(var(--cross-size) / 2),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-v-offset) / calc(var(--cross-size) / 2) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2 + var(--cross-big-circle-offset)) calc(var(--cross-size) / 2),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat calc(var(--cross-h-offset) + var(--cross-size) / 2) var(--cross-v-offset) / calc(var(--cross-size) / 2) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(-1 * var(--cross-big-circle-offset)),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-v-offset) / var(--cross-size) calc(var(--cross-size) / 2),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(var(--cross-size) / 2 + var(--cross-big-circle-offset)),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-h-offset) calc(var(--cross-v-offset) + var(--cross-size) / 2) / var(--cross-size) calc(var(--cross-size) / 2),
+
+        /* Top Right Cross */
+        /* small circles */
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(-1 * var(--cross-small-circle-offset)),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(var(--cross-size) + var(--cross-small-circle-offset)),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(-1 * var(--cross-small-circle-offset)) calc(var(--cross-size) / 2),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) + var(--cross-small-circle-offset)) calc(var(--cross-size) / 2),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-v-offset) / var(--cross-size) var(--cross-size),
+        /* big circles */
+        radial-gradient(
+            circle at calc(-1 * var(--cross-big-circle-offset)) calc(var(--cross-size) / 2),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-v-offset) / calc(var(--cross-size) / 2) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2 + var(--cross-big-circle-offset)) calc(var(--cross-size) / 2),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat calc(var(--cross-right-h-offset) + var(--cross-size) / 2) var(--cross-v-offset) / calc(var(--cross-size) / 2) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(-1 * var(--cross-big-circle-offset)),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-v-offset) / var(--cross-size) calc(var(--cross-size) / 2),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(var(--cross-size) / 2 + var(--cross-big-circle-offset)),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-right-h-offset) calc(var(--cross-v-offset) + var(--cross-size) / 2) / var(--cross-size) calc(var(--cross-size) / 2),
+
+        /* Bottom Right Cross */
+        /* small circles */
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(-1 * var(--cross-small-circle-offset)),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(var(--cross-size) + var(--cross-small-circle-offset)),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(-1 * var(--cross-small-circle-offset)) calc(var(--cross-size) / 2),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) + var(--cross-small-circle-offset)) calc(var(--cross-size) / 2),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) var(--cross-size),
+        /* big circles */
+        radial-gradient(
+            circle at calc(-1 * var(--cross-big-circle-offset)) calc(var(--cross-size) / 2),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-bottom-v-offset) / calc(var(--cross-size) / 2) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2 + var(--cross-big-circle-offset)) calc(var(--cross-size) / 2),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat calc(var(--cross-right-h-offset) + var(--cross-size) / 2) var(--cross-bottom-v-offset) / calc(var(--cross-size) / 2) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(-1 * var(--cross-big-circle-offset)),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-right-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) calc(var(--cross-size) / 2),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(var(--cross-size) / 2 + var(--cross-big-circle-offset)),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-right-h-offset) calc(var(--cross-bottom-v-offset) + var(--cross-size) / 2) / var(--cross-size) calc(var(--cross-size) / 2),
+
+        /* Bottom Left Cross */
+        /* small circles */
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(-1 * var(--cross-small-circle-offset)),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(var(--cross-size) + var(--cross-small-circle-offset)),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(-1 * var(--cross-small-circle-offset)) calc(var(--cross-size) / 2),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) + var(--cross-small-circle-offset)) calc(var(--cross-size) / 2),
+            var(--white) 0 var(--cross-small-circle-radius),
+            transparent 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) var(--cross-size),
+        /* big circles */
+        radial-gradient(
+            circle at calc(-1 * var(--cross-big-circle-offset)) calc(var(--cross-size) / 2),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-bottom-v-offset) / calc(var(--cross-size) / 2) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2 + var(--cross-big-circle-offset)) calc(var(--cross-size) / 2),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat calc(var(--cross-h-offset) + var(--cross-size) / 2) var(--cross-bottom-v-offset) / calc(var(--cross-size) / 2) var(--cross-size),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(-1 * var(--cross-big-circle-offset)),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-h-offset) var(--cross-bottom-v-offset) / var(--cross-size) calc(var(--cross-size) / 2),
+        radial-gradient(
+            circle at calc(var(--cross-size) / 2) calc(var(--cross-size) / 2 + var(--cross-big-circle-offset)),
+            transparent 0 var(--cross-big-circle-radius),
+            var(--red) 0 100%
+        ) no-repeat var(--cross-h-offset) calc(var(--cross-bottom-v-offset) + var(--cross-size) / 2) / var(--cross-size) calc(var(--cross-size) / 2),
+
+        /* Center Cross */
+        linear-gradient(
+            180deg,
+            transparent 0 calc(var(--scale) * 80),
+            var(--red) 0 calc(var(--scale) * 120),
+            transparent 0 100%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 0 calc(var(--scale) * 130),
+            var(--red) 0 calc(var(--scale) * 170),
+            transparent 0 100%
+
+        )
+    ;
+    background-color: var(--white);
+}
