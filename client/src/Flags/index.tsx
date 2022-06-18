@@ -7,6 +7,7 @@ import { Bahamas } from "./Bahamas";
 import { Bangladesh } from "./Bangladesh";
 import { Botswana } from "./Botswana";
 import { Burundi } from "./Burundi";
+import { Cameroon } from "./Cameroon";
 import { CentralAfricanRepublic } from "./CentralAfricanRepublic";
 import { Colombia } from "./Colombia";
 import { Cuba } from "./Cuba";
@@ -80,6 +81,7 @@ export const flags: React.ReactElement[] = [
     <Bangladesh key="bangladesh" />,
     <Botswana key="botswana" />,
     <Burundi key="burundi" />,
+    <Cameroon key="cameroon" />,
     <CentralAfricanRepublic key="central-african-republic" />,
     <Colombia key="colombia" />,
     <Cuba key="cuba" />,

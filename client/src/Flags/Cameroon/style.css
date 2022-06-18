@@ -1,0 +1,28 @@
+.flag-cameroon {
+    --green: #007a5e;
+    --red: #ce1126;
+    --yellow: #fcd116;
+
+    --proportion: calc(2 / 3);
+
+    --scale: calc(var(--width) / 18);
+
+    --star-color: var(--yellow);
+    --star-background-color: var(--red);
+    --star-radius-value: calc(4  / (1 + var(--sin-54)));
+    --star-radius: calc(var(--star-radius-value) * var(--scale));
+    --star-x-value: calc(9 - var(--star-radius-value));
+    --star-x-position: calc(var(--star-x-value) * var(--scale));
+    --star-y-value: calc(6 - var(--star-radius-value));
+    --star-y-position: calc(var(--star-y-value) * var(--scale));
+
+    background:
+        var(--single-five-pointed-star),
+        linear-gradient(
+            90deg,
+            var(--green) 0 calc(1 / 3 * var(--width)),
+            var(--red) 0 calc(2 / 3 * var(--width)),
+            var(--yellow) 0 calc(3 / 3 * var(--width))
+        )
+    ;
+}
