@@ -5,10 +5,9 @@ import { flags } from "./Flags";
 export function App() {
     return (
         <div className="App">
-            <Home/>
+            <Home />
 
-            { flags }
+            {flags}
         </div>
     );
 }
-

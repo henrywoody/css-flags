@@ -2,13 +2,17 @@ import React from "react";
 import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
-
 export function Thailand() {
     return (
         <FlagArea title="Thailand" flagName="ธงไตรรงค์ (Trairanga—Tricolour Flag)">
             <DescriptionSection title="Description">
                 <p>
-                    The flag of the Kingdom of Thailand (Thai: ธงไตรรงค์; RTGS: <em>thong trai rong</em>, meaning 'tricolour flag') shows five horizontal stripes in the colours red, white, blue, white and red, with the central blue stripe being twice as wide as each of the other four. The design was adopted on 28 September 1917, according to the royal decree issued by Rama VI. Since 2016, that day is a national day of importance in Thailand celebrating the flag. (Source: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Thailand">Wikipedia</ExternalLink>)
+                    The flag of the Kingdom of Thailand (Thai: ธงไตรรงค์; RTGS: <em>thong trai rong</em>, meaning
+                    'tricolour flag') shows five horizontal stripes in the colours red, white, blue, white and red, with
+                    the central blue stripe being twice as wide as each of the other four. The design was adopted on 28
+                    September 1917, according to the royal decree issued by Rama VI. Since 2016, that day is a national
+                    day of importance in Thailand celebrating the flag. (Source:{" "}
+                    <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Thailand">Wikipedia</ExternalLink>)
                 </p>
             </DescriptionSection>
 
@@ -21,11 +25,13 @@ export function Thailand() {
             <DescriptionSection title="Sources">
                 <ul className="citation-list">
                     <li>
-                        Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Thailand">"Flag of Thailand"</ExternalLink>
+                        Wikipedia:{" "}
+                        <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Thailand">
+                            "Flag of Thailand"
+                        </ExternalLink>
                     </li>
                 </ul>
             </DescriptionSection>
         </FlagArea>
-    )
+    );
 }
-
