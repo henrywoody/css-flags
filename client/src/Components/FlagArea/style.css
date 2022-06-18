@@ -27,10 +27,10 @@
 }
 
 .flag {
-    --aspect-ratio: var(--default-flag-aspect-ratio);
+    --proportion: var(--default-flag-aspect-ratio);
 
     --width: 70vw;
-    --height: calc(var(--width) * var(--aspect-ratio));
+    --height: calc(var(--width) * var(--proportion));
 
     width: var(--width);
     height: var(--height);
@@ -45,7 +45,7 @@
 @media all and (min-aspect-ratio: 2/1) {
     .flag {
         --height: 70vh;
-        --width: calc(var(--height) / var(--aspect-ratio));
+        --width: calc(var(--height) / var(--proportion));
     }
 }
 

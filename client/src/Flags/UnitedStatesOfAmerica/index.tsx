@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const UnitedStatesOfAmerica: React.FC = () => {
+export function UnitedStatesOfAmerica() {
     return (
         <FlagArea title="United States of America" flagName="The Stars and Stripes | Old Glory | The Star-Spangled Banner">
             <DescriptionSection title="Description">
@@ -40,4 +38,3 @@ const UnitedStatesOfAmerica: React.FC = () => {
     )
 }
 
-export default UnitedStatesOfAmerica;

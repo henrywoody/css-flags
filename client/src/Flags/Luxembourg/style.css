@@ -3,7 +3,7 @@
     --white: #fff;
     --blue: #00a3e0;
 
-    --aspect-ratio: calc(3 / 5);
+    --proportion: calc(3 / 5);
 
     background-image:
         linear-gradient(

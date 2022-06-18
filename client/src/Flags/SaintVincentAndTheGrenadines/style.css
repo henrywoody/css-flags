@@ -3,7 +3,7 @@
     --yellow: #ffcd00;
     --green: #009a44;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
     --diamond-narrow-angle: 53.14deg;
     --diamond-wide-angle: calc((360deg - 2 * var(--diamond-narrow-angle)) / 2);

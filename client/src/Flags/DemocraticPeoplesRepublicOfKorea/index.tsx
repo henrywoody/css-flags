@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const DemocraticPeoplesRepublicOfKorea: React.FC = () => {
+export function DemocraticPeoplesRepublicOfKorea() {
     return (
         <FlagArea title="Democratic People's Republic of Korea" flagName="람홍색공화국기 (Ramhongsaek Konghwagukgi)">
             <DescriptionSection title="Description">
@@ -31,4 +29,3 @@ const DemocraticPeoplesRepublicOfKorea: React.FC = () => {
     )
 }
 
-export default DemocraticPeoplesRepublicOfKorea;

@@ -4,7 +4,7 @@
     --black: #000;
     --white: #fff;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     --tall-triangle-angle: 48.46deg;
     --short-triangle-angle: 83.98deg;

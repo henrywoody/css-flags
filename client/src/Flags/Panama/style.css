@@ -3,20 +3,19 @@
     --white: #fff;
     --blue: #005293;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
-    --width-scale: calc(var(--width) / 36);
-    --height-scale: calc(var(--height) / 24);
+    --scale: calc(var(--width) / 36);
 
     --star-background-color: var(--white);
-    --star-radius: calc(4 * var(--width-scale));
+    --star-radius: calc(4 * var(--scale));
     --star-inner-radius: calc(
         var(--star-radius) * var(--sin-54) - var(--star-radius) * var(--cos-54) * var(--tan-36)
     );
-    --blue-star-x: calc(5 * var(--width-scale));
-    --blue-star-y: calc(2 * var(--height-scale));
-    --red-star-x: calc(22 * var(--width-scale));
-    --red-star-y: calc(14 * var(--height-scale));
+    --blue-star-x: calc(5 * var(--scale));
+    --blue-star-y: calc(2 * var(--scale));
+    --red-star-x: calc(22 * var(--scale));
+    --red-star-y: calc(14 * var(--scale));
 
     --star-top-angle: 180deg;
 	--star-top-sin: 1.00000;
@@ -73,7 +72,7 @@
         linear-gradient(
             0deg,
             var(--red) 0 100%
-        ) no-repeat calc(18 * var(--width-scale)) 0 / calc(18 * var(--width-scale)) calc(12 * var(--height-scale)),
+        ) no-repeat calc(18 * var(--scale)) 0 / calc(18 * var(--scale)) calc(12 * var(--scale)),
 
         /* Red star */
         /* covers */
@@ -119,7 +118,7 @@
         linear-gradient(
             0deg,
             var(--blue) 0 100%
-        ) no-repeat 0 calc(12 * var(--height-scale)) / calc(18 * var(--width-scale)) calc(12 * var(--height-scale))
+        ) no-repeat 0 calc(12 * var(--scale)) / calc(18 * var(--scale)) calc(12 * var(--scale))
     ;
 
     background-color: var(--white);

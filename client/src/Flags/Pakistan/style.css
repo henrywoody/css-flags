@@ -2,7 +2,7 @@
     --green: #01411c;
     --white: #fff;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
     --diagonal-angle: 41.63deg;
     --sin-diagonal-angle: 0.66432;

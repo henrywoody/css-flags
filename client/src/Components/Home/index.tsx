@@ -1,13 +1,12 @@
 import React from "react";
-import FlagArea from "../FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea } from "../FlagArea";
+import { DescriptionSection } from "../../Components/DescriptionSection";
+import { ExternalLink } from "../../Components/ExternalLink";
 import "./style.css";
 
-
-const Home: React.FC = () => {
+export function Home() {
     return (
-        <FlagArea title="CSS Flags" headingLevel={ 1 }>
+        <FlagArea title="CSS Flags" headingLevel={1}>
             <DescriptionSection title="Description">
                 <p>
                     These are flags recreated using CSS.
@@ -66,5 +65,3 @@ const Home: React.FC = () => {
         </FlagArea>
     )
 }
-
-export default Home;

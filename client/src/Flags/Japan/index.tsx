@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const Japan: React.FC = () => {
+export function Japan() {
     return (
         <FlagArea title="Japan" flagName="日章旗 (Nisshōki—Flag of Sun) | 日の丸 (Hinomaru—Circle of the Sun)">
             <DescriptionSection title="Description">
@@ -42,4 +40,3 @@ const Japan: React.FC = () => {
     )
 }
 
-export default Japan;

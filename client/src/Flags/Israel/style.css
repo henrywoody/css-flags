@@ -2,7 +2,7 @@
     --blue: #00205b;
     --white: #fff;
 
-    --aspect-ratio: calc(8 / 11);
+    --proportion: calc(8 / 11);
 
     --circle-radius: calc(69 / 440 * var(--width));
     --root-three: 1.73205;

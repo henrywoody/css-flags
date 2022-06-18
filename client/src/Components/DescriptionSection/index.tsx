@@ -1,13 +1,12 @@
 import React from "react";
 import "./style.css";
 
-
-type DescriptionSectionProps = {
+export type DescriptionSectionProps = {
     title: string;
+    children?: React.ReactNode;
 }
 
-
-const DescriptionSection: React.FC<DescriptionSectionProps> = ({ title, children }) => {
+export function DescriptionSection({ title, children }: DescriptionSectionProps) {
     return (
         <section className="description-section">
             <h3>{ title }</h3>
@@ -18,5 +17,3 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ title, children
         </section>
     )
 }
-
-export default DescriptionSection;

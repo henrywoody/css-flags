@@ -2,7 +2,7 @@
     --red: #ce2028;
     --yellow: #f9d616;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     --circle-radius: calc(var(--height) / 7);
     --circle-outline-radius: calc(var(--circle-radius) + var(--circle-radius) * 2 / 8);

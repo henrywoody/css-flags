@@ -5,7 +5,7 @@
     --white: #fff;
     --green: #009e49;
 
-    --aspect-ratio: calc(3 / 5);
+    --proportion: calc(3 / 5);
 
     --inner-triangle-angle: calc(30.96deg * 2);
     --outer-triangle-angle: calc(16.7deg * 2);

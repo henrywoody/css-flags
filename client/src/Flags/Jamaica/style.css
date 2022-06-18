@@ -3,7 +3,7 @@
     --green: #00b140;
     --gold: #fedb00;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     --diagonal-angle: 63.43deg;
     --stripe-width: calc(1 / 12 * var(--width));

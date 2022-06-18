@@ -2,7 +2,7 @@
     --red: #da291c;
     --white: #fff;
 
-    --aspect-ratio: 1;
+    --proportion: 1;
     --width: 70vmin;
 
     --outer-red-width: calc(6 / 32 * var(--width));

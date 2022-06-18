@@ -1,17 +1,16 @@
 import React from "react";
-import Heading, { HeadingLevelType } from "../Heading";
-import { titleToKebabCase } from "../../Modules/string-utils";
+import { Heading, HeadingLevelType } from "../Heading";
+import { titleToKebabCase } from "../../Utilities";
 import "./style.css";
 
-
-type FlagAreaProps = {
+export type FlagAreaProps = {
     title: string;
     flagName?: string;
     headingLevel?: HeadingLevelType;
+    children?: React.ReactNode;
 }
 
-
-const FlagArea: React.FC<FlagAreaProps> = ({ title, flagName, headingLevel, children }) => {
+export function FlagArea({ title, flagName, headingLevel = 2, children }: FlagAreaProps) {
     return (
         <div className={ `flag-area flag-area-${titleToKebabCase(title)} viewport` }>
             <div className="heading">
@@ -34,9 +33,3 @@ const FlagArea: React.FC<FlagAreaProps> = ({ title, flagName, headingLevel, chil
         </div>
     )
 }
-
-FlagArea.defaultProps = {
-    headingLevel: 2 as HeadingLevelType,
-}
-
-export default FlagArea;

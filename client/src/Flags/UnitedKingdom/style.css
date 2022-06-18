@@ -3,8 +3,8 @@
     --blue: #012169;
     --red: #c8102e;
 
-    --aspect-ratio: calc(1 / 2);
-    --diagonal-angle: 26.5650512deg; /* arctan(--aspect-ratio) */
+    --proportion: calc(1 / 2);
+    --diagonal-angle: 26.5650512deg; /* arctan(--proportion) */
 
     background-image:
         linear-gradient(

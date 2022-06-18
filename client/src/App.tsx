@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "./Components/Home";
-import flags from "./Flags";
+import { Home } from "./Components";
+import { flags } from "./Flags";
 
-const App: React.FC = () => {
+export function App() {
     return (
         <div className="App">
             <Home/>
@@ -12,4 +12,3 @@ const App: React.FC = () => {
     );
 }
 
-export default App;

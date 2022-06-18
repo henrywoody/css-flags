@@ -4,7 +4,7 @@
     --yellow: #fad201;
     --green: #20603d;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
     --scale: calc(var(--width) / 390);
 

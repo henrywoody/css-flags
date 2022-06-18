@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const Nauru: React.FC = () => {
+export function Nauru() {
     return (
         <FlagArea title="Nauru">
             <DescriptionSection title="Description">
@@ -37,4 +35,3 @@ const Nauru: React.FC = () => {
     )
 }
 
-export default Nauru;

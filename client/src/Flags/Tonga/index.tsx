@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const Tonga: React.FC = () => {
+export function Tonga() {
     return (
         <FlagArea title="Tonga">
             <DescriptionSection title="Description">
@@ -37,4 +35,3 @@ const Tonga: React.FC = () => {
     )
 }
 
-export default Tonga;

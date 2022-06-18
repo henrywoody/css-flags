@@ -2,7 +2,7 @@
     --red: #de2910;
     --gold: #ffde00;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
     --star-color: var(--gold);
     --star-background-color: var(--red);

@@ -3,7 +3,7 @@
     --green: #007367;
     --white: #fff;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
     --circle-radius: calc(8 / 72 * var(--width));
 

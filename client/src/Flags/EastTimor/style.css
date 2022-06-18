@@ -4,7 +4,7 @@
     --black: #000;
     --white: #fff;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     --black-triangle-angle: 73.74deg;
     --yellow-triangle-angle: 53.14deg;

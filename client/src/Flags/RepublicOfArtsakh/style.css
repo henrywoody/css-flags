@@ -4,7 +4,7 @@
     --yellow: #ebab16;
     --white: #fff;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     background:
         linear-gradient(

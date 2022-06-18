@@ -2,7 +2,7 @@
     --blue: #418fde;
     --yellow: #f7ea48;
 
-    --aspect-ratio: calc(5 / 8);
+    --proportion: calc(5 / 8);
 
     background-image:
         radial-gradient(

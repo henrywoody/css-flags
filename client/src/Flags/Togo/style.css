@@ -4,7 +4,7 @@
     --green: #006a4e;
     --yellow: #ffce00;
 
-    --aspect-ratio: calc(1 / 1.618);
+    --proportion: calc(1 / 1.618);
 
     --star-color: var(--white);
     --star-background-color: var(--red);

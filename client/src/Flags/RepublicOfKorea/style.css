@@ -4,7 +4,7 @@
     --red: #cd2e3a;
     --blue: #0047a0;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
     --acute-angle: 33.69deg;
     --cos-acute-angle: 0.83205;

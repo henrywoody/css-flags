@@ -6,7 +6,7 @@
     --blue: #0f47af;
     --gold: #fcdd09;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     --triangle-angle: 60deg;
     --root-3: 1.73205;

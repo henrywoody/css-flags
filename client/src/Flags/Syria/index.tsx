@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const Syria: React.FC = () => {
+export function Syria() {
     return (
         <FlagArea title="Syria">
             <DescriptionSection title="Description">
@@ -34,4 +32,3 @@ const Syria: React.FC = () => {
     )
 }
 
-export default Syria;

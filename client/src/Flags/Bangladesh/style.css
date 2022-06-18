@@ -2,7 +2,7 @@
     --green: #006a4e;
     --red: #f42a41;
 
-    --aspect-ratio: calc(3 / 5);
+    --proportion: calc(3 / 5);
 
     background-image:
         radial-gradient(

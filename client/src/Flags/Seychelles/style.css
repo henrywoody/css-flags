@@ -5,7 +5,7 @@
     --white: #fff;
     --green: #007a33;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     background-image:
         conic-gradient(

@@ -2,7 +2,7 @@
     --white: #fff;
     --carmine: #9d2235;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     background-image:
         linear-gradient(

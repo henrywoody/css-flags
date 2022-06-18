@@ -4,7 +4,7 @@
     --black: #000;
     --red: #ff0000;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     background-image:
         linear-gradient(

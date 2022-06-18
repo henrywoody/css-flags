@@ -3,7 +3,7 @@
     --red: #ff0000;
     --gold: #ffcc00;
 
-    --aspect-ratio: calc(3 / 5);
+    --proportion: calc(3 / 5);
 
     background-image:
         linear-gradient(

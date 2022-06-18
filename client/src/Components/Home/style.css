@@ -3,7 +3,7 @@
     --white: #fff;
     --red: #b5130d;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     --fimbriation-width: calc(1 / 54 * var(--width));
 

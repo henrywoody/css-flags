@@ -2,7 +2,7 @@
     --white: #fff;
     --maroon: #8a1538;
 
-    --aspect-ratio: calc(11 / 28);
+    --proportion: calc(11 / 28);
 
     --serration-angle: 16.99deg;
     --serration-h-position: calc(144 / 504 * var(--width));

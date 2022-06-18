@@ -3,7 +3,7 @@
     --red: #fe0000;
     --white: #fff;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
     --canton-width: calc(1 / 2 * var(--width));
     --canton-height: calc(1 / 2 * var(--height));

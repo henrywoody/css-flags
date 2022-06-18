@@ -3,36 +3,35 @@
     --green: #00a95c;
     --gold: #ffd700;
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 
-    --width-scale: calc(var(--width) / 1080);
-    --height-scale: calc(var(--height) / 720);
+    --scale: calc(var(--width) / 1080);
 
     --star-color: var(--gold);
     --star-background-color: var(--green);
     --star-radius-value: 90;
-    --star-radius: calc(var(--star-radius-value) * var(--width-scale));
+    --star-radius: calc(var(--star-radius-value) * var(--scale));
     --star-x-value: calc(540 - var(--star-radius-value));
-    --star-x-position: calc(var(--star-x-value) * var(--width-scale));
+    --star-x-position: calc(var(--star-x-value) * var(--scale));
     --star-y-value: calc(225 - var(--star-radius-value));
-    --star-y-position: calc(var(--star-y-value) * var(--height-scale));
+    --star-y-position: calc(var(--star-y-value) * var(--scale));
 
     background:
         linear-gradient(
             180deg,
-            var(--red) 0 calc(108 * var(--height-scale)),
-            transparent 0 calc(612 * var(--height-scale)),
-            var(--red) 0 calc(720 * var(--height-scale))
+            var(--red) 0 calc(108 * var(--scale)),
+            transparent 0 calc(612 * var(--scale)),
+            var(--red) 0 calc(720 * var(--scale))
         ),
         var(--single-five-pointed-star),
         radial-gradient(
-            circle at 50% calc(225 * var(--height-scale)),
-            var(--green) 0 calc(225 * var(--width-scale)),
+            circle at 50% calc(225 * var(--scale)),
+            var(--green) 0 calc(225 * var(--scale)),
             transparent 0 100%
         ),
         radial-gradient(
-            circle at 50% calc(293 * var(--height-scale)),
-            var(--gold) 0 calc(233 * var(--width-scale)),
+            circle at 50% calc(293 * var(--scale)),
+            var(--gold) 0 calc(233 * var(--scale)),
             transparent 0 100%
         )
     ;

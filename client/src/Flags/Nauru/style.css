@@ -3,7 +3,7 @@
     --yellow: #ffc61e;
     --white: #fff;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     --scale: calc(var(--width) / 48);
 

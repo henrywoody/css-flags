@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const Togo: React.FC = () => {
+export function Togo() {
     return (
         <FlagArea title="Togo">
             <DescriptionSection title="Description">
@@ -38,4 +36,3 @@ const Togo: React.FC = () => {
     )
 }
 
-export default Togo;

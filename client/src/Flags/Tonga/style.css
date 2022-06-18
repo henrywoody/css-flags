@@ -2,24 +2,24 @@
     --red: #c10000;
     --white: #fff;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
-    --width-scale: calc(var(--width) / 168);
-    --height-scale: calc(var(--height) / 84);
-    --canton-width: calc(70 * var(--width-scale));
-    --canton-height: calc(42 * var(--height-scale));
-    --cross-thickness: calc(12 * var(--width-scale));
-    --cross-length: calc(34 * var(--width-scale));
+    --scale: calc(var(--width) / 168);
+
+    --canton-width: calc(70 * var(--scale));
+    --canton-height: calc(42 * var(--scale));
+    --cross-thickness: calc(12 * var(--scale));
+    --cross-length: calc(34 * var(--scale));
 
     background:
         linear-gradient(
             0deg,
             var(--red) 0 100%
-        ) no-repeat calc(18 * var(--width-scale)) calc(15 * var(--height-scale)) / var(--cross-length) var(--cross-thickness),
+        ) no-repeat calc(18 * var(--scale)) calc(15 * var(--scale)) / var(--cross-length) var(--cross-thickness),
         linear-gradient(
             0deg,
             var(--red) 0 100%
-        ) no-repeat calc(29 * var(--width-scale)) calc(4 * var(--height-scale)) / var(--cross-thickness) var(--cross-length),
+        ) no-repeat calc(29 * var(--scale)) calc(4 * var(--scale)) / var(--cross-thickness) var(--cross-length),
         linear-gradient(
             0deg,
             var(--white) 0 100%

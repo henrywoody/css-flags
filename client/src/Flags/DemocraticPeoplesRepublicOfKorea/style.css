@@ -3,7 +3,7 @@
     --red: #ed1c27;
     --white: #fff;
 
-    --aspect-ratio: calc(1 / 2);
+    --proportion: calc(1 / 2);
 
     --star-color: var(--red);
     --star-background-color: var(--white);

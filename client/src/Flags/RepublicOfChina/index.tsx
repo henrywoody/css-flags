@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const RepublicOfChina: React.FC = () => {
+export function RepublicOfChina() {
     return (
         <FlagArea title="Republic of China" flagName="青天白日滿地紅 (Blue Sky, White Sun, and a Wholly Red Earth)">
             <DescriptionSection title="Description">
@@ -36,4 +34,3 @@ const RepublicOfChina: React.FC = () => {
     )
 }
 
-export default RepublicOfChina;

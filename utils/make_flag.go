@@ -46,8 +46,8 @@ func MakeFlag(ownerName string) error {
 	fmt.Printf("Add the following lines to %s:\n\n", flagsIndex)
 	componentName := getComponentName(ownerName)
 	key := getFlagKey(ownerName)
-	fmt.Printf("import %s from \"./%s\";\n", componentName, componentName)
-	fmt.Printf("<%s key=\"%s\"/>,\n\n", componentName, key)
+	fmt.Printf("import { %s } from \"./%s\";\n", componentName, componentName)
+	fmt.Printf("<%s key=\"%s\" />,\n\n", componentName, key)
 
 	return nil
 }
@@ -86,13 +86,10 @@ func makeFlagIndexTSX(ownerName, flagDir string) error {
 	componentName := getComponentName(ownerName)
 
 	fileContents := fmt.Sprintf(`import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
-
-const %s: React.FC = () => {
+export function %s() {
     return (
         <FlagArea title="%s">
             <DescriptionSection title="Description">
@@ -119,12 +116,9 @@ const %s: React.FC = () => {
         </FlagArea>
     )
 }
-
-export default %s;
 `,
 		componentName,
 		ownerName,
-		componentName,
 	)
 	return ioutil.WriteFile(path.Join(flagDir, "index.tsx"), []byte(fileContents), 0644)
 }
@@ -135,7 +129,7 @@ func makeFlagStyleCSS(ownerName, flagDir string) error {
 	fileContents := fmt.Sprintf(`%s {
     /* Define colors here */
 
-    --aspect-ratio: calc(2 / 3);
+    --proportion: calc(2 / 3);
 }
 `,
 		flagClassName,

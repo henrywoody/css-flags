@@ -3,7 +3,7 @@
     --white: #fff;
     --old-glory-blue: #3c3b6e;
 
-    --aspect-ratio: calc(10 / 19);
+    --proportion: calc(10 / 19);
 
     position: relative;
 

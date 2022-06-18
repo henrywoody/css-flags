@@ -1,11 +1,9 @@
 import React from "react";
-import FlagArea from "../../Components/FlagArea";
-import DescriptionSection from "../../Components/DescriptionSection";
-import ExternalLink from "../../Components/ExternalLink";
+import { FlagArea, DescriptionSection, ExternalLink } from "../../Components";
 import "./style.css";
 
 
-const Kuwait: React.FC = () => {
+export function Kuwait() {
     return (
         <FlagArea title="Kuwait" flagName="Alam Baladii | Derti">
             <DescriptionSection title="Description">
@@ -37,4 +35,3 @@ const Kuwait: React.FC = () => {
     )
 }
 
-export default Kuwait;

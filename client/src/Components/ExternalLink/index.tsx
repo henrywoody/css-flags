@@ -1,18 +1,15 @@
 import React from "react";
 
-
-type ExternalLinkProps = {
+export type ExternalLinkProps = {
     href: string;
     className?: string;
+    children?: React.ReactNode;
 }
 
-
-const ExternalLink: React.FC<ExternalLinkProps> = ({ href, className, children }) => {
+export function ExternalLink({ href, className, children }: ExternalLinkProps) {
     return (
-        <a href={ href } target="_blank" rel="noopener noreferrer">
+        <a href={ href } target="_blank" rel="noopener noreferrer" className={className}>
             { children }
         </a>
     )
 }
-
-export default ExternalLink;
