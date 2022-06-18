@@ -1,0 +1,16 @@
+.flag-armenia {
+    --red: #d90012;
+    --blue: #0033a0;
+    --orange: #f2a800;
+
+    --aspect-ratio: calc(1 / 2);
+
+    background-image:
+        linear-gradient(
+            180deg,
+            var(--red) 0 calc(1 / 3 * var(--height)),
+            var(--blue) 0 calc(2 / 3 * var(--height)),
+            var(--orange) 0 calc(3 / 3 * var(--height))
+        )
+    ;
+}
