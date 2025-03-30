@@ -1,0 +1,182 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Republic of Namibia" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>The flag of Namibia was adopted on 21 March 1990 upon independence from South Africa.</p>
+
+		<p>The symbolism of the flag's colors as follows:</p>
+
+		<ul>
+			<li>
+				Red – represents Namibia's most important resource, its people. It refers to their heroism and their
+				determination to build a future of equal opportunity for all.
+			</li>
+			<li>White – represents peace and unity.</li>
+			<li>Green – symbolises vegetation and agricultural resources.</li>
+			<li>
+				Blue – represents the clear Namibian sky and the Atlantic Ocean, the country's precious water resources and
+				rain.
+			</li>
+			<li>Golden-yellow sun – life and energy</li>
+		</ul>
+
+		<p>
+			(Source: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Namibia">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			The stripes were created with a <code>linear-gradient</code> and the sun was created with two{" "}
+			<code>radial-gradient</code>s in the center and 12 <code>conic-gradient</code>s surrounding.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/namibia_flag.html">"Namibia"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Namibia"> "Flag of Namibia" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--republic-of-namibia {
+		--blue: #002f6c;
+		--yellow: #ffcd00;
+		--green: #009a44;
+		--red: #c8102e;
+		--white: #fff;
+
+		--proportion: calc(2 / 3);
+
+		--scale: calc(var(--width) / 180);
+
+		--diagonal-angle: 33.69deg;
+
+		--sun-inner-radius: calc(10 * var(--scale));
+		--sun-middle-radius: calc(12 * var(--scale));
+		--sun-outer-radius: calc(20 * var(--scale));
+		--sun-x: calc(36 * var(--scale));
+		--sun-y: calc(33 * var(--scale));
+
+		--sun-ray-angle: 40.543478deg;
+		--sun-ray-rotation: 30deg;
+		--cos-sun-ray-rotation: 0.86603;
+		--sin-sun-ray-rotation: 0.5;
+		--cos-2-sun-ray-rotation: 0.5;
+		--sin-2-sun-ray-rotation: 0.86603;
+
+		background:
+			/* Sun */
+			/* center */
+			radial-gradient(
+				circle at var(--sun-x) var(--sun-y),
+				var(--yellow) 0 var(--sun-inner-radius),
+				transparent 0 100%
+			),
+			radial-gradient(
+				circle at var(--sun-x) var(--sun-y),
+				var(--blue) 0 var(--sun-middle-radius),
+				transparent 0 100%
+			),
+			/* rays (clockwise starting at bottom) */
+			conic-gradient(
+				from calc(0 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2) at 50% 100%,
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) var(--sun-y) / calc(var(--sun-outer-radius) * 2) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(1 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+				at calc(100% - var(--sun-outer-radius) * var(--cos-2-sun-ray-rotation)) calc(var(--sun-outer-radius) * var(--sin-2-sun-ray-rotation)),
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) var(--sun-y) / var(--sun-outer-radius) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(2 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+				at calc(100% - var(--sun-outer-radius) * var(--cos-sun-ray-rotation)) calc(var(--sun-outer-radius) * var(--sin-sun-ray-rotation)),
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) var(--sun-y) / var(--sun-outer-radius) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(3 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2) at 0 50%,
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) calc(var(--sun-outer-radius) * 2),
+			conic-gradient(
+				from calc(4 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+				at calc(100% - var(--sun-outer-radius) * var(--cos-sun-ray-rotation)) calc(100% - var(--sun-outer-radius) * var(--sin-sun-ray-rotation)),
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(5 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+				at calc(100% - var(--sun-outer-radius) * var(--cos-2-sun-ray-rotation)) calc(100% - var(--sun-outer-radius) * var(--sin-2-sun-ray-rotation)),
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(6 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2) at 50% 0,
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--sun-x) - var(--sun-outer-radius)) calc(var(--sun-y) - var(--sun-outer-radius)) / calc(var(--sun-outer-radius) * 2) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(7 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+				at calc(var(--sun-outer-radius) * var(--cos-2-sun-ray-rotation)) calc(100% - var(--sun-outer-radius) * var(--sin-2-sun-ray-rotation)),
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--sun-x) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(8 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+				at calc(var(--sun-outer-radius) * var(--cos-sun-ray-rotation)) calc(100% - var(--sun-outer-radius) * var(--sin-sun-ray-rotation)),
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--sun-x) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(9 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2) at 100% 50%,
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--sun-x) calc(var(--sun-y) - var(--sun-outer-radius)) / var(--sun-outer-radius) calc(var(--sun-outer-radius) * 2),
+			conic-gradient(
+				from calc(10 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+				at calc(var(--sun-outer-radius) * var(--cos-sun-ray-rotation)) calc(var(--sun-outer-radius) * var(--sin-sun-ray-rotation)),
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--sun-x) var(--sun-y) / var(--sun-outer-radius) var(--sun-outer-radius),
+			conic-gradient(
+				from calc(11 * var(--sun-ray-rotation) - var(--sun-ray-angle) / 2)
+				at calc(var(--sun-outer-radius) * var(--cos-2-sun-ray-rotation)) calc(var(--sun-outer-radius) * var(--sin-2-sun-ray-rotation)),
+				var(--yellow) 0 var(--sun-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--sun-x) var(--sun-y) / var(--sun-outer-radius) var(--sun-outer-radius),
+
+			/* Stripes */
+			linear-gradient(
+				calc(180deg - var(--diagonal-angle)),
+				var(--blue) 0 calc(50% - 20 * var(--scale)),
+				var(--white) 0 calc(50% - 15 * var(--scale)),
+				var(--red) 0 calc(50% + 15 * var(--scale)),
+				var(--white) 0 calc(50% + 20 * var(--scale)),
+				var(--green) 0 100%
+			)
+		;
+	}
+</style>

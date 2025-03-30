@@ -1,0 +1,75 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Tanzania" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Tanzania (Swahili: <em>bendera ya Tanzania</em>) consists of a yellow-edged black diagonal band,
+			divided diagonally from the lower hoist-side corner, with a green upper triangle and blue lower triangle. Adopted
+			in 1964 to replace the individual flags of Tanganyika and Zanzibar, it has been the flag of the United Republic of
+			Tanzania since the two states merged that year. The design of the present flag incorporates the elements from the
+			two former flags. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Tanzania">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code>.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Scheme Color:{" "}
+				<ExternalLink href="https://www.schemecolor.com/tanzania-flag-colors.php">
+					"Tanzania Flag Colors"
+				</ExternalLink>
+			</li>
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/tanzania_flag.html">"Tanzania"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Tanzania">"Flag of Tanzania"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--tanzania {
+		--green: #1eb53a;
+		--yellow: #fcd116;
+		--black: #000;
+		--blue: #00a3dd;
+
+		--proportion: calc(2 / 3);
+
+		--diagonal-angle: 33.69deg;
+
+		background-image:
+			linear-gradient(
+				calc(180deg - var(--diagonal-angle)),
+				var(--green) 0 calc(50% - 19 / 144 * var(--width)),
+				var(--yellow) 0 calc(50% - 13 / 144 * var(--width)),
+				var(--black) 0 calc(50% + 13 / 144 * var(--width)),
+				var(--yellow) 0 calc(50% + 19 / 144 * var(--width)),
+				var(--blue) 0 100%
+			)
+		;
+	}
+</style>

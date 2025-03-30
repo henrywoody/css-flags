@@ -1,0 +1,61 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Bangladesh" flagName="লাল সবুজ (Lal Shobuz—The Red & Green)" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The national flag of Bangladesh (Bengali: বাংলাদেশের জাতীয় পতাকা, romanized:{" "}
+			<em>Bānlādēśēra jātīẏa patākā</em>, pronounced [baŋlad̪eʃer dʒat̪io̪ pɔt̪aka]) was adopted officially on 17 January
+			1972. It consists of a red disc on top (similar to that on Japan's flag) of a green field. The red disc is offset
+			slightly toward the hoist so that it appears centred when the flag is flying. The disc represents the sun rising
+			over Bengal, and also the blood of those who died for the independence of Bangladesh. The green field stands for
+			the lushness of the land of Bangladesh. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Bangladesh">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created using the <code>background-color</code> for the green field and a{" "}
+			<code>radial-gradient</code> for the red disc.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Bangladesh"> "Flag of Bangladesh" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--bangladesh {
+		--green: #006a4e;
+		--red: #f42a41;
+
+		--proportion: calc(3 / 5);
+
+		background-image:
+			radial-gradient(
+				circle at calc(4.5 / 10 * var(--width)) 50%,
+				var(--red) 0 calc(2 / 10 * var(--width)),
+				transparent 0 100%
+			)
+		;
+		background-color: var(--green);
+	}
+</style>

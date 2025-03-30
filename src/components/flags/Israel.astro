@@ -1,0 +1,156 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Israel" flagName="Flag of Zion" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Israel (Hebrew: דגל ישראל‎ Degel Yisra'el; Arabic: علم إسرائيل‎ ʿAlam Israʼīl) was adopted on 28
+			October 1948, five months after the establishment of the State of Israel. It depicts a blue Star of David on a
+			white background, between two horizontal blue stripes. The Israeli flag legislation states that the official
+			measurements are 160 × 220 cm. Therefore, the official proportions are 8:11. Variants can be found at a wide range
+			of proportions, with 2:3 being common. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Israel">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			The background pattern of blue and white stripes was created with a <code>linear-gradient</code>. The Star of
+			David was created with many <code>linear-gradient</code>s (one to form each line) and a few more{" "}
+			<code>linear-gradient</code>s and <code>conic-gradient</code>s to over up the overflow.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/israel_flag.html">"Israel"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Israel">"Flag of Israel"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--israel {
+		--blue: #00205b;
+		--white: #fff;
+
+		--proportion: calc(8 / 11);
+
+		--circle-radius: calc(69 / 440 * var(--width));
+		--root-three: 1.73205;
+		--root-two: 1.41421;
+
+		--overflow-cover-size: calc(var(--circle-radius) / 2);
+		--overflow-diagonal-offset-frac:  calc(2 * var(--root-two)); /* put here separately for build compatibility: parentheses get removed when all on one line */
+		--overflow-diagonal-offset: calc(var(--circle-radius) / var(--overflow-diagonal-offset-frac));
+
+		background:
+			/* Trim Overflow */
+			conic-gradient( /* top */
+				from 150deg at 50% 1px,
+				transparent 0 60deg,
+				var(--white) 0 360deg
+			) no-repeat 50% calc(var(--height) / 2 - var(--circle-radius) - 1px) / var(--overflow-cover-size) var(--overflow-cover-size),
+			conic-gradient( /* bottom */
+				from -30deg at 50% calc(100% - 2px),
+				transparent 0 60deg,
+				var(--white) 0 360deg
+			) no-repeat 50% calc(var(--height) / 2 + var(--circle-radius) + 2px - var(--overflow-cover-size)) / var(--overflow-cover-size) var(--overflow-cover-size),
+			linear-gradient( /* top right */
+				120deg,
+				transparent 0 calc(74% - 1px),
+				var(--white) 0 100%
+			) no-repeat calc(50% + var(--overflow-diagonal-offset)) calc(50% - var(--overflow-diagonal-offset)) / calc(var(--overflow-cover-size) * 3) var(--overflow-cover-size),
+			linear-gradient( /* bottom right */
+				60deg,
+				transparent 0 calc(74% - 1px),
+				var(--white) 0 100%
+			) no-repeat calc(50% + var(--overflow-diagonal-offset)) calc(50% + var(--overflow-diagonal-offset)) / calc(var(--overflow-cover-size) * 3) var(--overflow-cover-size),
+			linear-gradient( /* top left */
+				60deg,
+				var(--white) 0 calc(26% + 1px),
+				transparent 0 100%
+			) no-repeat calc(50% - var(--overflow-diagonal-offset)) calc(50% - var(--overflow-diagonal-offset)) / calc(var(--overflow-cover-size) * 3) var(--overflow-cover-size),
+			linear-gradient( /* bottom left */
+				120deg,
+				var(--white) 0 calc(26% + 1px),
+				transparent 0 100%
+			) no-repeat calc(50% - var(--overflow-diagonal-offset)) calc(50% + var(--overflow-diagonal-offset)) / calc(var(--overflow-cover-size) * 3) var(--overflow-cover-size),
+
+			/* Upper Triangle */
+			linear-gradient(
+				60deg,
+				transparent 0 calc(63% + 11 / 440 * var(--width) / 2),
+				transparent 0 100% /* white */
+			) no-repeat 50% calc(50% - var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+			linear-gradient(
+				120deg,
+				transparent 0 calc(37% - 11 / 440 * var(--width) / 2), /* white */
+				var(--blue) 0 calc(37% + 11 / 440 * var(--width) / 2),
+				transparent 0 100%
+			) no-repeat 50% calc(50% - var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+			linear-gradient(
+				60deg,
+				transparent 0 calc(63% - 11 / 440 * var(--width) / 2),
+				var(--blue) 0 calc(63% + 11 / 440 * var(--width) / 2),
+				transparent 0 100% /* white */
+			) no-repeat 50% calc(50% - var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+			linear-gradient(
+				0deg,
+				var(--blue) 0 calc(11 / 440 * var(--width)),
+				transparent 0 100%
+			) no-repeat 50% calc(50% - var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+
+			/* Lower Triangle */
+			linear-gradient(
+				60deg,
+				transparent 0 calc(63% + 11 / 440 * var(--width) / 2),
+				transparent 0 100%
+			) no-repeat 50% calc(50% + var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+			linear-gradient(
+				60deg,
+				transparent 0 calc(37% - 11 / 440 * var(--width) / 2),
+				var(--blue) 0 calc(37% + 11 / 440 * var(--width) / 2),
+				transparent 0 100%
+			) no-repeat 50% calc(50% + var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+			linear-gradient(
+				120deg,
+				transparent 0 calc(63% - 11 / 440 * var(--width) / 2),
+				var(--blue) 0 calc(63% + 11 / 440 * var(--width) / 2),
+				transparent 0 100%
+			) no-repeat 50% calc(50% + var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+			linear-gradient(
+				0deg,
+				transparent 0 calc(100% - 11 / 440 * var(--width)),
+				var(--blue) 0 100%
+			) no-repeat 50% calc(50% + var(--circle-radius) / 4) / calc(var(--circle-radius) * var(--root-three)) calc(3 * var(--circle-radius) / 2),
+
+			/* Background */
+			linear-gradient(
+				0deg,
+				var(--white) 0 calc(3 / 32 * var(--height)),
+				var(--blue) 0 calc(8 / 32 * var(--height)),
+				var(--white) 0 calc(24 / 32 * var(--height)),
+				var(--blue) 0 calc(29 / 32 * var(--height)),
+				var(--white) 0 calc(32 / 32 * var(--height))
+			)
+		;
+	}
+</style>

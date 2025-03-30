@@ -1,0 +1,60 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Russia" flagName="Триколор (Tricolor)" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Russia (Russian Federation) (Russian: Флаг России) is a tricolour flag consisting of three equal
+			horizontal fields: white on the top, blue in the middle, and red on the bottom. The flag was first used as an
+			ensign for Russian merchant ships and became official as the flag of the Tsardom of Russia in 1696. It remained in
+			use until the Russian Socialist Federative Soviet Republic (RSFSR) fully occupied all Russian territories in 1922,
+			as the flag was used by the White guard during the Russian Civil War which had started in 1917. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Russia">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code>.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Russia"> "Flag of Russia" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--russia {
+		--white: #fff;
+		--blue: #0039a6;
+		--red: #d00b0e;
+
+		--proportion: calc(2 / 3);
+
+		background-image:
+			linear-gradient(
+				180deg,
+				var(--white) 0 calc(1 / 3 * var(--height)),
+				var(--blue) 0 calc(2 / 3 * var(--height)),
+				var(--red) 0 calc(3 / 3 * var(--height))
+			)
+		;
+	}
+</style>

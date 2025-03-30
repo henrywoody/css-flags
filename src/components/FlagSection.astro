@@ -1,0 +1,64 @@
+---
+import { titleToKebabCase } from "../utilities";
+import Heading, { type HeadingLevel } from "./Heading.astro";
+import Flag from "./Flag.astro";
+export interface Props {
+	title: string;
+	flagName?: string;
+	headingLevel?: HeadingLevel;
+}
+
+const { title, flagName, headingLevel = 2 } = Astro.props;
+---
+
+<div class={`flag-section flag-section-${titleToKebabCase(title)} viewport`}>
+	<div class="heading">
+		<Heading level={headingLevel} class="title">
+			{title}
+		</Heading>
+
+		{flagName && <div class="flag-name">{flagName}</div>}
+	</div>
+
+	<div class="flag-container">
+		<Flag class={`flag--${titleToKebabCase(title)}`} />
+	</div>
+
+	<div class="flag-description">
+		<slot />
+	</div>
+</div>
+
+<style>
+	.flag-section {
+		margin-bottom: 5rem;
+		display: flex;
+		flex-flow: column;
+	}
+
+	.flag-section .heading {
+		margin-bottom: 2rem;
+	}
+
+	.flag-section .flag-name {
+		font-size: 1.125rem;
+		font-weight: 700;
+
+		margin-top: 0.5rem;
+		margin-left: 1rem;
+	}
+
+	.flag-section .flag-container {
+		flex-grow: 1;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+	.flag-section .flag-description {
+		margin-top: 2rem;
+		padding: 0 10%;
+	}
+</style>

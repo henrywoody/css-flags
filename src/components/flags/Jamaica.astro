@@ -1,0 +1,78 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Jamaica" flagName="The Cross" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Jamaica was adopted on 6 August 1962 (Jamaican Independence Day), the country having gained
+			independence from the British-protected Federation of the West Indies. The flag consists of a gold saltire, which
+			divides the flag into four sections: two of them green (top and bottom) and two black (hoist and fly). The
+			Jamaican flag is the only national flag in the world not to feature the colours red, white, or blue. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Jamaica">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			The background colors (black and green) were set with a <code>repeating-conic-gradient</code>. The gold saltire
+			was created by overlaying two <code>linear-gradient</code>s.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/jamaica_flag.html">"Jamaica"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Jamaica">"Flag of Jamaica"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--jamaica {
+		--black: #000;
+		--green: #00b140;
+		--gold: #fedb00;
+
+		--proportion: calc(1 / 2);
+
+		--diagonal-angle: 63.43deg;
+		--stripe-width: calc(1 / 12 * var(--width));
+
+		background-image:
+			linear-gradient(
+				calc(90deg + var(--diagonal-angle)),
+				transparent 0 calc(50% - var(--stripe-width) / 2),
+				var(--gold) 0 calc(50% + var(--stripe-width) / 2),
+				transparent 0 100%
+			),
+			linear-gradient(
+				calc(90deg - var(--diagonal-angle)),
+				transparent 0 calc(50% - var(--stripe-width) / 2),
+				var(--gold) 0 calc(50% + var(--stripe-width) / 2),
+				transparent 0 100%
+			),
+			repeating-conic-gradient(
+				from var(--diagonal-angle) at center,
+				var(--black) 0 calc(180deg - 2 * var(--diagonal-angle)),
+				var(--green) 0 180deg
+			)
+		;
+	}
+</style>

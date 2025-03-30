@@ -1,0 +1,59 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Germany" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Germany or German flag (German: <em>Flagge Deutschlands</em>) is a tricolour consisting of three equal
+			horizontal bands displaying the national colours of Germany: black, red, and gold (German:{" "}
+			<em>Schwarz-Rot-Gold</em>). The flag was first adopted as the national flag of modern Germany in 1919, during the
+			Weimar Republic, until 1933. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Germany">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code>.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Germany">"Flag of Germany"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--germany {
+		--black: #000;
+		--red: #ff0000;
+		--gold: #ffcc00;
+
+		--proportion: calc(3 / 5);
+
+		background-image:
+			linear-gradient(
+				180deg,
+				var(--black) 0 calc(1 / 3 * var(--height)),
+				var(--red) 0 calc(2 / 3 * var(--height)),
+				var(--gold) 0 calc(3 / 3 * var(--height))
+			)
+		;
+	}
+</style>

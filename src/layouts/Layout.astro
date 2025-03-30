@@ -1,0 +1,124 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+	class?: string | undefined | null;
+}
+
+const { title = "CSS Flags", description = "Recreation of flags in CSS", class: className, ...rest } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="/images/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet" />
+	</head>
+	<body class={className} {...rest}>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+
+		padding: 0;
+		margin: 0;
+	}
+
+	:root {
+		--text-color: #fff;
+		--visited-link-color: #bbb;
+		--background-color: #333;
+		--accent-background-color: #444;
+		--shadow-color: #222;
+
+		/* Constants */
+		--root-3: 1.73205;
+
+		--sin-18: 0.30902;
+		--cos-18: 0.95106;
+		--tan-18: 0.32492;
+
+		--tan-36: 0.72654;
+
+		--sin-54: 0.80902;
+		--cos-54: 0.58779;
+		--tan-54: 1.37638;
+	}
+
+	body {
+		color: var(--text-color);
+		background-color: var(--background-color);
+		font-family: "Quicksand", sans-serif;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	.viewport {
+		width: 100vw;
+		min-height: 100vh;
+		padding: 1rem 1.5rem;
+	}
+
+	a {
+		color: var(--text-color);
+	}
+
+	a:visited {
+		color: var(--visited-link-color);
+	}
+
+	ul,
+	ol {
+		margin-bottom: 0.5rem;
+	}
+
+	code {
+		font-size: 1.1rem;
+		font-family: monospace;
+		background-color: var(--accent-background-color);
+	}
+
+	blockquote {
+		background-color: var(--accent-background-color);
+		padding: 0.25rem 0.5rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+</style>

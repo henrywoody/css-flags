@@ -1,0 +1,71 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Palestine" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The Palestinian flag (Arabic: علم فلسطين‎) is a tricolor of three equal horizontal stripes (black, white, and
+			green from top to bottom) overlaid by a red triangle issuing from the hoist. This flag is derived from the
+			Pan-Arab colors and is used to represent the State of Palestine and the Palestinian people. It was first adopted
+			on 28 May 1964 by the Palestinian Liberation Organization. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Palestine">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code> for the background and a <code>conic-gradient</code> for the red triangle.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/palestine_flag.html">"Palestine"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Palestine"> "Flag of Palestine" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--palestine {
+		--red: #c8102e;
+		--black: #000;
+		--white: #fff;
+		--green: #007a33;
+
+		--proportion: calc(1 / 2);
+
+		--triangle-angle: 73.74deg;
+
+		background:
+			conic-gradient(
+				from calc(270deg - var(--triangle-angle) / 2) at calc(4 / 12 * var(--width)) 50%,
+				var(--red) 0 var(--triangle-angle),
+				transparent 0 360deg
+			),
+			linear-gradient(
+				180deg,
+				var(--black) 0 calc(1 / 3 * var(--height)),
+				var(--white) 0 calc(2 / 3 * var(--height)),
+				var(--green) 0 calc(3 / 3 * var(--height))
+			)
+		;
+	}
+</style>

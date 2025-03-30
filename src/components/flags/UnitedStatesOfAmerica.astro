@@ -1,0 +1,170 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection
+	title="United States of America"
+	flagName="The Stars and Stripes | Old Glory | The Star-Spangled Banner"
+	headingLevel={headingLevel}
+>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of the United States of America, often referred to as the American flag or U.S. flag, is the national
+			flag of the United States. It consists of thirteen equal horizontal stripes of red (top and bottom) alternating
+			with white, with a blue rectangle in the canton (referred to specifically as the "union") bearing fifty small,
+			white, five-pointed stars arranged in nine offset horizontal rows, where rows of six stars (top and bottom)
+			alternate with rows of five stars. The 50 stars on the flag represent the 50 states of the United States of
+			America, and the 13 stripes represent the thirteen British colonies that declared independence from the Kingdom of
+			Great Britain, and became the first states in the U.S. Nicknames for the flag include the Stars and Stripes, Old
+			Glory, and the Star-Spangled Banner. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_United_States">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			The red and white stripes were created with a <code>repeating-linear-gradient</code>. The canton was created using
+			the <code>::after</code> and <code>::before</code> pseudo elements to create two over lapping patterns of stars (one
+			for the outer thirty and one for the inner twenty). Each star was created with two{" "}
+			<code>conic-gradient</code>s for the center of the star and two <code>linear-gradient</code>s for the side points.
+		</p>
+
+		<p>
+			Also the official names of the red and blue colors for the flag are Old Glory Red and Old Glory Blue,
+			respectively.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/united_states_of_america_flag.html">
+					"United States of America"
+				</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_United_States">
+					"Flag of the United States"
+				</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--united-states-of-america {
+		--old-glory-red: #b22234;
+		--white: #fff;
+		--old-glory-blue: #3c3b6e;
+
+		--proportion: calc(10 / 19);
+
+		position: relative;
+
+		--canton-width: calc(2 / 5 * var(--width));
+		--canton-height: calc(7 / 13 * var(--height));
+		--stripe-height: calc(1 / 13 * var(--height));
+
+		background:
+			linear-gradient( /* To fix pixel issues at the top */
+				180deg,
+				var(--old-glory-red) 0 var(--stripe-height),
+				transparent 0 100%
+			),
+			repeating-linear-gradient(
+				0deg,
+				var(--old-glory-red) calc(0 * var(--stripe-height)),
+				var(--old-glory-red) calc(1 * var(--stripe-height)),
+				var(--white) calc(1 * var(--stripe-height)),
+				var(--white) calc(2 * var(--stripe-height))
+			)
+		;
+	}
+
+	/* prettier-ignore */
+	.flag.flag--united-states-of-america::before,
+	.flag.flag--united-states-of-america::after {
+		content: "";
+		display: block;
+		width: var(--canton-width);
+		height: var(--canton-height);
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		--star-color: var(--white);
+		--star-background-color: var(--old-glory-blue);
+		--star-interior-angle: 36deg;
+		--star-radius: calc(2 / 5 * var(--stripe-height));
+		--star-height: calc(var(--star-radius) * (1 + var(--sin-54)));
+		--star-box-width: calc(1 / 6 * var(--canton-width));
+		--star-box-height: calc(1 / 5 * var(--canton-height));
+		--star-top-in-star-box: calc(var(--star-box-height) - var(--star-height));
+		--star-h-offset: calc(var(--star-box-height) - var(--star-radius) * var(--sin-54));
+		--star-sizing: repeat 0% var(--star-h-offset) / var(--star-box-width) var(--star-box-height);
+		--star-sizing-bottom-coverer: repeat 0% calc(var(--star-h-offset) + 1px) / var(--star-box-width) var(--star-box-height);
+		--star-side-point-v-size-and-position:
+			calc(var(--star-h-offset) + var(--star-top-in-star-box) + var(--star-radius) - var(--star-radius) * var(--sin-18))
+			/ var(--star-box-width) var(--star-box-height)
+		;
+		--star-left-point-position:
+			repeat
+			calc(-1 * var(--star-box-width) / 2)
+			var(--star-side-point-v-size-and-position)
+		;
+		--star-right-point-position:
+			repeat
+			calc(var(--star-box-width) / 2)
+			var(--star-side-point-v-size-and-position)
+		;
+
+		background:
+			linear-gradient(
+				calc(216deg),
+				var(--star-color) 0 10.65%,
+				transparent 0 100%
+			) var(--star-left-point-position),
+			linear-gradient(
+				calc(-216deg),
+				var(--star-color) 0 10.65%,
+				transparent 0 100%
+			) var(--star-right-point-position),
+			conic-gradient(
+				from calc(180deg - 108deg / 2) at 50% calc(100% - var(--star-height) * var(--tan-18) / var(--tan-54) - 1px),
+				var(--star-background-color) 0 108deg,
+				transparent 0 360deg
+			) var(--star-sizing-bottom-coverer),
+			conic-gradient(
+				from calc(180deg - var(--star-interior-angle) / 2) at 50% var(--star-top-in-star-box),
+				var(--star-color) 0 36deg,
+				transparent 0 360deg
+			) var(--star-sizing)
+		;
+	}
+
+	/* prettier-ignore */
+	.flag.flag--united-states-of-america::before {
+		background-color: var(--old-glory-blue);
+	}
+
+	/* prettier-ignore */
+	.flag.flag--united-states-of-america::after {
+		width: calc(var(--canton-width) - var(--star-box-width));
+		height: calc(var(--canton-height) - var(--star-box-height));
+		top: calc(var(--star-box-height) / 2);
+		left: calc(var(--star-box-width) / 2);
+	}
+</style>

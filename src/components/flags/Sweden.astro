@@ -1,0 +1,71 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Sweden" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Sweden (Swedish: <em>Sveriges flagga</em>) consists of a yellow or gold Nordic cross (i.e. an
+			asymmetrical horizontal cross, with the crossbar closer to the hoist than the fly, with the cross extending to the
+			edge of the flag) on a field of blue. The Nordic cross design traditionally represents Christianity. The design
+			and colours of the Swedish flag are believed to have been inspired by the present coat of arms of Sweden of 1442,
+			which is blue divided quarterly by a cross pattée of gold, and modelled on the Danish flag. Blue and yellow have
+			been used as Swedish colours at least since Magnus III's royal coat of arms of 1275. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Sweden">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a blue <code>background-color</code> and a <code>linear-gradient</code> for each of the lines in the cross.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/sweden_flag.html">"Sweden"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Sweden">"Flag of Sweden"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--sweden {
+		--blue: #004b87;
+		--gold: #ffcd00;
+
+		--proportion: calc(5 / 8);
+
+		background-image:
+			linear-gradient(
+				90deg,
+				transparent 0 calc(5 / 16 * var(--width)),
+				var(--gold) 0 calc(7 / 16 * var(--width)),
+				transparent 0 calc(16 / 16 * var(--width))
+			),
+			linear-gradient(
+				180deg,
+				transparent 0 calc(4 / 10 * var(--height)),
+				var(--gold) 0 calc(6 / 10 * var(--height)),
+				transparent 0 calc(10 / 10 * var(--height))
+			)
+		;
+		background-color: var(--blue);
+	}
+</style>

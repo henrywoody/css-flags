@@ -1,0 +1,104 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Saint Vincent and the Grenadines" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Saint Vincent and the Grenadines was adopted on 21 October 1985. It is composed of a vertical
+			tricolour of blue, gold (double width) and green with three green diamonds arranged in the V pattern centred on
+			the gold band, standing for 'Vincent'. These diamonds recall Saint Vincent as the "gems of the Antilles". Blue
+			represents the tropical sky and the crystal waters, yellow stands for the golden Grenadine sands, and green stands
+			for the islands' lush vegetation. (Source: <ExternalLink
+				href="https://en.wikipedia.org/wiki/Flag_of_Saint_Vincent_and_the_Grenadines">Wikipedia</ExternalLink
+			>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Creating the vertical bands on the sides of the flag was done simply with a{" "}
+			<code>linear-gradient</code>, and the yellow in the middle is set via the{" "}
+			<code>background-color</code> property.
+		</p>
+
+		<p>
+			To create the diamond pattern in the middle, two <code>conic-gradient</code>s were used to create a "V" of green.
+			Then two <code>linear-gradient</code>s were overlayed to create separations between the individual diamonds.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/saint_vincent_and_the_grenadines_flag.html">
+					"Saint Vincent and the Grenadines"
+				</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Saint_Vincent_and_the_Grenadines">
+					"Flag of Saint Vincent and the Grenadines"
+				</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--saint-vincent-and-the-grenadines {
+		--blue: #005eb8;
+		--yellow: #ffcd00;
+		--green: #009a44;
+
+		--proportion: calc(2 / 3);
+
+		--diamond-narrow-angle: 53.14deg;
+		--diamond-wide-angle: calc((360deg - 2 * var(--diamond-narrow-angle)) / 2);
+
+		background-image:
+			linear-gradient(
+				90deg,
+				var(--blue) 0 calc(18 / 72 * var(--width)),
+				transparent 0 calc(54 / 72 * var(--width)),
+				var(--green) 0 calc(72 / 72 * var(--width))
+			),
+			linear-gradient(
+				calc(var(--diamond-wide-angle) / 2),
+				transparent 0 49%,
+				var(--yellow) 0 calc(49% + 2.236 / 72 * var(--width)),
+				transparent 0 59.5%,
+				var(--yellow) 0 100%
+			),
+			linear-gradient(
+				calc(-1 * var(--diamond-wide-angle) / 2),
+				transparent 0 49%,
+				var(--yellow) 0 calc(49% + 2.236 / 72 * var(--width)),
+				transparent 0 59.5%,
+				var(--yellow) 0 100%
+			),
+			conic-gradient(
+				from calc(-1 * var(--diamond-narrow-angle) / 2) at 50% calc(100% - 22 / 48 * var(--height)),
+				var(--yellow) 0 var(--diamond-narrow-angle),
+				transparent 0 360deg
+			),
+			conic-gradient(
+				from calc(-1 * var(--diamond-narrow-angle) / 2) at 50% calc(100% - 6 / 48 * var(--height)),
+				var(--green) 0 var(--diamond-narrow-angle),
+				transparent 0 360deg
+			)
+		;
+		background-color: var(--yellow);
+	}
+</style>

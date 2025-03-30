@@ -1,0 +1,193 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Malaysia" flagName="Jalur Gemilang (Stripes of Glory)" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Malaysia, also known as Malay: <em>Jalur Gemilang</em> (Stripes of Glory), is composed of a field of 14
+			alternating red and white stripes along the fly and a blue canton bearing a crescent and a 14-point star known as the
+			<em>Bintang Persekutuan</em> (Federal Star). The 14 stripes, of equal width, represent the equal status in the federation
+			of the 13 member states and the federal territories, while the 14 points of the star represent the unity between these
+			entities. The crescent represents Islam, the country's state religion; the blue canton symbolises the unity of the
+			Malaysian people; the yellow of the star and crescent is the royal colour of the Malay rulers. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Malaysia">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			The stripes in the field were created with a <code>repeating-linear-gradient</code>. The canton was created with a
+			simple <code>linear-gradient</code>. The crescent with two <code>radial-gradient</code>s. And the star was formed
+			with 14 <code>conic-gradient</code>s.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Scheme Color:{" "}
+				<ExternalLink href="https://www.schemecolor.com/malaysia-flag-colors.php">
+					"Malaysia Flag Colors"
+				</ExternalLink>
+			</li>
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/malaysia_flag.html">"Malaysia"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Malaysia">"Flag of Malaysia"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--malaysia {
+		--blue: #010066;
+		--red: #cc0001;
+		--white: #fff;
+		--yellow: #ffcc00;
+
+		--proportion: calc(1 / 2);
+
+		--scale: calc(var(--width) / 448);
+
+		--star-x: calc(var(--scale) * 140);
+		--star-y: calc(var(--scale) * 64);
+		--star-color: var(--yellow);
+		--star-outer-radius: calc(40.000000 * var(--scale));
+		--star-ray-rotation: 25.714286deg;
+		--star-ray-angle: 16.602721deg;
+		--sin-1-star-ray-rotation: 0.222521;
+		--cos-1-star-ray-rotation: 0.974928;
+		--sin-2-star-ray-rotation: 0.623490;
+		--cos-2-star-ray-rotation: 0.781831;
+		--sin-3-star-ray-rotation: 0.900969;
+		--cos-3-star-ray-rotation: 0.433884;
+
+		background:
+			/* Star */
+			conic-gradient(
+				from calc(0 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at 50% 100%,
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--star-x) - var(--star-outer-radius)) var(--star-y) / calc(var(--star-outer-radius) * 2) var(--star-outer-radius),
+			conic-gradient(
+				from calc(1 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(100% - var(--star-outer-radius) * var(--cos-3-star-ray-rotation)) calc(var(--star-outer-radius) * var(--sin-3-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--star-x) - var(--star-outer-radius)) var(--star-y) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(2 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(100% - var(--star-outer-radius) * var(--cos-2-star-ray-rotation)) calc(var(--star-outer-radius) * var(--sin-2-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--star-x) - var(--star-outer-radius)) var(--star-y) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(3 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(100% - var(--star-outer-radius) * var(--cos-1-star-ray-rotation)) calc(var(--star-outer-radius) * var(--sin-1-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--star-x) - var(--star-outer-radius)) var(--star-y) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(4 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(100% - var(--star-outer-radius) * var(--cos-1-star-ray-rotation)) calc(100% - var(--star-outer-radius) * var(--sin-1-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--star-x) - var(--star-outer-radius)) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(5 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(100% - var(--star-outer-radius) * var(--cos-2-star-ray-rotation)) calc(100% - var(--star-outer-radius) * var(--sin-2-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--star-x) - var(--star-outer-radius)) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(6 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(100% - var(--star-outer-radius) * var(--cos-3-star-ray-rotation)) calc(100% - var(--star-outer-radius) * var(--sin-3-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--star-x) - var(--star-outer-radius)) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(7 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at 50% 0,
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--star-x) - var(--star-outer-radius)) calc(var(--star-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) var(--star-outer-radius),
+			conic-gradient(
+				from calc(8 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(var(--star-outer-radius) * var(--cos-3-star-ray-rotation)) calc(100% - var(--star-outer-radius) * var(--sin-3-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--star-x) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(9 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(var(--star-outer-radius) * var(--cos-2-star-ray-rotation)) calc(100% - var(--star-outer-radius) * var(--sin-2-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--star-x) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(10 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(var(--star-outer-radius) * var(--cos-1-star-ray-rotation)) calc(100% - var(--star-outer-radius) * var(--sin-1-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--star-x) calc(var(--star-y) - var(--star-outer-radius)) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(11 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(var(--star-outer-radius) * var(--cos-1-star-ray-rotation)) calc(var(--star-outer-radius) * var(--sin-1-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--star-x) var(--star-y) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(12 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(var(--star-outer-radius) * var(--cos-2-star-ray-rotation)) calc(var(--star-outer-radius) * var(--sin-2-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--star-x) var(--star-y) / var(--star-outer-radius) var(--star-outer-radius),
+			conic-gradient(
+				from calc(13 * var(--star-ray-rotation) - var(--star-ray-angle) / 2)
+				at calc(var(--star-outer-radius) * var(--cos-3-star-ray-rotation)) calc(var(--star-outer-radius) * var(--sin-3-star-ray-rotation)),
+				var(--star-color) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat var(--star-x) var(--star-y) / var(--star-outer-radius) var(--star-outer-radius),
+
+			/* Crescent */
+			radial-gradient(
+				circle at calc(var(--scale) * 102) calc(var(--scale) * 64),
+				var(--blue) 0 calc(var(--scale) * 42),
+				transparent 0 100%
+			),
+			radial-gradient(
+				circle at calc(var(--scale) * 92) calc(var(--scale) * 64),
+				var(--yellow) 0 calc(var(--scale) * 48),
+				transparent 0 100%
+			),
+
+			/* Canton */
+			linear-gradient(
+				0deg,
+				var(--blue) 0 100%
+			) no-repeat 0 0 / calc(var(--scale) * 224) calc(var(--scale) * 16 * 8),
+
+			/* Stripes */
+			repeating-linear-gradient(
+				180deg,
+				var(--red) 0 calc(var(--scale) * 16),
+				var(--white) 0 calc(var(--scale) * 32)
+			)
+		;
+	}
+</style>

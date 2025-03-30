@@ -1,0 +1,124 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="North Macedonia" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of North Macedonia is the national flag of the Republic of North Macedonia and depicts a stylized yellow
+			sun on a red field, with eight broadening rays extending from the center to the edge of the field. It was created
+			by Miroslav Grčev and was adopted on 5 October 1995. The first flag of the country, known as the Vergina Flag,
+			featured the Vergina Sun, a symbol that had been discovered at Aigai, the first capital and burial ground of the
+			ancient kings of Macedon. Greece considers the Vergina Sun to be a Greek symbol and imposed a year-long economic
+			embargo in order to force the then Republic of Macedonia to remove it from its flag, resulting in the current
+			design. The new eight-rayed sun represents the "new sun of Liberty" referred to in "Denes nad Makedonija", the
+			national anthem of North Macedonia. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_North_Macedonia">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a red <code>background-color</code>, a <code>conic-gradient</code> for each of the rays, and a <code
+				>radial-gradient</code
+			> for the sun in the center.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_North_Macedonia">
+					"Flag of North Macedonia"
+				</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--north-macedonia {
+		--red: #ce2028;
+		--yellow: #f9d616;
+
+		--proportion: calc(1 / 2);
+
+		--circle-radius: calc(var(--height) / 7);
+		--circle-outline-radius: calc(var(--circle-radius) + var(--circle-radius) * 2 / 8);
+
+		--vertical-ray-angular-width: 14.28deg;
+		--vertical-ray-offset: calc(6 / 56 * var(--height));
+
+		--horizontal-ray-anglular-width: 5.711deg;
+
+		--diagonal-h-offset: calc(3 / 35 * var(--height));
+		--diagonal-v-offset: calc(9 / 140 * var(--height));
+
+		--diagonal1-angular-offset: 54.31deg;
+		--diagonal2-angular-offset: 27.46deg;
+		--diagonal-angular-width: 8.223deg;
+
+		background-image:
+			radial-gradient(
+				circle at center,
+				var(--yellow) 0 var(--circle-radius),
+				var(--red) 0 var(--circle-outline-radius),
+				transparent 0 100%
+			),
+			/* Top */
+			conic-gradient(
+				from calc(-1 * var(--vertical-ray-angular-width)) at 50% calc(50% - var(--vertical-ray-offset)),
+				var(--yellow) 0 calc(var(--vertical-ray-angular-width) * 2),
+				transparent 0 360deg
+			),
+			/* Bottom */
+			conic-gradient(
+				from calc(-1 * var(--vertical-ray-angular-width) + 180deg) at 50% calc(50% + var(--vertical-ray-offset)),
+				var(--yellow) 0 calc(var(--vertical-ray-angular-width) * 2),
+				transparent 0 360deg
+			),
+			/* Right & Left */
+			repeating-conic-gradient(
+				from calc(90deg - var(--horizontal-ray-anglular-width)) at center,
+				var(--yellow) 0 calc(var(--horizontal-ray-anglular-width) * 2),
+				transparent 0 180deg
+			),
+			/* Top Right */
+			conic-gradient(
+				from var(--diagonal1-angular-offset) at calc(50% - var(--diagonal-h-offset)) calc(50% + var(--diagonal-v-offset)),
+				var(--yellow) 0 var(--diagonal-angular-width),
+				transparent 0 180deg
+			),
+			/* Bottom Right */
+			conic-gradient(
+				from calc(90deg + var(--diagonal2-angular-offset)) at calc(50% - var(--diagonal-h-offset)) calc(50% - var(--diagonal-v-offset)),
+				var(--yellow) 0 var(--diagonal-angular-width),
+				transparent 0 360deg
+			),
+			/* Bottom Left */
+			conic-gradient(
+				from calc(180deg + var(--diagonal1-angular-offset)) at calc(50% + var(--diagonal-h-offset)) calc(50% - var(--diagonal-v-offset)),
+				var(--yellow) 0 var(--diagonal-angular-width),
+				transparent 0 360deg
+			),
+			/* Top Left */
+			conic-gradient(
+				from calc(270deg + var(--diagonal2-angular-offset)) at calc(50% + var(--diagonal-h-offset)) calc(50% + var(--diagonal-v-offset)),
+				var(--yellow) 0 var(--diagonal-angular-width),
+				transparent 0 360deg
+			)
+		;
+		background-color: var(--red);
+	}
+</style>

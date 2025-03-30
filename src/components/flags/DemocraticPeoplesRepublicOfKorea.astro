@@ -1,0 +1,86 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection
+	title="Democratic People's Republic of Korea"
+	flagName="람홍색공화국기 (Ramhongsaek Konghwagukgi)"
+	headingLevel={headingLevel}
+>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of North Korea, also known as the Ramhongsaek Konghwagukgi (Korean: 람홍색공화국기; literally "blue and
+			red-colored flag of the republic"), consists of a central red panel, bordered both above and below by a narrow
+			white stripe and a broad blue stripe. The central red panel bears a five-pointed red star within a white circle
+			near the hoist. This flag is banned from public use in South Korea due to its association with the ruling regime,
+			although some exceptions for the usage of the flag exist. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_North_Korea">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code> for the background, a <code>radial-gradient</code> for the circle around
+			the star, and four <code>conic-gradient</code>s for the star.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_North_Korea"> "Flag of North Korea" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--democratic-peoples-republic-of-korea {
+		--blue: #024fa2;
+		--red: #ed1c27;
+		--white: #fff;
+
+		--proportion: calc(1 / 2);
+
+		--star-color: var(--red);
+		--star-background-color: var(--white);
+		--star-radius: calc(15.5 / 144 * var(--width));
+		--star-x-position: calc(48 / 144 * var(--width) - var(--star-radius));
+		--star-y-position: calc(36 / 72 * var(--star-height) + var(--star-radius) * 13 / 32);
+
+		--star-circle-radius: calc(16 / 144 * var(--width));
+
+		background:
+			/* Star */
+			var(--single-five-pointed-star),
+
+			/* Star Circle */
+			radial-gradient(
+				circle at calc(48 / 144 * var(--width)) 50%,
+				var(--white) 0 var(--star-circle-radius),
+				transparent 0 100%
+			),
+
+			/* Background */
+			linear-gradient(
+				0deg,
+				var(--blue) 0 calc(12 / 72 * var(--height)),
+				var(--white) 0 calc(14 / 72 * var(--height)),
+				var(--red) 0 calc(58 / 72 * var(--height)),
+				var(--white) 0 calc(60 / 72 * var(--height)),
+				var(--blue) 0 calc(72 / 72 * var(--height))
+			)
+		;
+	}
+</style>

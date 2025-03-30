@@ -1,0 +1,16 @@
+---
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
+export interface Props {
+	level: HeadingLevel;
+	class?: string | undefined | null;
+	style?: string | astroHTML.JSX.CSSProperties | undefined | null;
+}
+
+const { level, class: className, style } = Astro.props;
+const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+---
+
+<HeadingTag class={className} style={style}>
+	<slot />
+</HeadingTag>

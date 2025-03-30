@@ -1,0 +1,58 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Colombia" flagName="Tricolor Nacional (National Tricolor)" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The national flag of Colombia symbolizes Colombian independence from Spain, gained on July 20, 1810.[1] It is a
+			horizontal tricolor of yellow, blue and red. The yellow stripe takes up a half of the flag and the blue and red
+			take up a quarter of the space each. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Colombia">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code>.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Colombia"> "Flag of Colombia" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--colombia {
+		--yellow: #fcd116;
+		--blue: #003893;
+		--red: #ce1126;
+
+		--proportion: calc(2 / 3);
+
+		background-image:
+			linear-gradient(
+				180deg,
+				var(--yellow) 0 calc(2 / 4 * var(--height)),
+				var(--blue) 0 calc(3 / 4 * var(--height)),
+				var(--red) 0 calc(4 / 4 * var(--height))
+			)
+		;
+	}
+</style>

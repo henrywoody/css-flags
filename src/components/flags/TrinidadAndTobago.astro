@@ -1,0 +1,69 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Trinidad and Tobago" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Trinidad and Tobago was adopted upon independence from the United Kingdom on 31 August 1962. Designed
+			by Carlisle Chang (1921–2001), the flag of Trinidad and Tobago was chosen by the independence committee of 1962.
+			Red, black and white symbolise fire (the sun, representing courage), earth (representing dedication) and water
+			(representing purity and equality). (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Trinidad_and_Tobago">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code>.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/trinidad_and_tobago_flag.html">
+					"Trinidad and Tobago"
+				</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Trinidad_and_Tobago">
+					"Flag of Trinidad and Tobago"
+				</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--trinidad-and-tobago {
+		--red: #c8102e;
+		--white: #fff;
+		--black: #000;
+
+		--proportion: calc(3 / 5);
+
+		background-image:
+			linear-gradient(
+				40.82deg,
+				var(--red) 0 calc(50% - 3 / 30 * var(--width)),
+				var(--white) 0 calc(50% - 2 / 30 * var(--width)),
+				var(--black) 0 calc(50% + 2 / 30 * var(--width)),
+				var(--white) 0 calc(50% + 3 / 30 * var(--width)),
+				var(--red) 0 100%
+			)
+		;
+	}
+</style>

@@ -1,0 +1,11 @@
+---
+export interface Props {
+	href: string;
+	class?: string | undefined | null;
+	style?: string | astroHTML.JSX.CSSProperties | undefined | null;
+}
+
+const { href, class: className, style } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer" class={className} style={style}><slot /></a>

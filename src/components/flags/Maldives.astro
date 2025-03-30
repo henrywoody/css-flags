@@ -1,0 +1,83 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Maldives" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of the Republic of Maldives (Dhivehi: ދިވެހިރާއްޖެގެ ދިދަ) is green with a red border. The centre bears a
+			vertical white crescent; the closed side of the crescent is on the hoist side of the flag. It was adopted on 25
+			July 1965.
+		</p>
+
+		<p>
+			The red rectangle represents the boldness of the nation's heroes, and their willingness to sacrifice their every
+			drop of blood in defence of their country. The green rectangle in the centre symbolises peace and prosperity. The
+			white crescent moon symbolises the Islamic faith. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_Maldives">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a red <code>background-color</code>, a green <code>linear-gradient</code>, and two{" "}
+			<code>radial-gradient</code>s to form the crescent.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/maldives_flag.html">"Maldives"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_Maldives"> "Flag of the Maldives" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--maldives {
+		--red: #bf0d3e;
+		--green: #007367;
+		--white: #fff;
+
+		--proportion: calc(2 / 3);
+
+		--circle-radius: calc(8 / 72 * var(--width));
+
+		background:
+			/* Crescent */
+			radial-gradient(
+				circle at calc(42 / 72 * var(--width)) 50%,
+				var(--green) 0 var(--circle-radius),
+				transparent 0 100%
+			),
+			radial-gradient(
+				circle at calc(39 / 72 * var(--width)) 50%,
+				var(--white) 0 var(--circle-radius),
+				transparent 0 100%
+			),
+
+			/* Background */
+			linear-gradient(
+				180deg,
+				var(--green) 0 100%
+			) no-repeat calc(12 / 72 * var(--width)) calc(12 / 48 * var(--height)) / calc(48 / 72 * var(--width)) calc(24 / 48 * var(--height))
+		;
+		background-color: var(--red);
+	}
+</style>

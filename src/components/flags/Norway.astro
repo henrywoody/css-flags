@@ -1,0 +1,83 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Norway" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Norway (Norwegian: Norges flagg) is red with an indigo blue Scandinavian cross fimbriated in white
+			that extends to the edges of the flag; the vertical part of the cross is shifted to the hoist side in the style of
+			the Dannebrog, the flag of Denmark. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Norway">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a red <code>background-color</code> and a <code>linear-gradient</code> for each the vertical andd horizontal
+			parts of the cross in each color (for a total of four{" "}
+			<code>linear-gradient</code>s).
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/norway_flag.html">"Norway"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Norway"> "Flag of Norway" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--norway {
+		--red: #ef3340;
+		--white: #fff;
+		--blue: #00205b;
+
+		--proportion: calc(8 / 11);
+
+		background-image:
+			linear-gradient(
+				90deg,
+				transparent 0 calc(7 / 22 * var(--width)),
+				var(--blue) 0 calc(9 / 22 * var(--width)),
+				transparent 0 calc(22 / 22 * var(--width))
+			),
+			linear-gradient(
+				180deg,
+				transparent 0 calc(7 / 16 * var(--height)),
+				var(--blue) 0 calc(9 / 16 * var(--height)),
+				transparent 0 calc(16 / 16 * var(--height))
+			),
+			linear-gradient(
+				90deg,
+				transparent 0 calc(6 / 22 * var(--width)),
+				var(--white) 0 calc(10 / 22 * var(--width)),
+				transparent 0 calc(22 / 22 * var(--width))
+			),
+			linear-gradient(
+				180deg,
+				transparent 0 calc(6 / 16 * var(--height)),
+				var(--white) 0 calc(10 / 16 * var(--height)),
+				transparent 0 calc(16 / 16 * var(--height))
+			)
+		;
+		background-color: var(--red);
+	}
+</style>

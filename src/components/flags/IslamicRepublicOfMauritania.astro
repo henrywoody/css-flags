@@ -1,0 +1,101 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Islamic Republic of Mauritania" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The flag of Mauritania (Arabic: علم موريتانيا) is a green field containing a gold star and crescent, with a red
+			stripe at the top and bottom of the field. The original national flag was introduced under the instructions of
+			President Moktar Ould Daddah and the constitution of 22 March 1959 and was adopted on 1 April 1959.
+		</p>
+
+		<p>
+			On 5 August 2017, a referendum was held by President Mohamed Ould Abdel Aziz to change the national flag, abolish
+			the senate, and other constitutional amendments. The referendum was successful, and the new flag, including two
+			red stripes, which represent "the efforts and sacrifices that the people of Mauritania will keep consenting, to
+			the price of their blood, to defend their territory", was adopted in for its first raising on 28 November 2017,
+			the 57th anniversary of Mauritania's independence. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Mauritania">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a green <code>background-color</code>, a <code>linear-gradient</code> to form the red bands, two <code
+				>radial-gradient</code
+			>s to form the crescent, and four <code>conic-gradient</code>s to form the star.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Scheme Color:{" "}
+				<ExternalLink href="https://www.schemecolor.com/mauritania-flag-colors.php">
+					"Mauritania Flag Colors"
+				</ExternalLink>
+			</li>
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/mauritania_flag.html">"Mauritania"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Mauritania">"Flag of Mauritania"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--islamic-republic-of-mauritania {
+		--red: #d01c1f;
+		--green: #00a95c;
+		--gold: #ffd700;
+
+		--proportion: calc(2 / 3);
+
+		--scale: calc(var(--width) / 1080);
+
+		--star-color: var(--gold);
+		--star-background-color: var(--green);
+		--star-radius-value: 90;
+		--star-radius: calc(var(--star-radius-value) * var(--scale));
+		--star-x-value: calc(540 - var(--star-radius-value));
+		--star-x-position: calc(var(--star-x-value) * var(--scale));
+		--star-y-value: calc(225 - var(--star-radius-value));
+		--star-y-position: calc(var(--star-y-value) * var(--scale));
+
+		background:
+			linear-gradient(
+				180deg,
+				var(--red) 0 calc(108 * var(--scale)),
+				transparent 0 calc(612 * var(--scale)),
+				var(--red) 0 calc(720 * var(--scale))
+			),
+			var(--single-five-pointed-star),
+			radial-gradient(
+				circle at 50% calc(225 * var(--scale)),
+				var(--green) 0 calc(225 * var(--scale)),
+				transparent 0 100%
+			),
+			radial-gradient(
+				circle at 50% calc(293 * var(--scale)),
+				var(--gold) 0 calc(233 * var(--scale)),
+				transparent 0 100%
+			)
+		;
+		background-color: var(--green);
+	}
+</style>

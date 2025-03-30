@@ -1,0 +1,181 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Burundi" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The original national flag of Burundi (Kirundi: <em>ibendera ry'Uburundi</em>) was adopted after the country's
+			independence from Belgium on 1 July 1962. It went through several revisions and now consists of a white saltire
+			which divides the field into alternating red and green areas. The center of the saltire merges into a white disk,
+			on which there are three red solid six-pointed stars outlined in green. The current ratio is 3:5, which was
+			changed from 2:3 on 27 September 1982. (Source: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Burundi"
+				>Wikipedia</ExternalLink
+			>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			The background was created with a <code>repeating-conic-gradient</code> with two overlapping{" "}
+			<code>linear-gradient</code>s for the saltire, and the disc in the center was created with a{" "}
+			<code>radial-gradient</code>. The stars were created with four <code>conic-gradient</code>s (two green and two
+			red) each.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Scheme Color:{" "}
+				<ExternalLink href="https://www.schemecolor.com/burundi-flag-colors.php"> "Burundi Flag Colors" </ExternalLink>
+			</li>
+			<li>
+				Vexilla Mundi:{" "}
+				<ExternalLink href="http://www.vexilla-mundi.com/burundi_flag.html">"Burundi"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Burundi"> "Flag of Burundi" </ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--burundi {
+		--green: #1eb53a;
+		--white: #fff;
+		--red: #ce1126;
+
+		--proportion: calc(3 / 5);
+
+		--scale: calc(var(--width) / 2500);
+
+		--star-outer-radius: calc(100 * var(--scale));
+		--star-inner-radius: calc(82 * var(--scale));
+		--star-ray-angle: 60deg;
+
+		--disc-radius: calc(425 * var(--scale));
+		--star-circle-radius: calc(220 * var(--scale));
+
+		--half-x: calc(1250 * var(--scale));
+		--half-y: calc(750 * var(--scale));
+		--top-star-x: var(--half-x);
+		--top-star-y: calc(var(--half-y) - var(--star-circle-radius));
+		--side-star-x-offset: calc(var(--root-3) * var(--star-circle-radius) / 2);
+		--side-star-y-offset: calc(var(--star-circle-radius) / 2);
+		--left-star-x: calc(var(--half-x) - var(--side-star-x-offset));
+		--left-star-y: calc(var(--half-y) + var(--side-star-y-offset));
+		--right-star-x: calc(var(--half-x) + var(--side-star-x-offset));
+		--right-star-y: calc(var(--half-y) + var(--side-star-y-offset));
+
+		--fimbriation-width: calc(200 * var(--scale));
+		--diagonal-angle: 30.96deg;
+		--background-green-angle: calc(var(--diagonal-angle) * 2);
+		--background-red-angle: 118.08deg;
+
+		background:
+			/* Stars */
+			/* top */
+			conic-gradient(
+				from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+				var(--red) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--top-star-x) - var(--star-inner-radius)) calc(var(--top-star-y) - var(--star-inner-radius)) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+			conic-gradient(
+				from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+				var(--red) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--top-star-x) - var(--star-inner-radius)) calc(var(--top-star-y) - var(--star-inner-radius) / 2) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+			conic-gradient(
+				from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+				var(--green) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--top-star-x) - var(--star-outer-radius)) calc(var(--top-star-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+			conic-gradient(
+				from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+				var(--green) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--top-star-x) - var(--star-outer-radius)) calc(var(--top-star-y) - var(--star-outer-radius) / 2) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+			/* left */
+			conic-gradient(
+				from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+				var(--red) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--left-star-x) - var(--star-inner-radius)) calc(var(--left-star-y) - var(--star-inner-radius)) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+			conic-gradient(
+				from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+				var(--red) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--left-star-x) - var(--star-inner-radius)) calc(var(--left-star-y) - var(--star-inner-radius) / 2) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+			conic-gradient(
+				from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+				var(--green) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--left-star-x) - var(--star-outer-radius)) calc(var(--left-star-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+			conic-gradient(
+				from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+				var(--green) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--left-star-x) - var(--star-outer-radius)) calc(var(--left-star-y) - var(--star-outer-radius) / 2) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+			/* right */
+			conic-gradient(
+				from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+				var(--red) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--right-star-x) - var(--star-inner-radius)) calc(var(--right-star-y) - var(--star-inner-radius)) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+			conic-gradient(
+				from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+				var(--red) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--right-star-x) - var(--star-inner-radius)) calc(var(--right-star-y) - var(--star-inner-radius) / 2) / calc(var(--star-inner-radius) * 2) calc(var(--star-inner-radius) * 1.5),
+			conic-gradient(
+				from calc(180deg - var(--star-ray-angle) / 2) at 50% 0,
+				var(--green) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--right-star-x) - var(--star-outer-radius)) calc(var(--right-star-y) - var(--star-outer-radius)) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+			conic-gradient(
+				from calc(-1 * var(--star-ray-angle) / 2) at 50% 100%,
+				var(--green) 0 var(--star-ray-angle),
+				transparent 0 360deg
+			) no-repeat calc(var(--right-star-x) - var(--star-outer-radius)) calc(var(--right-star-y) - var(--star-outer-radius) / 2) / calc(var(--star-outer-radius) * 2) calc(var(--star-outer-radius) * 1.5),
+
+			/* Disc */
+			radial-gradient(
+				circle at center,
+				var(--white) 0 var(--disc-radius),
+				transparent 0 100%
+			),
+
+			/* Background */
+			linear-gradient(
+				var(--diagonal-angle),
+				transparent 0 calc(50% - var(--fimbriation-width) / 2),
+				var(--white) 0 calc(50% + var(--fimbriation-width) / 2),
+				transparent 0 100%
+			),
+			linear-gradient(
+				calc(-1 * var(--diagonal-angle)),
+				transparent 0 calc(50% - var(--fimbriation-width) / 2),
+				var(--white) 0 calc(50% + var(--fimbriation-width) / 2),
+				transparent 0 100%
+			),
+			repeating-conic-gradient(
+				from calc(-1 * var(--background-red-angle) / 2) at center,
+				var(--red) 0 var(--background-red-angle),
+				var(--green) 0 calc(var(--background-red-angle) + var(--background-green-angle))
+			)
+		;
+	}
+</style>

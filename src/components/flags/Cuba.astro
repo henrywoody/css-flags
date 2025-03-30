@@ -1,0 +1,89 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Cuba" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The national flag of Cuba (Spanish: Bandera de Cuba) consists of five alternating stripes (three blue and two
+			white) and a red equilateral triangle at the hoist, within which is a white five-pointed star. It was designed in
+			1849 and officially adopted May 20, 1902. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Cuba">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>repeating-linear-gradient</code> for the background stripes, a{" "}
+			<code>conic-gradient</code> for the red triangle, and four <code>conic-gradient</code>s for the star.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Vexilla Mundi: <ExternalLink href="http://www.vexilla-mundi.com/cuba_flag.html">"Cuba"</ExternalLink>
+			</li>
+			<li>
+				Wikipedia: <ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Cuba">"Flag of Cuba"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--cuba {
+		--blue: #00205b;
+		--red: #c8102e;
+		--white: #fff;
+
+		--proportion: calc(1 / 2);
+
+		--root-3: 1.73205;
+
+		--triangle-side-length: calc(1 / 2 * var(--height));
+		--triangle-width: calc(var(--triangle-side-length) * var(--root-3));
+
+		--star-color: var(--white);
+		--star-background-color: var(--red);
+		--star-radius: calc(1 / 12 * var(--width));
+		--star-x-position: calc(var(--triangle-side-length) / 2 / var(--root-3)); /* center point of triangle */
+		--star-y-position: calc(50% - (2 * var(--star-radius) - var(--star-height)) / 2);
+
+		background:
+			/* Star */
+			var(--single-five-pointed-star),
+
+			/* Triangle */
+			conic-gradient(
+				from 240deg at var(--triangle-width) 50%,
+				var(--red) 0 60deg,
+				transparent 0 360deg
+			),
+
+			/* Background Stripes */
+			linear-gradient( /* to fix pixel issues */
+				180deg,
+				var(--blue) 0 calc(1 / 5 * var(--height)),
+				transparent 0 100%
+			),
+			repeating-linear-gradient(
+				0deg,
+				var(--blue) calc(0 / 5 * var(--height)),
+				var(--blue) calc(1 / 5 * var(--height)),
+				var(--white) calc(1 / 5 * var(--height)),
+				var(--white) calc(2 / 5 * var(--height))
+			)
+		;
+	}
+</style>

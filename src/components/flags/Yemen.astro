@@ -1,0 +1,66 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Yemen" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The Flag of Yemen (Arabic: علم اليمن) was adopted on May 22, 1990, the day that North Yemen and South Yemen were
+			unified. The flag is essentially the Arab Liberation Flag of 1952, introduced after the Egyptian Revolution of
+			1952 in which Arab nationalism was a dominant theme. The Arab Liberation Flag served as the inspiration for the
+			flags of both North and South Yemen prior to unification, as well as for the current flags of Egypt, Iraq, Sudan,
+			and Syria. (Source:{" "}
+			<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Yemen">Wikipedia</ExternalLink>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code>.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Scheme Color:{" "}
+				<ExternalLink href="https://www.schemecolor.com/yemen-arab-republic-flag-colors.php">
+					"Yemen Arab Republic Flag Colors"
+				</ExternalLink>
+			</li>
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_Yemen">"Flag of Yemen"</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--yemen {
+		--red: #cf0820;
+		--white: #fff;
+		--black: #000;
+
+		--proportion: calc(2 / 3);
+
+		background-image:
+			linear-gradient(
+				180deg,
+				var(--red) 0 calc(1 / 3 * var(--height)),
+				var(--white) 0 calc(2 / 3 * var(--height)),
+				var(--black) 0 calc(3 / 3 * var(--height))
+			)
+		;
+	}
+</style>

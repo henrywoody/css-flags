@@ -1,0 +1,80 @@
+---
+import FlagSection from "../FlagSection.astro";
+import DescriptionSection from "../DescriptionSection.astro";
+import ExternalLink from "../ExternalLink.astro";
+import type { HeadingLevel } from "../Heading.astro";
+
+export interface Props {
+	headingLevel?: HeadingLevel;
+}
+
+const { headingLevel = 2 }: Props = Astro.props;
+---
+
+<FlagSection title="Democratic Republic of the Congo" headingLevel={headingLevel}>
+	<DescriptionSection title="Description">
+		<p>
+			The national flag of the Democratic Republic of the Congo (French:{" "}
+			<em>drapeau de la république démocratique du Congo</em>) is a sky blue flag, adorned with a yellow star in the
+			upper left canton and cut diagonally by a red stripe with a yellow fimbriation. It was adopted on 20 February
+			2006. A new constitution, ratified in December 2005 and which came into effect in February 2006, promoted a return
+			to a flag similar to that flown between 1963 and 1971, with a change from a royal blue to sky blue background.
+			Blue represents peace. Red stands for "the blood of the country's martyrs", yellow the country's wealth; and the
+			star a radiant future for the country. (Source: <ExternalLink
+				href="https://en.wikipedia.org/wiki/Flag_of_the_Democratic_Republic_of_the_Congo">Wikipedia</ExternalLink
+			>)
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Construction">
+		<p>
+			Created with a <code>linear-gradient</code> for the field and four <code>conic-gradient</code>s for the star.
+		</p>
+	</DescriptionSection>
+
+	<DescriptionSection title="Sources">
+		<ul class="citation-list">
+			<li>
+				Wikipedia:{" "}
+				<ExternalLink href="https://en.wikipedia.org/wiki/Flag_of_the_Democratic_Republic_of_the_Congo">
+					"Flag of the Democratic Republic of the Congo"
+				</ExternalLink>
+			</li>
+		</ul>
+	</DescriptionSection>
+</FlagSection>
+
+<style is:global>
+	/* prettier-ignore */
+	.flag.flag--democratic-republic-of-the-congo {
+		--blue: #007fff;
+		--red: #ce1021;
+		--yellow: #f7d618;
+
+		--proportion: calc(3 / 4);
+
+		--diagonal-angle: -31deg;
+
+		--star-color: var(--yellow);
+		--star-background-color: var(--blue);
+		--star-radius: calc(0.157 * var(--width));
+		--star-x-position: calc(0.034 * var(--width));
+		--star-y-position: calc(0.051 * var(--height));
+
+		background:
+			/* Star */
+			var(--single-five-pointed-star),
+
+			/* Background/Stripe */
+			linear-gradient(
+				var(--diagonal-angle),
+				transparent 41.3%,
+				var(--yellow) 0 44.5%,
+				var(--red) 0 55.5%,
+				var(--yellow) 0 58.7%,
+				transparent 58.7%
+			)
+		;
+		background-color: var(--blue);
+	}
+</style>
