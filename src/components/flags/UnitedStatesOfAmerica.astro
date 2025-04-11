@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -16,7 +16,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 	flagName="The Stars and Stripes | Old Glory | The Star-Spangled Banner"
 	headingLevel={headingLevel}
 >
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The flag of the United States of America, often referred to as the American flag or U.S. flag, is the national
 			flag of the United States. It consists of thirteen equal horizontal stripes of red (top and bottom) alternating
@@ -30,7 +30,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The red and white stripes were created with a <code>repeating-linear-gradient</code>. The canton was created using
 			the <code>::after</code> and <code>::before</code> pseudo elements to create two over lapping patterns of stars (one
@@ -44,7 +44,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Vexilla Mundi:{" "}

@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -12,7 +12,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 ---
 
 <FlagSection title="United Arab Emirates" headingLevel={headingLevel}>
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The flag of the United Arab Emirates (Arabic: علم دولة الإمارات العربية المتحدة‎) contains the Pan-Arab colors
 			red, green, white, and black. It was designed in 1971 by Abdullah Mohammed Al Maainah, who was 19 years old at
@@ -22,13 +22,13 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			Created with a <code>linear-gradient</code> for the vertical stripes an another for the horizontal stripe.
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Wikipedia:{" "}

@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -12,7 +12,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 ---
 
 <FlagSection title="Israel" flagName="Flag of Zion" headingLevel={headingLevel}>
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The flag of Israel (Hebrew: דגל ישראל‎ Degel Yisra'el; Arabic: علم إسرائيل‎ ʿAlam Israʼīl) was adopted on 28
 			October 1948, five months after the establishment of the State of Israel. It depicts a blue Star of David on a
@@ -23,7 +23,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The background pattern of blue and white stripes was created with a <code>linear-gradient</code>. The Star of
 			David was created with many <code>linear-gradient</code>s (one to form each line) and a few more{" "}
@@ -31,7 +31,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Vexilla Mundi:{" "}

@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -12,7 +12,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 ---
 
 <FlagSection title="Saint Kitts and Nevis" headingLevel={headingLevel}>
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The flag of Saint Kitts and Nevis consists of a yellow-edged black band containing two white stars that divides
 			diagonally from the lower hoist-side corner, with a green upper triangle and red lower triangle. Adopted in 1983
@@ -29,14 +29,14 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			Created with a <code>linear-gradient</code> for the stripes and six <code>conic-gradient</code>s for each of the
 			stars.
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Scheme Color:{" "}

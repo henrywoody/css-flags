@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -12,7 +12,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 ---
 
 <FlagSection title="Suriname" headingLevel={headingLevel}>
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The flag of Suriname is formed by five horizontal bands of green (top, double width), white, red (quadruple
 			width), white, and green (double width). There is a large, yellow, five-pointed star centered in the red band.
@@ -21,7 +21,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The background was formed with a <code>linear-gradient</code>. The star was formed with four{" "}
 			<code>conic-gradient</code>s, one for the top and bottom points of the star, one to make the indent at the bottom,
@@ -29,7 +29,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Vexilla Mundi:{" "}

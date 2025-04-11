@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -12,7 +12,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 ---
 
 <FlagSection title="Syria" headingLevel={headingLevel}>
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The current flag was first adopted in 1958 to represent Syria as part of the United Arab Republic, and was used
 			until 1961. It was readopted in 1980. Since its first adoption, variations of the red-white-black flag have been
@@ -24,13 +24,13 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			Created with a <code>linear-gradient</code> for the stripes and six <code>conic-gradients</code> for each of the stars.
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Wikimedia:{" "}

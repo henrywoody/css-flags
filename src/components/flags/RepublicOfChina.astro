@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -16,7 +16,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 	flagName="青天白日滿地紅 (Blue Sky, White Sun, and a Wholly Red Earth)"
 	headingLevel={headingLevel}
 >
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The flag of the Republic of China (also known as the Blue Sky, White Sun, and a Wholly Red Earth and the flag of
 			Taiwan) consists of a red field with a blue canton bearing a white disc with twelve triangles surrounding it. The
@@ -26,7 +26,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The field was created with the <code>background-color</code> property. The canton was created with a{" "}
 			<code>linear-gradient</code> with a <code>background-size</code>. The sun was created with two{" "}
@@ -34,7 +34,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Vexilla Mundi:{" "}

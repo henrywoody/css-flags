@@ -1,7 +1,8 @@
 ---
-import { titleToKebabCase } from "../utilities";
-import Heading, { type HeadingLevel } from "./Heading.astro";
+import { titleToKebabCase, type HeadingLevel } from "../utilities";
+import Heading from "./Heading.astro";
 import Flag from "./Flag.astro";
+
 export interface Props {
 	title: string;
 	flagName?: string;

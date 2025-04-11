@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -16,7 +16,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 	flagName="Parc̱am-e Sitārah o-Hilāl (Flag of the Crescent and Star)"
 	headingLevel={headingLevel}
 >
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			The national flag of Pakistan (Urdu: إسلامى باكستان, lslami Paki̱stan) was adopted in its present form during a
 			meeting of the Constituent Assembly on August 11, 1947, just three days before the country's independence, when it
@@ -28,7 +28,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			Created with a <code>linear-gradient</code> for the white stripe and green field. Two{" "}
 			<code>radial-gradient</code>s form the crescent. The star was made in the six{" "}
@@ -37,7 +37,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Vexilla Mundi:{" "}

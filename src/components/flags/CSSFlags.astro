@@ -2,7 +2,7 @@
 import FlagSection from "../FlagSection.astro";
 import DescriptionSection from "../DescriptionSection.astro";
 import ExternalLink from "../ExternalLink.astro";
-import type { HeadingLevel } from "../Heading.astro";
+import { type HeadingLevel, toHeadingLevel } from "../../utilities";
 
 export interface Props {
 	headingLevel?: HeadingLevel;
@@ -12,7 +12,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 ---
 
 <FlagSection title="CSS Flags" headingLevel={headingLevel}>
-	<DescriptionSection title="Description">
+	<DescriptionSection title="Description" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>
 			These are flags recreated using CSS. Each flag is a single <code>div</code> whose design is created using only CSS
 			(no sub elements and no JS). Most of these are national flags from various countries, but this might be expanded to
@@ -31,7 +31,7 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</p>
 	</DescriptionSection>
 
-	<DescriptionSection title="Related Items">
+	<DescriptionSection title="Related Items" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<p>If you like this page you might also like:</p>
 
 		<ul>
@@ -59,12 +59,12 @@ const { headingLevel = 2 }: Props = Astro.props;
 		</ul>
 	</DescriptionSection>
 
-	<DescriptionSection title="Construction">
+	<DescriptionSection title="Construction" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		The flag above was constructed using a <code>linear-gradient</code> for the stripes of the C flag, and the boxes (for
 		the S flags) were created with <code>linear-gradient</code>s with positioning attributes.
 	</DescriptionSection>
 
-	<DescriptionSection title="Sources">
+	<DescriptionSection title="Sources" headingLevel={toHeadingLevel(headingLevel + 1)}>
 		<ul class="citation-list">
 			<li>
 				Wikipedia:{" "}
